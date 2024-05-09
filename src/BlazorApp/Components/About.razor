@@ -1,27 +1,33 @@
-<section class="light" id="about">
-    @if (hero is not null)
+@* <section class="dark" id="about"> *@
+<section id="about">
+    @* @if (hero is not null)
     {
-        <img class="background" src="@(hero.Src)" alt="@(hero.Alt)" />
-    }
-    <h2>About Myself</h2>
+    <img class="background" src="@(hero.Src)" alt="@(hero.Alt)" />
+    } *@    
+    <br>
+    <br>
+    <div style="background-color:white; height:0.1rem; margin-left:2rem; margin-right:2rem;" />
+    <br>    
+    <br>
+    <h2 style="font-weight:600; color:white; font-size:3rem;">About Myself</h2>
     <div style="background-color: white; width: 50%; padding: 4rem; margin: 3rem auto; text-align: center;">
-    @if (aboutMe is null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-        <p class="large">@aboutMe.Description</p>
-        <hr />
-        <ul style="text-align: left; columns: 2; font-size: 1.25rem; margin: 2rem 3rem; gap: 3rem;">
-        @foreach (var skill in aboutMe.Skills)
+        @if (aboutMe is null)
         {
-            <li key="@skill">@skill</li>
+            <p><em>Loading...</em></p>
         }
-        </ul>
-        <hr />
-        <p style="padding: 1rem 3rem 0;">@aboutMe.DetailOrQuote</p>
-    }
+        else
+        {
+            <p class="large">@aboutMe.Description</p>
+            <hr />
+            <ul style="text-align: left; columns: 2; font-size: 1.25rem; margin: 2rem 3rem; gap: 3rem;">
+                @foreach (var skill in aboutMe.Skills)
+                {
+                    <li key="@skill">@skill</li>
+                }
+            </ul>
+            <hr />
+            <p style="padding: 1rem 3rem 0;">@aboutMe.DetailOrQuote</p>
+        }
     </div>
 </section>
 
@@ -37,7 +43,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        aboutMe = await Http.GetFromJsonAsync<AboutMe>("sample-data/aboutme.json");
+        aboutMe = await Http.GetFromJsonAsync<AboutMe>(GlobalValues.FolderPath + "aboutme.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "about");
 
     }

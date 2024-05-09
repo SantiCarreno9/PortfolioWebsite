@@ -1,11 +1,18 @@
-#header {
-  position: fixed;
+#header {    
+  /*position: fixed;*/
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  /*justify-content: center;*/
+  justify-content:space-evenly;
+  /*gap: 2rem;*/
   background: rgba(255,255,255,0.75);
   padding: 1rem;
   top: 0;
-  width: 100%;
-  z-index: 10;
+  width: auto;
+  flex-wrap:wrap;
+  z-index: 10;  
+}
+
+a{
+    margin-left:1rem;
+    margin-right:1rem;
 }

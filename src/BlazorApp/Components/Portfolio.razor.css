@@ -1,0 +1,64 @@
+::deep {    
+    
+}
+
+.custom-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: stretch;
+    align-content: start;
+    margin: 0;
+    height: 100vh;
+    background-color: var(--main-background-color);
+}
+
+    .custom-container.unity {
+    }
+
+    .custom-container.unreal {
+    }
+
+    .custom-container.dotnet {
+    }
+
+.tabs-container {       
+    display: flex;
+    justify-items: stretch;
+    align-content: start;
+    flex-wrap: wrap;
+    height:auto;
+    gap:5px;
+}
+
+.tab-button {
+    flex: 1;
+    min-width: 20rem;
+    border-width: 0;
+    height: 10vh;
+    justify-content: center;
+    background-color: #1c1c1c;
+    padding: 0.5rem;
+    border-bottom: 2px solid;
+    border-color: #808080;       
+}
+
+    .tab-button:hover {
+        background-color: var(--hover-color);
+    }
+
+    .tab-button.active {
+        border-color: var(--unity-color);
+    }
+
+    .tab-button.unreal.active {        
+        border-color: var(--unreal-color);
+    }
+
+    .tab-button.dotnet.active {
+        border-color: var(--dotnet-color);
+    }
+
+.logo {
+    width: auto;
+    height: 100%;    
+}

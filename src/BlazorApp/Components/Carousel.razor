@@ -1,0 +1,35 @@
+<div class="custom-container">
+    <div class="horizontal-scroller-container">
+        <button class="scroll-btn prev-btn" @onclick="ScrollLeft">
+            @* <img src="/favicon.png" /> *@
+            <i class="arrow left" />
+        </button>
+        <div class="horizontal-scroller" @ref=@scrollerReference>
+            @foreach (var component in Components)
+            {
+                <div class="item">
+                    @component
+                </div>
+            }
+        </div>
+
+        <button class="scroll-btn next-btn" @onclick="ScrollRight">
+            @* <img src="/favicon.png" /> *@
+            <i class="arrow right" />
+        </button>
+    </div>
+    <div class="indicators-container">
+        @foreach (var item in Enumerable.Range(0, Components.Length))
+        {
+            <button class="content-indicator @(currentPosition==item?"current":"")" @onclick="()=>ScrollTo(item)" />
+        }
+    </div>
+</div>
+
+<script>
+    window.scrollElement = function (element, amount) {
+        if (element) {
+            element.scrollLeft += amount * window.innerWidth
+        }
+    }
+</script>

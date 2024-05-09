@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Collaborative Surgery Simulator",
+    "description": "Prototype of a multi-user environment simulator for lipoma extraction surgery, with some of its features including:",
+    "bulletItems": [
+      "Online Multiplayer system where each user can choose a specific role (surgeon, assistant, resident, etc) and chat through a voice chat feature.",
+      "Real time 3D mesh modification.",
+      "Avatars animations, both hand controls.",
+      "Object transfer between users."
+    ],
+    "videoURL": "https://www.youtube.com/embed/Jc6QFovmRck?si=5Utht4aecYS4IzpE",
+    "repositoryURL": "https://github.com/SantiCarreno9/MultiplayerSurgerySimulator.git"
+  },
+  {
+    "title": "UNO 3D",
+    "description": "Videogame of the popular card game UNO, but in a 3D immersive version.",
+    "bulletItems": [
+      "Multiplayer system (up to 6 players).",
+      "Animations for special cards.",
+      "Complete game logic implemented."
+    ],
+    "videoURL": "https://www.youtube.com/embed/HDGS-Jimu5M?si=d0NNyWFNcOJw1_4a",
+    "repositoryURL": "https://www.youtube.com/embed/HDGS-Jimu5M?si=d0NNyWFNcOJw1_4a"
+  },
+  {
+    "title": "Cookies Game",
+    "description": "Single player game, where the user has to collect as many cookies as possible in a short time while avoiding obstacles",
+    "bulletItems": [
+      "Procedural map generation.",
+      "Last highest score saved locally"
+    ],
+    "videoURL": "https://www.youtube.com/embed/zUrW9RkVLnM?si=i2NP5k0hVhGbtMtc",
+    "repositoryURL": "https://github.com/SantiCarreno9/MultiplayerSurgerySimulator.git"
+  },
+  {
+    "title": "Jumping Game",
+    "description": "Based on Google's Dinosaur Game where the player has to dodge obstacles and last as long as possible.",
+    "bulletItems": [
+      "Control by voice commands (english or spanish) or keyboard.",
+      "Difficulty increases over time.",
+      "Multiplatform (Desktop & Web Browser)"
+    ],
+    "videoURL": "https://www.youtube.com/embed/RJGvawRlqMs?si=wHTpjVGHRpgj4fxc",
+    "repositoryURL": "https://github.com/SantiCarreno9/MultiplayerSurgerySimulator.git"
+  }
+]

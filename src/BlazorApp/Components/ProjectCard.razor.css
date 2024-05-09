@@ -1,0 +1,42 @@
+::deep {
+    --media-width: 25vw;
+    --description-width: calc(100 - var(--media-width));
+}
+
+h3{
+
+}
+
+.custom-container {
+    padding:5% 2% 5% 2%;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+    align-content: center;
+    margin: 0;
+    /*flex-wrap:nowrap;*/
+}
+
+.media-container {
+    flex: 1;
+    min-width: var(--media-width);
+    max-width: 30%;
+    min-width: var(--media-width);
+    min-width: 30%;
+}
+
+.description {
+    flex: 1;
+    flex-wrap: wrap;
+    word-wrap: normal;
+    max-width: 70%;
+    max-width: var(--description-width);
+    overflow: scroll;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+}

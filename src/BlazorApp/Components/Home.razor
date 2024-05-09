@@ -4,15 +4,15 @@
         <img class="background" src="@(hero.Src)" alt="@(hero.Alt)" />
     }
     <div style="position: absolute; top: 30%; left: 2rem;">
-    @if (property is null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-        <h1>@property.Name</h1>
-        <h2>@property.Title</h2>
-    }
+        @if (property is null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            <h1>@property.Name</h1>
+            <h2>@property.Title</h2>
+        }
     </div>
     <div style="position: absolute; bottom: 8rem; left: 50%;">
         <a href="#about" target="_top">
@@ -33,7 +33,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        property = await Http.GetFromJsonAsync<SiteProperties>("sample-data/siteproperties.json");
+        property = await Http.GetFromJsonAsync<SiteProperties>(GlobalValues.FolderPath + "siteproperties.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "home");
     }
 }

@@ -1,0 +1,28 @@
+<div class="custom-container">
+    @if (Project.VideoURL != null)
+    {
+        <div class="media-container">
+            <iframe src="@Project.VideoURL">
+            </iframe>
+        </div>
+    }
+    <div>
+        <h3 style="text-align:left">@Project.Title</h3>
+        <br>
+        <p>@Project.Description</p>
+        @if (Project.BulletItems != null)
+        {
+            <ul>
+                @foreach (var item in Project.BulletItems)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Project Project { get; set; }
+}

@@ -4,13 +4,26 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
 
+:root {
+    --main-background-color: #1c1c1c;
+    --hover-color: #2c2b2b;
+    --division-color: #7254d4;
+    --unity-color: white;
+    --unreal-color: #fee457;
+    --dotnet-color: #7254d4;
+}
+
 html,
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    background-color: var(--main-background-color);
 }
 
 div#main {
@@ -132,14 +145,18 @@ a:hover {
 .portfolio-container {
   display: flex;
   flex-direction: row;
+  justify-items: stretch;
   padding-top: 3rem;
 }
 
-@media screen and (max-width: 420px) {
+/*@media screen and (max-width: 420px) {
   .portfolio-container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-items: stretch;
+    background-color: purple;
+
   }
-}
+}*/
 
 .portfolio-hero {
   max-width: 40%;
