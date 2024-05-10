@@ -7,15 +7,8 @@ using Microsoft.AspNetCore.Components;
 
 namespace BlazorApp.Components
 {
-    public partial class Portfolio : ComponentBase
-    {
-        enum Category
-        {
-            Unity = 1,
-            Unreal = 2,
-            Dotnet = 4
-        }
-
+    public partial class PortfolioCategory : ComponentBase
+    {        
         [Parameter, EditorRequired]
         public required HttpClient Http { get; set; }
 

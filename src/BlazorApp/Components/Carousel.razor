@@ -27,9 +27,17 @@
 </div>
 
 <script>
-    window.scrollElement = function (element, amount) {
-        if (element) {
-            element.scrollLeft += amount * window.innerWidth
+    window.scrollElement = function (container, amount) {
+        if (container) {
+            const scrollAmount = amount * window.innerWidth;
+            const currentPosition = container.scrollLeft;
+            const newPosition = currentPosition + scrollAmount;
+
+            container.scrollTo({
+                left: newPosition,
+                behavior: 'smooth'
+            });
         }
-    }
+    };
+
 </script>

@@ -1,0 +1,47 @@
+<div class="dropdown @(isSelected?"active":"")">
+    <div class="bar-button-container @(isSelected?"active":"")">                
+            <div class="bar-button" @onclick="TriggerAction">
+                @ChildContent
+            </div>        
+        <div class="button-label">
+            @Text
+        </div>
+    </div>
+    @if (DropdownItems != null)
+    {
+        <div class="dropdown-content">
+            @foreach (var item in DropdownItems)
+            {
+                <div class="dropdown-item-label" @onclick="()=>item.OnClickedAction()">@item.Text</div>
+            }            
+        </div>
+    }
+</div>
+
+@code {
+
+    [Parameter] public required RenderFragment? ChildContent { get; set; }
+
+    [Parameter] public required int Id { get; set; }
+
+    [Parameter] public string Text { get; set; } = string.Empty;
+
+    [Parameter] public Action<int> OnClicked { get; set; }
+
+    [Parameter] public List<HeaderDropdownItem>? DropdownItems { get; set; }
+
+    [Parameter]
+    public bool State
+    {
+        get { return isSelected; }
+        set { if (isSelected != value) isSelected = value; }
+    }
+
+    private bool isSelected = false;
+
+    private void TriggerAction()
+    {
+        isSelected = true;
+        if (OnClicked != null) OnClicked(Id);
+    }
+}

@@ -22,8 +22,9 @@ body {
     font-family: "Montserrat", sans-serif;
     max-width: 100%;
     overflow-x: hidden;
-    scrollbar-width: none;
     background-color: var(--main-background-color);
+    scroll-snap-align: start;
+    scroll-snap-type: y proximity;
 }
 
 div#main {
