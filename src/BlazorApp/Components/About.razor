@@ -43,7 +43,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        aboutMe = await Http.GetFromJsonAsync<AboutMe>(GlobalValues.FolderPath + "aboutme.json");
+        aboutMe = await Http.GetFromJsonAsync<AboutMe>(Path.Combine(GlobalValues.JsonPath,"aboutme.json"));
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "about");
 
     }

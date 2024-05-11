@@ -1,72 +1,6 @@
 @inject IJSRuntime JSRuntime
 
 <div id="header">
-    @* <div class="bar-button">
-    <input class="menu-input" type="radio" name="menu" id="main" checked="" />
-    <label for="main">
-    <div class="dropdown">
-    <div >
-    <div class="bar" />
-    <div class="bar" />
-    <div class="bar" />
-    </div>
-    <div class="dropdown-content">
-    <a href="#home" target="_top" @onclick:preventDefault="true" @onclick='()=>ScrollTo("#home")'>Home</a>
-    <a href="#about" target="_top" @onclick:preventDefault="true" @onclick='()=>ScrollTo("#about")'>About</a>
-    </div>
-    </div>
-    @currentMenuText
-    </label>
-    </div>
-    <div class="bar-button">
-    <input class="menu-input" type="radio" name="menu" id="unity" />
-    <label for="unity">
-    <img class="logo" src="/images/icons/unity-logo-simple.png" alt="Unity" />
-    Unity
-    </label>
-    </div>
-    <div class="bar-button">
-    <input class="menu-input" type="radio" name="menu" id="unreal" />
-    <label class="menu-label" for="unreal">
-    <img class="logo" src="/images/icons/unreal-logo-simple.png" alt="Unreal" />
-    Unreal
-    </label>
-    </div>
-    <div class="bar-button">
-    <input class="menu-input" type="radio" name="menu" id="dotnet" />
-    <label class="menu-label" for="dotnet">
-    <img class="logo" src="/images/icons/dotnet-2.png" alt=".NET" />
-    .NET
-    </label>
-    </div> *@
-    @* <div class="bar-button-container">
-    <div class="dropdown">
-    <div class="logo">
-    <div class="bar" />
-    <div class="bar" />
-    <div class="bar" />
-    </div>
-    <div class="dropdown-content">
-    <a href="#home" target="_top" @onclick:preventDefault="true" @onclick='()=>ScrollTo("#home")'>Home</a>
-    <a href="#about" target="_top" @onclick:preventDefault="true" @onclick='()=>ScrollTo("#about")'>About</a>
-    </div>
-    </div>
-    <div class="label">
-    Menu
-    </div>
-    </div>
-    <div class="bar-button-container" target="_top">
-    <button class="bar-button" @onclick='()=>ScrollTo("#portfolio")'>
-    <img class="logo" src="/images/icons/unity-logo-simple.png" alt="Unity" />
-    </button>
-    </div>
-    <a href="#portfolio" target="_top" @onclick:preventDefault="true" @onclick='()=>ScrollTo("#portfolio")'>
-    <img class="logo" src="/images/icons/unreal-logo-simple.png" alt="Unreal" />
-    </a>
-    <a href="#portfolio" target="_top" @onclick:preventDefault="true" @onclick='()=>ScrollTo("#portfolio")'>
-    <img class="logo" src="/images/icons/dotnet-2.png" alt=".NET" />
-    </a> *@
-
     <HeaderButton Id=(int)TabCategories.Menu Text="Menu" OnClicked=OnButtonSelected State=@(currentCategory==TabCategories.Menu)
                   DropdownItems='new List<HeaderDropdownItem>{
                 new HeaderDropdownItem{ Text="Home", OnClickedAction=()=>{ScrollAction("#home");} },
@@ -97,7 +31,7 @@
     }
 </script>
 
-@code {    
+@code {
 
     private string currentMenuText = "Home";
 
@@ -123,6 +57,14 @@
     private void OnButtonSelected(int id)
     {
         currentCategory = (TabCategories)id;
+        switch (currentCategory)
+        {
+            case TabCategories.Unity:
+            case TabCategories.Unreal:
+            case TabCategories.Dotnet:
+                ScrollAction("#portfolio");
+                break;
+        }
         StateHasChanged();
     }
 }

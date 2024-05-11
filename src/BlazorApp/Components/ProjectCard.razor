@@ -1,15 +1,46 @@
 <div class="custom-container">
-    @if (Project.VideoURL != null)
-    {
-        <div class="media-container">
-            <iframe src="@Project.VideoURL">
-            </iframe>
+    <div class="media-container">
+        <div class="media-content-container">
+            @if (!string.IsNullOrEmpty(currentMediaContent.Item2))
+            {
+                @GetContentToDisplay(currentMediaContent)
+            }
+            @* @switch (currentMediaContent.Item1)
+            {
+            case ContentType.Image
+            } *@
+            @* @if (Project.VideosURL != null)
+            {
+            @foreach (var video in Project.VideosURL)
+            {
+            <iframe src="@video" allowfullscreen="" loading="lazy" />
+            }
+            } *@
         </div>
-    }
-    <div>
+        <div class="thumbnails-scroller">
+            @if (Project.MediaContent != null)
+            {
+                @foreach (int i in Enumerable.Range(0, mediaContent.Count))
+                {
+                    <div class="thumbnail" @onclick="()=>SelectContent(i)">
+                        @if (mediaContent[i].Item1 == MediaContentType.Image)
+                        {
+                            <img src="@mediaContent[i].Item2" @onclick="()=>SelectContent(i)" />
+                        }
+                        else
+                        {
+                            <i class="far fa-play-circle"></i>
+                            @* <i class="fab fa-github" style="width:100%; height:100%; " aria-hidden="true"></i> *@
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="description">
         <h3 style="text-align:left">@Project.Title</h3>
         <br>
-        <p>@Project.Description</p>
+        @Project.Description
         @if (Project.BulletItems != null)
         {
             <ul>
@@ -23,6 +54,50 @@
 </div>
 
 @code {
+
     [Parameter]
     public Project Project { get; set; }
+    private List<(MediaContentType, string)> mediaContent = new List<(MediaContentType, string)>();
+
+    private (MediaContentType, string) currentMediaContent;
+
+    protected override void OnInitialized()
+    {
+        if (Project.MediaContent == null)
+            return;
+
+        for (int i = 0; i < 4; i++)
+        {
+            if (!Project.MediaContent.ContainsKey(i))
+                continue;
+            foreach (var item in Project.MediaContent[i])
+            {
+                mediaContent.Add(((MediaContentType)i, item));
+            }
+        }
+    }
+
+    private void SelectContent(int index)
+    {
+        currentMediaContent.Item1 = mediaContent[index].Item1;
+        currentMediaContent.Item2 = mediaContent[index].Item2;
+    }
+
+    private RenderFragment GetContentToDisplay((MediaContentType, string) content)
+    {
+        switch (content.Item1)
+        {
+            case MediaContentType.Image:
+                return@<img class="media-content" src=@content.Item2 />;
+            case MediaContentType.Video:
+                return@<video class="media-content" src=@content.Item2 controls/>;
+            case MediaContentType.ShortVideo:
+                return@<video class="media-content" src=@content.Item2 muted loop autoplay />;
+            case MediaContentType.WebVideo:
+                return@<iframe class="media-content" src=@content.Item2 allowfullscreen="" loading="lazy" />;
+            default:
+                return@<></>;
+        }
+    }
+
 }

@@ -8,7 +8,12 @@
       "Avatars animations, both hand controls.",
       "Object transfer between users."
     ],
-    "videoURL": "https://www.youtube.com/embed/Jc6QFovmRck?si=5Utht4aecYS4IzpE",
+    "mediaContent": {
+      "0": [ "/portfolio/unity/video.mp4" ],
+      "1": [ "/portfolio/unity/video.mp4" ],
+      "2": [ "https://www.youtube.com/embed/Jc6QFovmRck?si=5Utht4aecYS4IzpE" ],
+      "3": [ "/images/icons/unity-logo.png" ]
+    },
     "repositoryURL": "https://github.com/SantiCarreno9/MultiplayerSurgerySimulator.git"
   },
   {
@@ -19,7 +24,9 @@
       "Animations for special cards.",
       "Complete game logic implemented."
     ],
-    "videoURL": "https://www.youtube.com/embed/HDGS-Jimu5M?si=d0NNyWFNcOJw1_4a",
+    "mediaContent": {
+      "0": [ "https://www.youtube.com/embed/Jc6QFovmRck?si=5Utht4aecYS4IzpE" ]
+    },
     "repositoryURL": "https://www.youtube.com/embed/HDGS-Jimu5M?si=d0NNyWFNcOJw1_4a"
   },
   {
@@ -29,7 +36,9 @@
       "Procedural map generation.",
       "Last highest score saved locally"
     ],
-    "videoURL": "https://www.youtube.com/embed/zUrW9RkVLnM?si=i2NP5k0hVhGbtMtc",
+    "mediaContent": {
+      "0": [ "https://www.youtube.com/embed/Jc6QFovmRck?si=5Utht4aecYS4IzpE" ]
+    },
     "repositoryURL": "https://github.com/SantiCarreno9/MultiplayerSurgerySimulator.git"
   },
   {
@@ -40,7 +49,9 @@
       "Difficulty increases over time.",
       "Multiplatform (Desktop & Web Browser)"
     ],
-    "videoURL": "https://www.youtube.com/embed/RJGvawRlqMs?si=wHTpjVGHRpgj4fxc",
+    "mediaContent": {
+      "0": [ "https://www.youtube.com/embed/Jc6QFovmRck?si=5Utht4aecYS4IzpE" ]
+    },
     "repositoryURL": "https://github.com/SantiCarreno9/MultiplayerSurgerySimulator.git"
   }
 ]

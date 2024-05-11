@@ -26,15 +26,15 @@ namespace BlazorApp.Components
 
         protected override async Task OnInitializedAsync()
         {
-            Project[] unityProjects = await Http.GetFromJsonAsync<Project[]>(GlobalValues.FolderPath + "unity-projects.json");
+            Project[] unityProjects = await Http.GetFromJsonAsync<Project[]>(Path.Combine(GlobalValues.PortfolioFolderPath,"unity","unity-projects.json"));
             if (unityProjects != null)            
                 GenerateCards(unityProjects, out projectCardsUnity);
 
-            Project[] unrealProjects = await Http.GetFromJsonAsync<Project[]>(GlobalValues.FolderPath + "unreal-projects.json");
+            Project[] unrealProjects = await Http.GetFromJsonAsync<Project[]>(Path.Combine(GlobalValues.PortfolioFolderPath, "unreal", "unreal-projects.json"));
             if (unrealProjects != null)
                 GenerateCards(unrealProjects, out projectCardsUnreal);
 
-            Project[] dotnetProjects = await Http.GetFromJsonAsync<Project[]>(GlobalValues.FolderPath + "dotnet-projects.json");
+            Project[] dotnetProjects = await Http.GetFromJsonAsync<Project[]>(Path.Combine(GlobalValues.PortfolioFolderPath, "dotnet", "dotnet-projects.json"));
             if (dotnetProjects != null)
                 GenerateCards(dotnetProjects, out projectCardsDotNet);
             //hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");

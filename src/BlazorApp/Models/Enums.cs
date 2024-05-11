@@ -12,3 +12,11 @@ public enum TabCategories
     Unreal = 2,
     Dotnet = 4
 }
+
+public enum MediaContentType
+{
+    ShortVideo,
+    Video,
+    WebVideo,
+    Image
+}

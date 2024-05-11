@@ -348,3 +348,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/src/BlazorApp/wwwroot/jay.js
+/src/BlazorApp/wwwroot/jayvanhuttenindex.html
+/src/BlazorApp/wwwroot/css/jay.css

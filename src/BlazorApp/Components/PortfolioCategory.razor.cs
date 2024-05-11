@@ -8,56 +8,34 @@ using Microsoft.AspNetCore.Components;
 namespace BlazorApp.Components
 {
     public partial class PortfolioCategory : ComponentBase
-    {        
+    {
         [Parameter, EditorRequired]
         public required HttpClient Http { get; set; }
 
         [Parameter, EditorRequired]
         public required HeroImageService HeroImageService { get; set; }
 
-        private Category currentCategory = Category.Unity;
         private string containerStyle = "custom-container unity";
 
         private HeroImage? hero;
 
-        private RenderFragment[]? projectCardsUnity;
-        private RenderFragment[]? projectCardsUnreal;
-        private RenderFragment[]? projectCardsDotNet;
+        private PortfolioCategoryInfo? portfolioCategoryInfo;
+        private RenderFragment[] projectCards;
 
         protected override async Task OnInitializedAsync()
         {
-            Project[] unityProjects = await Http.GetFromJsonAsync<Project[]>(GlobalValues.FolderPath + "unity-projects.json");
-            if (unityProjects != null)            
-                GenerateCards(unityProjects, out projectCardsUnity);
+            portfolioCategoryInfo = new PortfolioCategoryInfo
+            {
+                ProjectsInfoPath = Path.Combine(GlobalValues.PortfolioFolderPath, "unity", "unity-projects.json"),
+                Logo = "/images/icons/unity-logo.png"
+            };
+            Project[] projects = await Http.GetFromJsonAsync<Project[]>(portfolioCategoryInfo.ProjectsInfoPath);
+            if (projects != null)
+                GenerateCards(projects, out projectCards);
 
-            Project[] unrealProjects = await Http.GetFromJsonAsync<Project[]>(GlobalValues.FolderPath + "unreal-projects.json");
-            if (unrealProjects != null)
-                GenerateCards(unrealProjects, out projectCardsUnreal);
 
-            Project[] dotnetProjects = await Http.GetFromJsonAsync<Project[]>(GlobalValues.FolderPath + "dotnet-projects.json");
-            if (dotnetProjects != null)
-                GenerateCards(dotnetProjects, out projectCardsDotNet);
             //hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
         }
 
-        private void ChangePlatform(Category category)
-        {
-            switch (category)
-            {
-                case Category.Unity:
-                    containerStyle = "custom-container unity";
-                    break;
-                case Category.Unreal:
-                    containerStyle = "custom-container unreal";
-                    break;
-                case Category.Dotnet:
-                    containerStyle = "custom-container dotnet";
-                    break;
-                default:
-                    break;
-            }
-
-            currentCategory = category;
-        }
     }
 }
