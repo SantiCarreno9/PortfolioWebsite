@@ -1,36 +1,25 @@
-<div class="custom-container">
+<div class="custom-container" @ref=component>
     <div class="media-container">
         <div class="media-content-container">
             @if (!string.IsNullOrEmpty(currentMediaContent.Item2))
             {
                 @GetContentToDisplay(currentMediaContent)
             }
-            @* @switch (currentMediaContent.Item1)
-            {
-            case ContentType.Image
-            } *@
-            @* @if (Project.VideosURL != null)
-            {
-            @foreach (var video in Project.VideosURL)
-            {
-            <iframe src="@video" allowfullscreen="" loading="lazy" />
-            }
-            } *@
         </div>
         <div class="thumbnails-scroller">
             @if (Project.MediaContent != null)
             {
                 @foreach (int i in Enumerable.Range(0, mediaContent.Count))
                 {
-                    <div class="thumbnail" @onclick="()=>SelectContent(i)">
+                    <div class="thumbnail @(currentMediaIndex==i?"active":"")" @onclick="()=>SelectContent(i)">
                         @if (mediaContent[i].Item1 == MediaContentType.Image)
                         {
-                            <img src="@mediaContent[i].Item2" @onclick="()=>SelectContent(i)" />
+                            <img src="@mediaContent[i].Item2" />
                         }
                         else
                         {
+                            @* @GetThumbnail(mediaContent[i].Item2) *@
                             <i class="far fa-play-circle"></i>
-                            @* <i class="fab fa-github" style="width:100%; height:100%; " aria-hidden="true"></i> *@
                         }
                     </div>
                 }
@@ -53,51 +42,38 @@
     </div>
 </div>
 
+<script src="../Components/ProjectCard.razor.js"></script>
+
 @code {
-
-    [Parameter]
-    public Project Project { get; set; }
-    private List<(MediaContentType, string)> mediaContent = new List<(MediaContentType, string)>();
-
-    private (MediaContentType, string) currentMediaContent;
-
-    protected override void OnInitialized()
-    {
-        if (Project.MediaContent == null)
-            return;
-
-        for (int i = 0; i < 4; i++)
-        {
-            if (!Project.MediaContent.ContainsKey(i))
-                continue;
-            foreach (var item in Project.MediaContent[i])
-            {
-                mediaContent.Add(((MediaContentType)i, item));
-            }
-        }
-    }
-
-    private void SelectContent(int index)
-    {
-        currentMediaContent.Item1 = mediaContent[index].Item1;
-        currentMediaContent.Item2 = mediaContent[index].Item2;
-    }
 
     private RenderFragment GetContentToDisplay((MediaContentType, string) content)
     {
         switch (content.Item1)
         {
             case MediaContentType.Image:
-                return@<img class="media-content" src=@content.Item2 />;
+                return @<img class="media-content" src=@content.Item2 />;
             case MediaContentType.Video:
-                return@<video class="media-content" src=@content.Item2 controls/>;
+                return
+                @<video class="media-content" controls @ref=videoPlayer>
+                    <source src="@content.Item2" type="video/mp4">
+                </video>;
             case MediaContentType.ShortVideo:
-                return@<video class="media-content" src=@content.Item2 muted loop autoplay />;
+                return@<video id="short-video" @onplay="MuteAutoplayVideo" class="media-content" src=@content.Item2 muted loop playsinline preload="auto" @ref=shortVideoPlayer />;
             case MediaContentType.WebVideo:
-                return@<iframe class="media-content" src=@content.Item2 allowfullscreen="" loading="lazy" />;
+                return@<iframe class="media-content" src=@content.Item2 allowfullscreen="" @ref=iFramePlayer />;
             default:
                 return@<></>;
         }
     }
 
+    private RenderFragment GetThumbnail(string path)
+    {
+        if (path.Contains("*THMB*"))
+        {
+            var thumbnailSrc = path.Split("*THMB*");
+            if (thumbnailSrc.Length > 1)
+                return@< img src = "@(path[1])" />;
+        }
+        return null;
+    }
 }

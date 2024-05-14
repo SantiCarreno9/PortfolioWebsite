@@ -1,5 +1,6 @@
 using System.Net.Http.Json;
 
+using BlazorApp.Interfaces;
 using BlazorApp.Models;
 using BlazorApp.Services;
 
@@ -19,8 +20,10 @@ namespace BlazorApp.Components
 
         private HeroImage? hero;
 
-        private PortfolioCategoryInfo? portfolioCategoryInfo;
-        private RenderFragment[] projectCards;
+        private PortfolioCategoryInfo? portfolioCategoryInfo;        
+        private IDictionary<string, object>[] projectsParameters;
+
+        
 
         protected override async Task OnInitializedAsync()
         {
@@ -31,7 +34,14 @@ namespace BlazorApp.Components
             };
             Project[] projects = await Http.GetFromJsonAsync<Project[]>(portfolioCategoryInfo.ProjectsInfoPath);
             if (projects != null)
-                GenerateCards(projects, out projectCards);
+            {
+                this.projectsParameters = new Dictionary<string, object>[projects.Length];                
+                for (int i = 0; i < projects.Length; i++)
+                {
+                    this.projectsParameters[i] = new Dictionary<string, object>();
+                    this.projectsParameters[i].Add("Project", projects[i]);
+                }                
+            }
 
 
             //hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");

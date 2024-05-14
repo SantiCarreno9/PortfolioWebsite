@@ -25,7 +25,7 @@ body {
     overflow-y: auto;
     background-color: var(--main-background-color);
     scroll-snap-align: start;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y proximity;    
 }
 
 div#main {
@@ -253,4 +253,31 @@ img.social-icon {
 
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
+    }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.4rem;
+    padding:1rem;    
+    border-radius: 0.3rem;    
+}
+
+/*Track*/
+::-webkit-scrollbar-track {
+    /*background: #f1f1f1;*/
+    /*opacity: 0;*/
+    padding: 1rem;
+    border-radius: 0;
+}
+
+/*Handle*/
+::-webkit-scrollbar-thumb {
+    background: #555;    
+    border-radius: 1rem;
+}
+
+    /*Handle on hover*/
+    ::-webkit-scrollbar-thumb:hover {
+        background: #888;
     }

@@ -5,29 +5,17 @@
             {
                 <img class="logo" src=@portfolioCategoryInfo.Logo alt="Unity" />
             }
-        </div>
-        @if (projectCards == null)
+        </div>        
+        @if (projectsParameters == null)
         {
             <p><em>Loading...</em></p>
         }
         else
         {
             <div style="flex:1">
-                <Carousel Components="@projectCards"></Carousel>
+                <DynamicCarousel ItemType="typeof(ProjectCard)" ItemsParameters="@projectsParameters"></DynamicCarousel>
+                
             </div>
         }
     </div>
 </section>
-
-@code {
-    private RenderFragment<Project> projectCardTemplate = (project) =>@<ProjectCard Project="@project" />;
-
-    private void GenerateCards(Project[] projects, out RenderFragment[] projectCard)
-    {
-        projectCard = new RenderFragment[projects.Length];
-        for (int i = 0; i < projects.Length; i++)
-        {
-            projectCard[i] = @projectCardTemplate(projects[i]);
-        }
-    }
-}

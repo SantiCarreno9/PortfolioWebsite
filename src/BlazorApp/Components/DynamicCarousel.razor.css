@@ -1,0 +1,6 @@
+.item {
+    flex: 1;
+    min-width: var(--content-width);
+    scroll-snap-align: center;
+    scroll-snap-type: x proximity;
+}
