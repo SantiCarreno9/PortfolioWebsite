@@ -1,6 +1,5 @@
 using System.Net.Http.Json;
 
-using BlazorApp.Interfaces;
 using BlazorApp.Models;
 using BlazorApp.Services;
 

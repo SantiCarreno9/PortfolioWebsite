@@ -4,7 +4,8 @@
   /*justify-content: center;*/
   justify-content:space-evenly;
   /*gap: 2rem;*/
-  background: rgba(255,255,255,0.75);
+  /*background: rgba(255,255,255,0.75);*/
+  background: black;
   padding: 1rem;
   top: 0;
   width: auto;
@@ -15,4 +16,5 @@
 a{
     margin-left:1rem;
     margin-right:1rem;
+    color:white;
 }

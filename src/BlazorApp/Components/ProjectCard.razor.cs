@@ -2,7 +2,9 @@ using BlazorApp.Models;
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using BlazorApp.Interfaces;
+
+using RazorSCLibrary;
+using RazorSCLibrary.Interfaces;
 
 namespace BlazorApp.Components
 {
@@ -10,6 +12,8 @@ namespace BlazorApp.Components
     {
         [Inject]
         IJSRuntime JsRuntime { get; set; }
+        [Inject]
+        JsMethods JsMethods { get; set; }
 
         [Parameter]
         public Project Project { get; set; }
@@ -56,7 +60,7 @@ namespace BlazorApp.Components
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            isVisible = await JsRuntime.InvokeAsync<bool>("isElementVisible", component);
+            isVisible = await JsMethods.IsElementVisible(component);
         }
 
         public async void StartRendering()

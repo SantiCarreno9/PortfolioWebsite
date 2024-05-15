@@ -1,5 +1,19 @@
 [
   {
+    "title": "Breakout",
+    "description": "My version of the classic \"Breakout\" game, which features an attractive sci-fi style.",
+    "bulletItems": [
+      "Power ups",
+      "Music and sound effects"      
+    ],
+    "mediaContent": {
+      "0": [ "/portfolio/unity/Breakout/svideo1.mp4", "/portfolio/unity/Breakout/svideo2.mp4" ],
+      "2": [ "https://www.youtube.com/embed/aLLGY9lUF_A?si=vTXqca1xJwg1S-8q" ],
+      "3": [ "/portfolio/unity/Breakout/image1.png","/portfolio/unity/Breakout/image2.png","/portfolio/unity/Breakout/image3.png","/portfolio/unity/Breakout/image4.png" ]
+    },
+    "repositoryURL": "https://github.com/SantiCarreno9/MultiplayerSurgerySimulator.git"
+  },
+  {
     "title": "Collaborative Surgery Simulator",
     "description": "Prototype of a multi-user environment simulator for lipoma extraction surgery, with some of its features including:",
     "bulletItems": [
