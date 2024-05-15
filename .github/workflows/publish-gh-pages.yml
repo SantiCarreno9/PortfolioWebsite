@@ -1,14 +1,16 @@
 name: Publish Blazor App to GitHub Pages
 
-on: [ push, workflow_dispatch ]
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: write
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -16,75 +18,57 @@ concurrency:
 jobs:
   build_test_artifact:
     name: Build App
-
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
 
     - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '8.x'
+        dotnet-version: '6.x'
 
-    # - name: Set basepath on index.html
-    #   shell: pwsh
-    #   run: |
-    #     $filepath = "./src/BlazorApp/wwwroot/index.html"
-    #     $repository = "${{ github.repository }}" -replace "${{ github.repository_owner }}", ""
-
-    #     $html = Get-Content -Path $filepath
-    #     $html -replace "<base href=`"/`" />", "<base href=`"$repository/`" />" | Out-File -Path $filepath -Force
-
-    # - name: Set basepath on JSON objects
-    #   shell: pwsh
-    #   run: |
-    #     $filepath = "./src/BlazorApp/wwwroot/sample-data"
-    #     $repository = "${{ github.repository }}" -replace "${{ github.repository_owner }}", ""
-
-    #     Get-ChildItem -Path $filepath -Filter "*.json" | ForEach-Object {
-    #       $json = Get-Content -Path $_.FullName
-    #       $json.Replace("../", "$repository/") | Out-File -Path $_.FullName -Force
-    #     }
-
-    - name: Restore NuGet packages
+    - name: Restore NuGet packages and build Blazor app
       shell: bash
       run: |
+        cd src/BlazorApp
         dotnet restore .
-
-    - name: Build solution
-      shell: bash
-      run: |
         dotnet build .
 
-    - name: Test solution
+    - name: Publish Blazor app artifact
       shell: bash
       run: |
-        dotnet test . -c Release
+        cd src/BlazorApp
+        dotnet publish -c Release -o published/wwwroot
 
-    - name: Publish artifact
+    - name: Restore NuGet packages and build Razor Class Library
       shell: bash
       run: |
-        dotnet publish src/BlazorApp -c Release -o published
+        cd RazorSCLibrary
+        dotnet restore .
+        dotnet build .
+
+    - name: Publish Razor Class Library artifact
+      shell: bash
+      run: |
+        cd RazorSCLibrary
+        dotnet publish -c Release -o published/wwwroot
 
     - name: Upload artifact for web
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-artifact@v2
       with:
-        path: published/wwwroot
+        name: web-artifact
+        path: |
+          src/BlazorApp/published/wwwroot
+          RazorSCLibrary/wwwroot
 
   deploy:
     name: Deploy App to GitHub Pages
-    needs:
-    - build_test_artifact
-
+    needs: [build_test_artifact]
     runs-on: ubuntu-latest
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
     - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v1
+      uses: actions/deploy-pages@v2
