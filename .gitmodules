@@ -1,0 +1,3 @@
+[submodule "RazorSCLibrary"]
+	path = RazorSCLibrary
+	url = https://github.com/SantiCarreno9/RazorSCLibrary.git
