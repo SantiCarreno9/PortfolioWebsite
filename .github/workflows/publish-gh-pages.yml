@@ -23,7 +23,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4.1.5
       with:
-        token: ${{ secrets.BOT_GITHUB_ACCESS_PACKAGES_TOKEN }}
         submodules: recursive
     - name: Checkout submodules
       run: git submodule sync && git submodule update --init --recursive
