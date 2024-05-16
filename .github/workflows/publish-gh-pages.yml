@@ -22,6 +22,11 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4.1.5
+      with:
+        token: ${{ secrets.BOT_GITHUB_ACCESS_PACKAGES_TOKEN }}
+        submodules: recursive
+    - name: Checkout submodules
+      run: git submodule sync && git submodule update --init --recursive
 
 
     - name: Setup .NET SDK
@@ -49,10 +54,10 @@ jobs:
     #       $json.Replace("../", "$repository/") | Out-File -Path $_.FullName -Force
     #     }
 
-    #- name: Restore NuGet packages
-    #  shell: bash
-    #  run: |
-    #    dotnet restore .
+    - name: Restore NuGet packages
+      shell: bash
+      run: |
+        dotnet restore .
     - name: Build solution
       shell: bash
       run: |
