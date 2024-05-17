@@ -53,6 +53,7 @@
 }
 
 .thumbnail {
+    cursor:pointer;
     min-height: 4rem;
     min-width: 4rem;
     max-width: 4rem;

@@ -20,7 +20,7 @@ namespace BlazorApp.Components
         private HeroImage? hero;
 
         private PortfolioCategoryInfo? portfolioCategoryInfo;        
-        private IDictionary<string, object>[] projectsParameters;
+        private IDictionary<string, object>[]? projectsParameters;
 
         
 
@@ -31,7 +31,7 @@ namespace BlazorApp.Components
                 ProjectsInfoPath = Path.Combine(GlobalValues.PortfolioFolderPath, "unity", "unity-projects.json"),
                 Logo = "/images/icons/unity-logo.png"
             };
-            Project[] projects = await Http.GetFromJsonAsync<Project[]>(portfolioCategoryInfo.ProjectsInfoPath);
+            Project[]? projects = await Http.GetFromJsonAsync<Project[]>(portfolioCategoryInfo.ProjectsInfoPath);
             if (projects != null)
             {
                 this.projectsParameters = new Dictionary<string, object>[projects.Length];                

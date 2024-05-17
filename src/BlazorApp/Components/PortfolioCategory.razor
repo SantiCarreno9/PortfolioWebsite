@@ -5,16 +5,19 @@
             {
                 <img class="logo" src=@portfolioCategoryInfo.Logo alt="Unity" />
             }
-        </div>        
+        </div>
         @if (projectsParameters == null)
         {
             <p><em>Loading...</em></p>
         }
         else
         {
+            <CascadingValue Value='"portfolio"'>
             <div style="flex:1">
-                <DynamicCarousel ItemType="typeof(ProjectCard)" ItemsParameters="@projectsParameters"></DynamicCarousel>                
+                <DynamicCarousel Id="unity" ItemType="typeof(ProjectCard)" ItemsParameters="@projectsParameters"></DynamicCarousel>
+                @* <StaticCarousel ItemType="typeof(ProjectCard)" ItemsParameters="@projectsParameters"></StaticCarousel> *@
             </div>
+            </CascadingValue>
         }
     </div>
 </section>
