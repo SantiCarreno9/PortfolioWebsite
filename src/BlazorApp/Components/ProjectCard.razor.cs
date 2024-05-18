@@ -12,6 +12,8 @@ namespace BlazorApp.Components
     {
         [Inject]
         IJSRuntime JsRuntime { get; set; }
+        [Inject]
+        JsMethods JsMethods { get; set; }
 
         [Parameter]
         public Project Project { get; set; }
@@ -54,7 +56,7 @@ namespace BlazorApp.Components
             switch (currentMediaContent.Item1)
             {
                 case MediaContentType.ShortVideo:
-                    await JsRuntime.InvokeVoidAsync("playVideo", shortVideoPlayer);
+                    await JsMethods.PlayVideo(shortVideoPlayer);
                     break;
                 default:
                     StateHasChanged();
@@ -68,13 +70,13 @@ namespace BlazorApp.Components
             switch (currentMediaContent.Item1)
             {
                 case MediaContentType.ShortVideo:
-                    await JsRuntime.InvokeVoidAsync("pauseVideo", shortVideoPlayer);
+                    await JsMethods.PauseVideo(shortVideoPlayer);                    
                     break;
                 case MediaContentType.Video:
-                    await JsRuntime.InvokeVoidAsync("pauseVideo", videoPlayer);
+                    await JsMethods.PauseVideo(videoPlayer);                    
                     break;
                 case MediaContentType.WebVideo:
-                    await JsRuntime.InvokeVoidAsync("stopWebVideo", iFramePlayer);
+                    await JsMethods.PauseVideo(iFramePlayer,isIFrame:true);                    
                     break;
             }
         }
