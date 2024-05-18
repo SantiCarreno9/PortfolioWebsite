@@ -13,10 +13,9 @@
         else
         {
             <CascadingValue Value='"portfolio"'>
-            <div style="flex:1">
-                <DynamicCarousel Id="unity" ItemType="typeof(ProjectCard)" ItemsParameters="@projectsParameters"></DynamicCarousel>
-                @* <StaticCarousel ItemType="typeof(ProjectCard)" ItemsParameters="@projectsParameters"></StaticCarousel> *@
-            </div>
+                <div class="carousel-container">
+                    <DynamicCarousel Id="unity" ItemType="typeof(ProjectCard)" ItemsParameters="@projectsParameters"></DynamicCarousel>
+                </div>
             </CascadingValue>
         }
     </div>

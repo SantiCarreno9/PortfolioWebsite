@@ -29,7 +29,7 @@ namespace BlazorApp.Components
             portfolioCategoryInfo = new PortfolioCategoryInfo
             {
                 ProjectsInfoPath = Path.Combine(GlobalValues.PortfolioFolderPath, "unity", "unity-projects.json"),
-                Logo = "/images/icons/unity-logo.png"
+                Logo = "images/icons/unity-logo.png"
             };
             Project[]? projects = await Http.GetFromJsonAsync<Project[]>(portfolioCategoryInfo.ProjectsInfoPath);
             if (projects != null)

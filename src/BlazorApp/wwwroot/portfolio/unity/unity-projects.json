@@ -23,9 +23,9 @@
       "Object transfer between users."
     ],
     "mediaContent": {
-      "0": [ "/portfolio/unity/Surgery/svideo1.mp4", "/portfolio/unity/Surgery/svideo2.mp4" ],      
+      "0": [ "portfolio/unity/Surgery/svideo1.mp4", "portfolio/unity/Surgery/svideo2.mp4" ],      
       "2": [ "https://www.youtube.com/embed/Jc6QFovmRck?si=5Utht4aecYS4IzpE" ],
-      "3": [ "/portfolio/unity/Surgery/image1.png" ]
+      "3": [ "portfolio/unity/Surgery/image1.png" ]
     },
     "repositoryURL": "https://github.com/SantiCarreno9/MultiplayerSurgerySimulator.git"
   },

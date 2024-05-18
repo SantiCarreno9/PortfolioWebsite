@@ -3,15 +3,16 @@ function muteVideo(element) {
 }
 
 function pauseVideo(element) {
-    element.pause();
+    if (!element.paused)
+        element.pause();
 }
 
 function playVideo(element) {
     element.play();
 }
 
-var stopWebVideo = function (iframe) {
+function stopWebVideo(iframe) {
     //Reassigns source video to "stop it"
     let iframeSrc = iframe.src;
-    iframe.src = iframeSrc;    
+    iframe.src = iframeSrc;
 }

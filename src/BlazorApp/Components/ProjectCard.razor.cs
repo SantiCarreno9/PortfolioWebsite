@@ -12,19 +12,15 @@ namespace BlazorApp.Components
     {
         [Inject]
         IJSRuntime JsRuntime { get; set; }
-        [Inject]
-        JsMethods JsMethods { get; set; }
 
         [Parameter]
         public Project Project { get; set; }
 
-        private bool isVisible { get; set; } = false;
         private List<(MediaContentType, string)> mediaContent = new List<(MediaContentType, string)>();
 
         private (MediaContentType, string) currentMediaContent;
         private int currentMediaIndex = 0;
 
-        private ElementReference component;
         private ElementReference videoPlayer;
         private ElementReference shortVideoPlayer;
         private ElementReference iFramePlayer;
@@ -51,17 +47,7 @@ namespace BlazorApp.Components
             currentMediaContent.Item1 = mediaContent[index].Item1;
             currentMediaContent.Item2 = mediaContent[index].Item2;
             currentMediaIndex = index;
-        }
-
-        private async Task MuteAutoplayVideo()
-        {
-            await JsRuntime.InvokeVoidAsync("muteVideo", shortVideoPlayer);
-        }
-
-        protected override async Task OnAfterRenderAsync(bool firstRender)
-        {
-            isVisible = await JsMethods.IsElementVisible(component);
-        }
+        }    
 
         public async void StartRendering()
         {

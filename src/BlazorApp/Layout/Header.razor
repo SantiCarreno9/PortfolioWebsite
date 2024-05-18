@@ -1,19 +1,8 @@
 @inject NavigationManager NavigationManager
 
-@* <div id="header">
+<div id="header">
     <a href="#home" target="_top">Home</a>
     <a href="#about" target="_top">About</a>
     <a href="#portfolio" target="_top">Portfolio</a>
     <a href="#contact" target="_top">Contact</a>
-</div> *@
-
-<div id="header">
-    <a href="#home" @onclick='()=>ScrollTo("#home")' @onclick:preventDefault>Home</a>
-    <a href="#about" @onclick='()=>ScrollTo("#about")' @onclick:preventDefault>About</a>
-    <a href="#portfolio" @onclick='()=>ScrollTo("#portfolio")' @onclick:preventDefault>Portfolio</a>
-    <a href="#contact" @onclick='()=>ScrollTo("#contact")' @onclick:preventDefault>Contact</a>
 </div>
-
-@code {
-    private void ScrollTo(string target) => NavigationManager.NavigateTo(target, true);    
-}

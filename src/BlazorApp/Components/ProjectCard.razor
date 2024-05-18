@@ -1,6 +1,6 @@
-<div class="custom-container" @ref=component>
+<div class="custom-container">
     <div class="media-container">
-        <div class="media-content-container">
+        <div class="media-content-container">        
             @if (!string.IsNullOrEmpty(currentMediaContent.Item2))
             {
                 @GetContentToDisplay(currentMediaContent)
@@ -11,16 +11,15 @@
             {
                 @foreach (int i in Enumerable.Range(0, mediaContent.Count))
                 {
-                    <div class="thumbnail @(currentMediaIndex==i?"active":"")" @onclick="()=>SelectContent(i)">                        
+                    <div class="thumbnail @(currentMediaIndex==i?"active":"")" @onclick="()=>SelectContent(i)">
                         @if (mediaContent[i].Item1 == MediaContentType.Image)
                         {
-                            <img src="@mediaContent[i].Item2" />                            
+                            <img src="@mediaContent[i].Item2" />
                         }
                         else
-                        {
-                            @* @GetThumbnail(mediaContent[i].Item2) *@
+                        {                            
                             <i class="far fa-play-circle"></i>
-                        }                        
+                        }
                     </div>
                 }
             }
@@ -55,8 +54,8 @@
             case MediaContentType.Video:
                 return
                 @<video class="media-content" controls @ref=videoPlayer>
-                    <source src="@content.Item2" type="video/mp4">
-                </video>;
+        <source src="@content.Item2" type="video/mp4">
+    </video>;
             case MediaContentType.ShortVideo:
                 return@<video id="short-video" class="media-content" src=@content.Item2 autoplay muted loop playsinline preload="auto" @ref=shortVideoPlayer />;
             case MediaContentType.WebVideo:
