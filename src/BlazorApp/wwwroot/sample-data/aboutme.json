@@ -1,11 +1,8 @@
 {
-  "description": "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.",
-  "skills": [
-    "Game programming",
-    "C#",
-    "Git",
-    "Problem Solving",
-    ".NET"    
-  ],
-  "detailOrQuote": "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all."
+  "description": "I am a Mechatronic Engineer with a strong passion for coding and software development. Professionally, I specialize in developing robust and interactive applications using Unity. With a diverse skill set that includes multiple programming languages, web technologies, and industry-standard tools, I bring a creative and problem-solving mindset to every project. My expertise encompasses everything from game development and 3D modeling to web application frameworks, allowing me to design and implement innovative solutions tailored to a variety of needs.",
+  "skills": {
+    "Languages and Technologies": [ "C#", ".NET", "C++", "Blazor", "Java", "Javascript", "HTML", "CSS" ],
+    "Development Tools and Engines": [ "Visual Studio", "Unity", "Unreal Engine", "Blender", "Git"],
+    "Soft skills": [ "Problem solving", "Critical thinking", "Teamwork", "Adaptability", "Leadership" ]
+  }
 }

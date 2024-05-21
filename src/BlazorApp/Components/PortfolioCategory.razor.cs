@@ -1,7 +1,6 @@
 using System.Net.Http.Json;
 
 using BlazorApp.Models;
-using BlazorApp.Services;
 
 using Microsoft.AspNetCore.Components;
 
@@ -10,10 +9,7 @@ namespace BlazorApp.Components
     public partial class PortfolioCategory : ComponentBase
     {
         [Parameter, EditorRequired]
-        public required HttpClient Http { get; set; }
-
-        [Parameter, EditorRequired]
-        public required HeroImageService HeroImageService { get; set; }
+        public required HttpClient Http { get; set; }        
 
         private string containerStyle = "custom-container unity";
 

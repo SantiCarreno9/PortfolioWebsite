@@ -25,6 +25,7 @@ body {
     background-color: var(--main-background-color);
     scroll-behavior: smooth;
     scrollbar-width:none;
+    color:white;
     /*scroll-snap-type: y proximity;*/    
     /*scroll-snap-align: start;
     scroll-snap-type: y proximity;    
