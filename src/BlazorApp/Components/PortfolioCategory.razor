@@ -1,21 +1,16 @@
-<section class="dark" id="portfolio">
-    <div class=@containerStyle>
-        <div class="logo-container">
-            @if (portfolioCategoryInfo != null)
-            {
-                <img class="logo" src=@portfolioCategoryInfo.Logo alt="Unity" />
-            }
-        </div>
+<section id="portfolio">    
+    <a href="#portfolio">
+        <h2>Portfolio</h2>
+    </a>
+    <div class="content-container">
         @if (projectsParameters == null)
         {
             <p><em>Loading...</em></p>
         }
         else
-        {
+        {            
             <CascadingValue Value='"portfolio"'>
-                <div class="carousel-container">
-                    <DynamicCarousel Id="unity" ItemType="typeof(ProjectCard)" ItemsParameters="@projectsParameters"></DynamicCarousel>
-                </div>
+                <DynamicCarousel ItemType="typeof(ProjectCard)" ItemsParameters="@projectsParameters"></DynamicCarousel>
             </CascadingValue>
         }
     </div>

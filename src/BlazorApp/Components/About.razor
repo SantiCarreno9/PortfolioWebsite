@@ -1,7 +1,6 @@
-@* <section class="dark" id="about"> *@
 <section id="about">
     <br>
-    <h2 style="font-weight:600; color:white; font-size:3rem;">About Myself</h2>
+    <h2>About Me</h2>
     <div class="custom-container">
         <div class="picture">
             <img src="images/ProfilePicture.jpeg" />
@@ -17,7 +16,7 @@
                 <hr />
                 @foreach (var key in aboutMe.Skills.Keys)
                 {
-                    <h2>@key</h2>
+                    <h3>@key</h3>
                     <ul>
                         @foreach (var values in aboutMe.Skills[key])
                         {

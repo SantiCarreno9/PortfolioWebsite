@@ -1,7 +1,6 @@
 using BlazorApp.Models;
 
 using Microsoft.AspNetCore.Components;
-using Microsoft.JSInterop;
 
 using RazorSCLibrary;
 using RazorSCLibrary.Interfaces;
@@ -10,8 +9,6 @@ namespace BlazorApp.Components
 {
     public partial class ProjectCard : ComponentBase, ICarouselComponent
     {
-        [Inject]
-        IJSRuntime JsRuntime { get; set; }
         [Inject]
         JsMethods JsMethods { get; set; }
 

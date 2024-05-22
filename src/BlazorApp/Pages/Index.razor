@@ -14,58 +14,10 @@
 
 @*New layout*@
 <Header />
+<div style="width:100%; height:100%;display:flex; flex-direction:column;">
+    <Home Http=@Http HeroImageService=@HeroImageService />
+    <PortfolioCategory Http="@Http"></PortfolioCategory>
+    <About Http=@Http />
+</div>
 @* <HeaderWithPlatforms /> *@
-<Home Http=@Http HeroImageService=@HeroImageService />
-<PortfolioCategory Http="@Http"></PortfolioCategory>
-<About Http=@Http />
 <Footer Http=@Http PrimaryColor="black" SecondaryColor="#D2F1E4" />
-
-@* <div id="div1" @ref="div1Ref">Div 1</div>
-<div id="div2" @ref="div2Ref">Div 2</div>
-<div id="div3" @ref="div3Ref">Div 3</div> *@
-
-<script>
-
-</script>
-
-@code {
-    // private ElementReference div1Ref;
-    // private ElementReference div2Ref;
-    // private ElementReference div3Ref;
-
-    // protected override async Task OnAfterRenderAsync(bool firstRender)
-    // {
-    //     if (firstRender)
-    //     {
-    //         await JSRuntime.InvokeVoidAsync("checkVisibleDiv");
-    //     }
-    // }
-
-    // [JSInvokable]
-    // public async Task CheckVisibleDiv()
-    // {
-    //     var div1 = await JSRuntime.InvokeAsync("getBoundingClientRect", div1Ref);
-    //     var div2 = await JSRuntime.InvokeAsync("getBoundingClientRect", div2Ref);
-    //     var div3 = await JSRuntime.InvokeAsync<>("getBoundingClientRect", div3Ref);
-
-    //     var viewportHeight = window.innerHeight;
-
-    //     if (IsInViewport(div1, viewportHeight))
-    //     {
-    //         Console.WriteLine("Div 1 is currently visible");
-    //     }
-    //     else if (IsInViewport(div2, viewportHeight))
-    //     {
-    //         Console.WriteLine("Div 2 is currently visible");
-    //     }
-    //     else if (IsInViewport(div3, viewportHeight))
-    //     {
-    //         Console.WriteLine("Div 3 is currently visible");
-    //     }
-    // }
-
-    // private static bool IsInViewport(DOMRect elementRect, double viewportHeight)
-    // {
-    //     return elementRect.top >= 0 && elementRect.bottom <= viewportHeight;
-    // }
-}
