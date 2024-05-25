@@ -1,70 +1,81 @@
 [
   {
+    "id": 1,
     "title": "Breakout",
-    "description": "My version of the classic \"Breakout\" game, which features an attractive sci-fi style.",
+    "description": "My version of the classic \"Breakout\" game features an attractive sci-fi style and fun, challenging levels.",
     "bulletItems": [
-      "Power ups",
-      "Music and sound effects"      
+      "Power-Ups: Elevate your gaming experience with power-ups that augment your paddle's size and equip you with lasers, allowing for strategic block destruction.",
+      "Immerse yourself in the sci-fi atmosphere with captivating music and sound effects."
     ],
     "mediaContent": {
       "0": [ "portfolio/unity/Breakout/svideo1.mp4", "portfolio/unity/Breakout/svideo2.mp4" ],
       "2": [ "https://www.youtube.com/embed/aLLGY9lUF_A?si=vTXqca1xJwg1S-8q" ],
-      "3": [ "portfolio/unity/Breakout/image1.png","portfolio/unity/Breakout/image2.png","portfolio/unity/Breakout/image3.png","portfolio/unity/Breakout/image4.png" ]
+      "3": [ "portfolio/unity/Breakout/img1.png", "portfolio/unity/Breakout/img2.png", "portfolio/unity/Breakout/img3.png", "portfolio/unity/Breakout/img4.png" ]
     },
-    "repositoryURL": "https://github.com/SantiCarreno9/MultiplayerSurgerySimulator.git"
+    "categoryId": 1    
   },
   {
+    "id": 2,
     "title": "Collaborative Surgery Simulator",
-    "description": "Prototype of a multi-user environment simulator for lipoma extraction surgery, with some of its features including:",
+    "description": "It is a prototype designed to create a multi-user environment for simulating lipoma extraction surgery. This simulator allows multiple users to engage in a realistic surgical experience, each assuming specific roles such as surgeon, assistant, or resident, and communicating through an integrated voice chat feature. This simulator has garnered academic recognition, including a publication in an IEEE article.",
     "bulletItems": [
-      "Online Multiplayer system where each user can choose a specific role (surgeon, assistant, resident, etc) and chat through a voice chat feature.",
-      "Real time 3D mesh modification.",
-      "Avatars animations, both hand controls.",
-      "Object transfer between users."
+      "Online Multiplayer System: Users can select and perform different roles within the surgical team, enhancing collaborative learning and practice with real-time voice communication.",
+      "Real-Time 3D Mesh Modification: Simulates the surgical cutting process in real time, allowing users to make precise cuts on the 3D model of the skin covering the lipoma, closely mimicking the actual surgical procedure.",
+      "Avatar Animations with hand controls: Includes a procedural rig that enables full hand movement and interaction with objects, providing a realistic and interactive experience.",
+      "Object Transfer Between Users: Facilitates seamless transfer of instruments and objects between users, mirroring the teamwork required in an actual operating room."
     ],
     "mediaContent": {
-      "0": [ "portfolio/unity/Surgery/svideo1.mp4", "portfolio/unity/Surgery/svideo2.mp4" ],      
+      "0": [ "portfolio/unity/Surgery/svideo1.mp4", "portfolio/unity/Surgery/svideo2.mp4" ],
       "2": [ "https://www.youtube.com/embed/Jc6QFovmRck?si=5Utht4aecYS4IzpE" ],
-      "3": [ "portfolio/unity/Surgery/image1.png" ]
+      "3": [ "portfolio/unity/Surgery/img1.png" ]
     },
-    "repositoryURL": "https://github.com/SantiCarreno9/MultiplayerSurgerySimulator.git"
+    "categoryId": 1,
+    "hyperlinks": {
+      "IEEE article": "https://ieeexplore.ieee.org/document/9419164"
+    }
   },
   {
+    "id": 3,
     "title": "UNO 3D",
-    "description": "Videogame of the popular card game UNO, but in a 3D immersive version.",
+    "description": "It is a sophisticated adaptation of the classic card game UNO, presented in an immersive three-dimensional environment. This version retains the beloved gameplay while introducing a minimalist design for the cards, creating an elegant and engaging visual experience.",
     "bulletItems": [
-      "Multiplayer system (up to 6 players).",
-      "Animations for special cards.",
-      "Complete game logic implemented."
+      "Multiplayer System: Accommodates up to six players, making it ideal for both casual and competitive play.",
+      "3D Animations: Features dynamic 3D animations for special cards, enhancing the interactive experience.",
+      "Complete Game Logic: Fully implements the traditional rules and mechanics of UNO, ensuring a seamless and authentic gameplay experience."
     ],
     "mediaContent": {
-      "2": [ "https://www.youtube.com/embed/HDGS-Jimu5M?si=d0NNyWFNcOJw1_4a" ]
+      "2": [ "https://www.youtube.com/embed/HDGS-Jimu5M?si=d0NNyWFNcOJw1_4a" ],
+      "3": [ "portfolio/unity/UNO/img1.png", "portfolio/unity/UNO/img2.png", "portfolio/unity/UNO/img3.png" ]
     },
-    "repositoryURL": "https://www.youtube.com/embed/HDGS-Jimu5M?si=d0NNyWFNcOJw1_4a"
+    "categoryId": 1    
   },
   {
-    "title": "Cookies Game",
-    "description": "Single player game, where the user has to collect as many cookies as possible in a short time while avoiding obstacles",
+    "id": 4,
+    "title": "Cookie Mania",
+    "description": "single-player game designed to test your speed and precision. The goal is simple: collect as many cookies as you can within a limited time while navigating a dynamically changing terrain. Be cautious, as falling off the map will end your run!",
     "bulletItems": [
-      "Procedural map generation.",
-      "Last highest score saved locally"
+      "Procedural Map Generation: Every playthrough offers a unique challenge with maps generated on the fly, ensuring endless replayability and a fresh experience each time you play.",
+      "Stream Writing for Score Storage: Your high scores are efficiently saved using advanced stream writing techniques, allowing you to track and compare your progress seamlessly."
     ],
     "mediaContent": {
-      "2": [ "https://www.youtube.com/embed/zUrW9RkVLnM?si=i2NP5k0hVhGbtMtc" ]
+      "2": [ "https://www.youtube.com/embed/zUrW9RkVLnM?si=i2NP5k0hVhGbtMtc" ],
+      "3": [ "portfolio/unity/Cookies/img1.png" ]
     },
-    "repositoryURL": "https://github.com/SantiCarreno9/MultiplayerSurgerySimulator.git"
+    "categoryId": 1    
   },
   {
-    "title": "Jumping Game",
-    "description": "Based on Google's Dinosaur Game where the player has to dodge obstacles and last as long as possible.",
+    "id": 5,
+    "title": "Jump Command",
+    "description": "Inspired by Google's Dinosaur Game, this game challenges players to dodge obstacles and survive for as long as possible. The game offers a unique twist with the option to control the character using voice commands or the traditional keyboard, making it accessible and engaging for a wide range of players.",
     "bulletItems": [
-      "Control by voice commands (english or spanish) or keyboard.",
-      "Difficulty increases over time.",
-      "Multiplatform (Desktop & Web Browser)"
+      "Voice Command Controls: Play using voice commands in either English or Spanish, or opt for classic keyboard controls for a versatile gaming experience.",
+      "Increasing Difficulty: The game becomes progressively more challenging over time, ensuring that players remain engaged and tested.",
+      "Multiplatform Compatibility: Enjoy the game on both desktop and web browsers, providing flexibility and convenience for players."
     ],
     "mediaContent": {
-      "2": [ "https://www.youtube.com/embed/RJGvawRlqMs?si=wHTpjVGHRpgj4fxc" ]
+      "2": [ "https://www.youtube.com/embed/RJGvawRlqMs?si=wHTpjVGHRpgj4fxc" ],
+      "3": [ "portfolio/unity/Jumping/img1.png" ]
     },
-    "repositoryURL": "https://github.com/SantiCarreno9/MultiplayerSurgerySimulator.git"
+    "categoryId": 1    
   }
 ]

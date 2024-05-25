@@ -2,13 +2,16 @@ namespace BlazorApp.Models;
 
 public class Project
 {
+    public int Id { get; set; }
+    public int CategoryId { get; set; }
     public string Title { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
+    public string Description { get; set; } = string.Empty;    
+    public int? Technologies { get; set; }
+    public int? Tools { get; set; }
     public List<string>? BulletItems { get; set; }
-    public Dictionary<int,List<string>>? MediaContent { get; set; }
-    public List<string>? VideosURL { get; set; }    
-    public List<string>? ImagesURL { get; set; }    
-    public string? RepositoryURL { get; set; }
+    public Dictionary<int,List<string>>? MediaContent { get; set; }    
+    public List<string>? Keywords { get; set; }
+    public Dictionary<string,string>? Hyperlinks { get; set; }
 }
 
 public class MediaType

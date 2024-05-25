@@ -1,0 +1,55 @@
+<section id="portfolio">
+    <a href="#portfolio">
+        <h2>Portfolio</h2>
+    </a>
+    <div class="content-container">
+        @if (Projects == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            var projectsCount = Projects.Count();
+            if (projectsCount > 0)
+            {
+                @* @foreach (var projGroup in GetGroupedProjectsByCategory()) *@
+                {
+                    <div class="container-md">
+                        <div class="row">
+                            <DisplayProjects Projects="GetGroupedProjectsByCategory()" OnProjectSelected="OnItemSelected" Logos="logos"></DisplayProjects>
+                        </div>
+                    </div>
+                }
+            }
+
+        }
+    </div>
+</section>
+@if (isCarouselOpen)
+{
+    <div class="preview-container @(isCarouselOpen?"active":"")">
+        <div class="close-button" @onclick="()=>{isCarouselOpen=false;}">X</div>
+        <div class="preview-content-container">            
+            <DynamicCarousel ItemType="typeof(ProjectCard)" ItemsParameters="@projectsParameters"
+                             IndexToDisplay=GetProjectIndexById(currentProjectId) ShowIndicators=false
+                             SmoothMovement=false></DynamicCarousel>
+        </div>
+    </div>
+}
+
+@code {
+    private RenderFragment GetCurrentProject()
+    {
+        if (projectCards.ContainsKey(currentProjectId))
+            return projectCards[currentProjectId];
+
+        Project project = GetProject(currentProjectId);
+        if (project != null)
+        {
+            RenderFragment card = @<ProjectCard Project="project" />;
+            projectCards.Add(currentProjectId, card);
+            return card;
+        }
+        return @<></>;
+    }
+}

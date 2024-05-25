@@ -1,6 +1,6 @@
 <div class="project-container">
     <div class="media-container">
-        <div class="media-content-container">            
+        <div class="media-content-container">
             @if (!string.IsNullOrEmpty(currentMediaContent.Item2))
             {
                 @GetContentToDisplay(currentMediaContent)
@@ -37,6 +37,13 @@
                     <li>@item</li>
                 }
             </ul>
+        }
+        @if (Project.Hyperlinks != null)
+        {
+            @foreach (var key in Project.Hyperlinks.Keys)
+            {
+                <a href="@Project.Hyperlinks[key]" target="_blank">@key</a>
+            }
         }
     </div>
 </div>

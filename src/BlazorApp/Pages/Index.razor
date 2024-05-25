@@ -14,10 +14,9 @@
 
 @*New layout*@
 <Header />
-<div style="width:100%; height:100%;display:flex; flex-direction:column;">
-    <Home Http=@Http HeroImageService=@HeroImageService />
-    <PortfolioCategory Http="@Http"></PortfolioCategory>
-    <About Http=@Http />
-</div>
+<Home Http=@Http HeroImageService=@HeroImageService />
+@* <PortfolioCategory Http="@Http"></PortfolioCategory> *@
+<Portfolio></Portfolio>
+<About Http=@Http />
 @* <HeaderWithPlatforms /> *@
 <Footer Http=@Http PrimaryColor="black" SecondaryColor="#D2F1E4" />

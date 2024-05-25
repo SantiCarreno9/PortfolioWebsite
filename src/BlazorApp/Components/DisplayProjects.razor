@@ -1,0 +1,16 @@
+@foreach (var project in Projects)
+{
+    <div class="col-md-3 mb-2 d-flex">
+        <div @onclick="()=>TriggerSelection(project.Id)">
+            <div class="card flex-fill">
+                <img class="img-thumbnail" src="@project.MediaContent[(int)MediaContentType.Image][0]" />
+                <div class="card-body">
+                    <h5 class="card-title-mb-3">
+                        @project.Title
+                    </h5>
+                    <img class="category-logo" src=@Logos.GetLogoByCategory(project.CategoryId)/>
+                </div>
+            </div>
+        </div>
+    </div>
+}

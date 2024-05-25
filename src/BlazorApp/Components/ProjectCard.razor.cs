@@ -14,6 +14,8 @@ namespace BlazorApp.Components
 
         [Parameter]
         public Project Project { get; set; }
+        [Parameter]
+        public Logos Logos { get; set; }
 
         private List<(MediaContentType, string)> mediaContent = new List<(MediaContentType, string)>();
 
