@@ -19,6 +19,7 @@ h2 {
     height: 100vh;
     overflow:hidden;
     background-color: rgba(0,0,0,0.7);
+    z-index:11;
 }
 
     .preview-container.active {
