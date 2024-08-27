@@ -2,34 +2,20 @@
   {
     "id": 1,
     "title": "Collaborative Surgery Simulator",
-    "description": "It is a prototype designed to create a multi-user environment for simulating lipoma extraction surgery. This simulator allows multiple users to engage in a realistic surgical experience, each assuming specific roles such as surgeon, assistant, or resident, and communicating through an integrated voice chat feature. This simulator has garnered academic recognition, including a publication in an IEEE article.",
-    "bulletItems": [
-      "Online Multiplayer System: Users can select and perform different roles within the surgical team, enhancing collaborative learning and practice with real-time voice communication.",
-      "Real-Time 3D Mesh Modification: Simulates the surgical cutting process in real time, allowing users to make precise cuts on the 3D model of the skin covering the lipoma, closely mimicking the actual surgical procedure.",
-      "Avatar Animations with hand controls: Includes a procedural rig that enables full hand movement and interaction with objects, providing a realistic and interactive experience.",
-      "Object Transfer Between Users: Facilitates seamless transfer of instruments and objects between users, mirroring the teamwork required in an actual operating room."
-    ],
+    "description": "It is a prototype designed to create a multi-user environment for simulating lipoma extraction surgery. This simulator allows multiple users to engage in a realistic surgical experience, each assuming specific roles such as surgeon, assistant, or resident, and communicating through an integrated voice chat feature. This simulator has garnered academic recognition, including a publication in an <a style=\"text-decoration:underline\" href=https://ieeexplore.ieee.org/document/9419164 target=_blank>IEEE article</a>.<br/><br/><ul><li>Online Multiplayer System: Users can select and perform different roles within the surgical team, enhancing collaborative learning and practice with real-time voice communication.</li><li>Real-Time 3D Mesh Modification: Simulates the surgical cutting process in real time, allowing users to make precise cuts on the 3D model of the skin covering the lipoma, closely mimicking the actual surgical procedure.</li><li>Avatar Animations with hand controls: Includes a procedural rig that enables full hand movement and interaction with objects, providing a realistic and interactive experience.</li><li>Object Transfer Between Users: Facilitates seamless transfer of instruments and objects between users, mirroring the teamwork required in an actual operating room.</li></ul>",
     "mediaContent": {
       "0": [ "portfolio/unity/Surgery/svideo1.mp4", "portfolio/unity/Surgery/svideo2.mp4" ],
       "2": [ "https://www.youtube.com/embed/Jc6QFovmRck?si=f0tlcg1iUswpJ6Tn" ],
       "3": [ "portfolio/unity/Surgery/img1.png" ]
     },
-    "categoryId": 1,
-    "hyperlinks": {
-      "IEEE article": "https://ieeexplore.ieee.org/document/9419164"
-    }
+    "categoryId": 1
   },
   {
     "id": 3,
     "title": "UNO 3D",
-    "description": "It is a sophisticated adaptation of the classic card game UNO, presented in an immersive three-dimensional environment. This version retains the beloved gameplay while introducing a minimalist design for the cards, creating an elegant and engaging visual experience.",
-    "bulletItems": [
-      "Multiplayer System: Accommodates up to six players, making it ideal for both casual and competitive play.",
-      "3D Animations: Features dynamic 3D animations for special cards, enhancing the interactive experience.",
-      "Complete Game Logic: Fully implements the traditional rules and mechanics of UNO, ensuring a seamless and authentic gameplay experience."
-    ],
+    "description": "It is a sophisticated adaptation of the classic card game UNO, presented in an immersive three-dimensional environment. This version retains the beloved gameplay while introducing a minimalist design for the cards, creating an elegant and engaging visual experience.<br/><br/><ul><li>Multiplayer System: Accommodates up to six players, making it ideal for both casual and competitive play.</li><li>3D Animations: Features dynamic 3D animations for special cards, enhancing the interactive experience.</li><li>Complete Game Logic: Fully implements the traditional rules and mechanics of UNO, ensuring a seamless and authentic gameplay experience.</li></ul>",
     "mediaContent": {
-      "2": [ "https://www.youtube.com/embed/zUrW9RkVLnM?si=ap9FCXcJu8D1ImYs" ],
+      "2": [ "https://www.youtube.com/embed/HDGS-Jimu5M?si=ggw39pprL2eYhEp7" ],
       "3": [ "portfolio/unity/UNO/img1.png", "portfolio/unity/UNO/img2.png", "portfolio/unity/UNO/img3.png" ]
     },
     "categoryId": 1
@@ -37,27 +23,18 @@
   {
     "id": 4,
     "title": "Breakout",
-    "description": "My version of the classic \"Breakout\" game features an attractive sci-fi style and fun, challenging levels.",
-    "bulletItems": [
-      "Power-Ups: Elevate your gaming experience with power-ups that augment your paddle's size and equip you with lasers, allowing for strategic block destruction.",
-      "Immerse yourself in the sci-fi atmosphere with captivating music and sound effects."
-    ],
+    "description": "My version of the classic \"Breakout\" game features an attractive sci-fi style and fun, challenging levels.<br/><br/><ul><li>Power-Ups: Elevate your gaming experience with power-ups that augment your paddle's size and equip you with lasers, allowing for strategic block destruction.</li><li>Immerse yourself in the sci-fi atmosphere with captivating music and sound effects.</li></ul>",
     "mediaContent": {
       "0": [ "portfolio/unity/Breakout/svideo1.mp4", "portfolio/unity/Breakout/svideo2.mp4" ],
       "2": [ "https://www.youtube.com/embed/aLLGY9lUF_A?si=vTXqca1xJwg1S-8q" ],
-      "3": [ "portfolio/unity/Breakout/img1.png", "portfolio/unity/Breakout/img2.png"]
+      "3": [ "portfolio/unity/Breakout/img1.png", "portfolio/unity/Breakout/img2.png" ]
     },
     "categoryId": 1
   },
   {
     "id": 5,
     "title": "Pong",
-    "description": "My version of the classic \"Pong\" game features an engaging sci-fi aesthetic and customizable gameplay, enhancing replayability and providing fresh challenges with each playthrough.",
-    "bulletItems": [
-      "Local Multiplayer: Supports up to 4 players, with 2 players using the keyboard and 2 using gamepads.",
-      "Flexible Player Options: Players can choose between competing against human opponents or AI, allowing for a versatile gaming experience.",
-      "Customizable Gameplay: Players can enable or disable obstacles and power-ups to add complexity. Power-ups can freeze opponents or increase their speed, enhancing the challenge and strategic depth of the game."
-    ],
+    "description": "My version of the classic \"Pong\" game features an engaging sci-fi aesthetic and customizable gameplay, enhancing replayability and providing fresh challenges with each playthrough.<br/><br/><ul><li>Local Multiplayer: Supports up to 4 players, with 2 players using the keyboard and 2 using gamepads.</li><li>Flexible Player Options: Players can choose between competing against human opponents or AI, allowing for a versatile gaming experience.</li><li>Customizable Gameplay: Players can enable or disable obstacles and power-ups to add complexity. Power-ups can freeze opponents or increase their speed, enhancing the challenge and strategic depth of the game.</li></ul>",
     "mediaContent": {
       "0": [ "portfolio/unity/Pong/svideo1.mp4", "portfolio/unity/Pong/svideo2.mp4" ],
       "2": [ "https://www.youtube.com/embed/IgG47VEhGR8?si=Y01nercIkCEmUPrj" ],
@@ -68,11 +45,7 @@
   {
     "id": 6,
     "title": "Tira Island",
-    "description": "This project is a 2D action/adventure platformer demo developed collaboratively with two colleagues. I was responsible for all programming aspects related to gameplay, enemies, and player controls.",
-    "bulletItems": [
-      "Modular Weapon System: Implemented a modular weapon system utilizing object pooling to optimize performance and adhere to good coding practices.",
-      "Development Tools: Created various tools to simplify the addition of new enemy types and features, enhancing the overall gameplay experience."
-    ],
+    "description": "This project is a 2D action/adventure platformer demo developed collaboratively with two colleagues. I was responsible for all programming aspects related to gameplay, enemies, and player controls.<br/><br/><ul><li>Modular Weapon System: Implemented a modular weapon system utilizing object pooling to optimize performance and adhere to good coding practices.</li><li>Development Tools: Created various tools to simplify the addition of new enemy types and features, enhancing the overall gameplay experience.</li></ul>",
     "mediaContent": {
       "0": [ "portfolio/unity/Tira/svideo1.mp4", "portfolio/unity/Tira/svideo2.mp4" ],
       "2": [ "https://www.youtube.com/embed/2b1zo4DpeP4?si=b4eSf0j_y_bXV4TF" ],
@@ -83,12 +56,7 @@
   {
     "id": 7,
     "title": "Jump Command",
-    "description": "Inspired by Google's Dinosaur Game, this game challenges players to dodge obstacles and survive for as long as possible. The game offers a unique twist with the option to control the character using voice commands or the traditional keyboard, making it accessible and engaging for a wide range of players.",
-    "bulletItems": [
-      "Voice Command Controls: Play using voice commands in either English or Spanish, or opt for classic keyboard controls for a versatile gaming experience.",
-      "Increasing Difficulty: The game becomes progressively more challenging over time, ensuring that players remain engaged and tested.",
-      "Multiplatform Compatibility: Enjoy the game on both desktop and web browsers, providing flexibility and convenience for players."
-    ],
+    "description": "Inspired by Google's Dinosaur Game, this game challenges players to dodge obstacles and survive for as long as possible. The game offers a unique twist with the option to control the character using voice commands or the traditional keyboard, making it accessible and engaging for a wide range of players.<br/><br/><ul><li>Voice Command Controls: Play using voice commands in either English or Spanish, or opt for classic keyboard controls for a versatile gaming experience.</li><li>Increasing Difficulty: The game becomes progressively more challenging over time, ensuring that players remain engaged and tested.</li><li>Multiplatform Compatibility: Enjoy the game on both desktop and web browsers, providing flexibility and convenience for players.</li></ul>",
     "mediaContent": {
       "2": [ "https://www.youtube.com/embed/RJGvawRlqMs?si=WTj8VESsevdGaWD2" ],
       "3": [ "portfolio/unity/Jumping/img1.png" ]
@@ -98,11 +66,7 @@
   {
     "id": 8,
     "title": "Cookie Mania",
-    "description": "single-player game designed to test your speed and precision. The goal is simple: collect as many cookies as you can within a limited time while navigating a dynamically changing terrain. Be cautious, as falling off the map will end your run!",
-    "bulletItems": [
-      "Procedural Map Generation: Every playthrough offers a unique challenge with maps generated on the fly, ensuring endless replayability and a fresh experience each time you play.",
-      "Stream Writing for Score Storage: Your high scores are efficiently saved using advanced stream writing techniques, allowing you to track and compare your progress seamlessly."
-    ],
+    "description": "single-player game designed to test your speed and precision. The goal is simple: collect as many cookies as you can within a limited time while navigating a dynamically changing terrain. Be cautious, as falling off the map will end your run!<br/><br/><ul><li>Procedural Map Generation: Every playthrough offers a unique challenge with maps generated on the fly, ensuring endless replayability and a fresh experience each time you play.</li><li>Stream Writing for Score Storage: Your high scores are efficiently saved using advanced stream writing techniques, allowing you to track and compare your progress seamlessly.</li></ul>",
     "mediaContent": {
       "2": [ "https://www.youtube.com/embed/zUrW9RkVLnM?si=ap9FCXcJu8D1ImYs" ],
       "3": [ "portfolio/unity/Cookies/img1.png" ]

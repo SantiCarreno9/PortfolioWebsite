@@ -7,11 +7,9 @@ public class Project
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;    
     public int? Technologies { get; set; }
-    public int? Tools { get; set; }
-    public List<string>? BulletItems { get; set; }
+    public int? Tools { get; set; }    
     public Dictionary<int,List<string>>? MediaContent { get; set; }    
-    public List<string>? Keywords { get; set; }
-    public Dictionary<string,string>? Hyperlinks { get; set; }
+    public List<string>? Keywords { get; set; }    
 }
 
 public class MediaType

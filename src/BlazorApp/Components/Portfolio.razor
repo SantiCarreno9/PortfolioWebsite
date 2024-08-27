@@ -15,9 +15,7 @@
                 @* @foreach (var projGroup in GetGroupedProjectsByCategory()) *@
                 {
                     <div class="container-md">
-                        <div class="row">
-                            <DisplayProjects Projects="GetGroupedProjectsByCategory()" OnProjectSelected="OnItemSelected" Logos="logos"></DisplayProjects>
-                        </div>
+                        <DisplayProjects Projects="GetGroupedProjectsByCategory()" OnProjectSelected="OnItemSelected" Logos="logos"></DisplayProjects>
                     </div>
                 }
             }
@@ -25,11 +23,14 @@
         }
     </div>
 </section>
+
 @if (isCarouselOpen)
 {
     <div class="preview-container @(isCarouselOpen?"active":"")">
-        <div class="close-button" @onclick="()=>{isCarouselOpen=false;}">X</div>
-        <div class="preview-content-container">            
+        <div class="w-100 p-2 text-end">
+            <button class="btn-close" @onclick="()=>{isCarouselOpen=false;}"></button>
+        </div>
+        <div class="preview-content-container">
             <DynamicCarousel ItemType="typeof(ProjectCard)" ItemsParameters="@projectsParameters"
                              IndexToDisplay=GetProjectIndexById(currentProjectId) ShowIndicators=false
                              SmoothMovement=false></DynamicCarousel>

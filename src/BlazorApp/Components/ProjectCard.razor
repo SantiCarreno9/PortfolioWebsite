@@ -28,23 +28,7 @@
     <div class="description">
         <h3 style="text-align:left">@Project.Title</h3>
         <br>
-        @Project.Description
-        @if (Project.BulletItems != null)
-        {
-            <ul>
-                @foreach (var item in Project.BulletItems)
-                {
-                    <li>@item</li>
-                }
-            </ul>
-        }
-        @if (Project.Hyperlinks != null)
-        {
-            @foreach (var key in Project.Hyperlinks.Keys)
-            {
-                <a href="@Project.Hyperlinks[key]" target="_blank">@key</a>
-            }
-        }
+        @((MarkupString)Project.Description)        
     </div>
 </div>
 

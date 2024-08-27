@@ -10,7 +10,7 @@ public sealed class HeroImageService : IDisposable
 
     public HeroImageService(HttpClient client)
     {
-        _client = client;
+        _client = client;        
         _getHeroImagesTask =
             _client.GetFromJsonAsync<List<HeroImage>>(
                 "sample-data/heroimages.json");

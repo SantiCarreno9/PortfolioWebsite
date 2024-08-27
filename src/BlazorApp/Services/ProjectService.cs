@@ -4,7 +4,7 @@ using System.Net.Http.Json;
 
 namespace BlazorApp.Services
 {
-    public class ProjectService:IDisposable
+    public class ProjectService : IDisposable
     {
         private readonly HttpClient httpClient;
         private readonly Task<IEnumerable<Project>?> getProjectsTask;
@@ -19,19 +19,24 @@ namespace BlazorApp.Services
         {
             try
             {
-                var response = await this.httpClient.GetAsync(GlobalValues.ProjectsFolderPath);
-                if (response.IsSuccessStatusCode)
+                List<Project> projects = new();
+                for (int i = 0; i < GlobalValues.ProjectsFolderPaths.Length; i++)
                 {
-                    if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
-                        return Enumerable.Empty<Project>();
+                    var response = await this.httpClient.GetAsync(GlobalValues.ProjectsFolderPaths[i]);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                            return Enumerable.Empty<Project>();
 
-                    return await response.Content.ReadFromJsonAsync<IEnumerable<Project>>();
+                        projects.AddRange(await response.Content.ReadFromJsonAsync<IEnumerable<Project>>());
+                    }
+                    else
+                    {
+                        var message = await response.Content.ReadAsStringAsync();
+                        throw new Exception(message);
+                    }
                 }
-                else
-                {
-                    var message = await response.Content.ReadAsStringAsync();
-                    throw new Exception(message);
-                }
+                return projects;
             }
             catch (Exception)
             {
