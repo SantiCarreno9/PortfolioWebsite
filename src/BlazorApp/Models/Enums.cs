@@ -41,3 +41,11 @@ public enum DevelopmentTools
     Unreal = 2,
     Blender = 4
 }
+
+public enum ProjectCategory
+{
+    Design,
+    Development,
+    Marketing,
+    Research
+}

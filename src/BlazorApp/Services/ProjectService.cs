@@ -53,7 +53,8 @@ namespace BlazorApp.Services
         public async Task<IEnumerable<Project>?> GetProjectsByCategory(Category category)
         {
             var projects = await getProjectsTask;
-            return projects?.Where(x => x.CategoryId == (int)category);
+            var categoryName = Enum.GetName(typeof(Category), category)??"";
+            return projects?.Where(x => x.Category.ToString() == categoryName);
         }
 
         public void Dispose()

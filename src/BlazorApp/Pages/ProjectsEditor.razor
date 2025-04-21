@@ -1,0 +1,65 @@
+@page "/projectseditor"
+
+<div>
+    <div class="m-5">
+        <h3>Project Editor</h3>
+
+        <EditForm Model="@project">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div>
+                <label for="title">Title:</label>
+                <InputText id="title" @bind-Value="project.Title" class="form-control" />
+            </div>
+
+            <div>
+                <label for="description">Description:</label>
+                <InputTextArea id="description" @bind-Value="project.Description" class="form-control" />
+            </div>
+
+            <div>
+                <label for="category">Category:</label>
+                <InputSelect id="category" @bind-Value="project.Category" class="form-control">
+                    @foreach (var category in Enum.GetValues<ProjectCategory>())
+                    {
+                        <option value="@category">@category</option>
+                    }
+                </InputSelect>
+            </div>
+
+            <div>
+                <h4>Keywords</h4>
+                <button @onclick="()=>{project.Keywords.Add(string.Empty);}" @onclick:preventDefault>+</button>
+                @for (int i = 0; i < project.Keywords.Count; i++)
+                {
+                    <div>
+                        <InputText class="form-control" @bind-Value="project.Keywords[i]" />
+                    </div>
+                }
+                @* <InputText id="url" @bind-Value="project.Url" class="form-control" /> *@
+            </div>
+            @* <div>
+        <label for="keywords">Keywords:</label>
+        <InputText id="keywords" @bind-Value="project.Keywords" class="form-control" />
+    </div>
+
+    <div>
+        <label for="mediaContent">Media Content:</label>
+        <InputFile OnChange="HandleFileSelected" />
+    </div> *@
+
+            <button type="submit" class="btn btn-primary">Save</button>
+        </EditForm>
+    </div>
+    <ProjectCard Project="project"></ProjectCard>
+</div>
+
+@code {
+    private Project project = new Project();
+
+    private void HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        // Handle file upload logic here
+    }
+}
