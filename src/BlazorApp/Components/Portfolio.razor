@@ -2,26 +2,37 @@
     <a href="#portfolio">
         <h2>Portfolio</h2>
     </a>
-    <div class="content-container">
-        @if (Projects == null)
-        {
-            <p><em>Loading...</em></p>
-        }
-        else
-        {
-            var projectsCount = Projects.Count();
-            if (projectsCount > 0)
-            {
-                @* @foreach (var projGroup in GetGroupedProjectsByCategory()) *@
-                {
-                    <div class="container-md">
-                        <DisplayProjects Projects="GetGroupedProjectsByCategory()" OnProjectSelected="OnItemSelected" Logos="logos"></DisplayProjects>
-                    </div>
-                }
-            }
+    @if (_projects == null || _projectCategories == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="content-container d-flex flex-column">
+            @* <div class="row">
 
-        }
-    </div>
+            </div> *@
+
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                @{
+                    var index = 0;
+                }
+                @foreach (var categoryInfo in _projectCategories)
+                {
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio@(index)" autocomplete="off" @onchange="async()=>await SetProjectCategory(categoryInfo.Category)">
+                    <label class="btn btn-outline-light" for="btnradio@(index)">@categoryInfo.Name</label>
+                    index++;
+                }
+            </div>
+
+            @if (_projects.Count() > 0)
+            {
+                <div class="container-md">
+                    <DisplayProjects Projects="_projects" OnProjectSelected="OnItemSelected" Logos="logos"></DisplayProjects>
+                </div>
+            }
+        </div>
+    }
 </section>
 
 @if (isCarouselOpen)
@@ -39,18 +50,18 @@
 }
 
 @code {
-    private RenderFragment GetCurrentProject()
-    {
-        if (projectCards.ContainsKey(currentProjectId))
-            return projectCards[currentProjectId];
+    // private RenderFragment GetCurrentProject()
+    // {
+    //     if (projectCards.ContainsKey(currentProjectId))
+    //         return projectCards[currentProjectId];
 
-        Project project = GetProject(currentProjectId);
-        if (project != null)
-        {
-            RenderFragment card = @<ProjectCard Project="project" />;
-            projectCards.Add(currentProjectId, card);
-            return card;
-        }
-        return @<></>;
-    }
+    //     Project project = GetProject(currentProjectId);
+    //     if (project != null)
+    //     {
+    //         RenderFragment card = @<ProjectCard Project="project" />;
+    //         projectCards.Add(currentProjectId, card);
+    //         return card;
+    //     }
+    //     return @<></>;
+    // }
 }

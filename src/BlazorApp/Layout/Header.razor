@@ -1,8 +1,14 @@
+@using Microsoft.AspNetCore.Components.WebAssembly.Hosting
 @inject NavigationManager NavigationManager
+@inject IWebAssemblyHostEnvironment WebAssemblyHostEnvironment
 
 <div id="header">
     <a href="#home" target="_top">Home</a>
     <a href="#portfolio" target="_top">Portfolio</a>
     <a href="#about" target="_top">About</a>    
     <a href="#contact" target="_top">Contact</a>
+    @if (WebAssemblyHostEnvironment.IsDevelopment())
+    {
+        <a href="/projectseditor" target="_top">Editor</a>
+    }
 </div>

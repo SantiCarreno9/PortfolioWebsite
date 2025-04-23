@@ -44,8 +44,8 @@ public enum DevelopmentTools
 
 public enum ProjectCategory
 {
-    Design,
-    Development,
-    Marketing,
+    All,
+    Game,
+    Web,
     Research
 }

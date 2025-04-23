@@ -1,10 +1,20 @@
 @page "/projectseditor"
 
+<Header />
 <div>
     <div class="m-5">
         <h3>Project Editor</h3>
+        <InputFile OnChange="LoadJsonFile" accept=".json" />        
 
-        <EditForm Model="@project">
+        <button @onclick="DownloadJson">Download Edited Projects</button>
+
+        @if (_projects != null)
+        {
+            <p>Loaded Projects: @(_projects.Count)</p>
+            <DisplayProjects Projects="_projects" OnProjectSelected="SelectProject"></DisplayProjects>
+        }        
+
+        <EditForm Model="@project" OnSubmit="SaveChanges">
             <DataAnnotationsValidator />
             <ValidationSummary />
 
@@ -43,11 +53,11 @@
         <label for="keywords">Keywords:</label>
         <InputText id="keywords" @bind-Value="project.Keywords" class="form-control" />
     </div>
-
-    <div>
-        <label for="mediaContent">Media Content:</label>
-        <InputFile OnChange="HandleFileSelected" />
-    </div> *@
+    *@
+            <div>
+                <label for="mediaContent">Media Content:</label>
+                <InputFile OnChange="HandleFileSelected" />
+            </div>
 
             <button type="submit" class="btn btn-primary">Save</button>
         </EditForm>
@@ -55,11 +65,34 @@
     <ProjectCard Project="project"></ProjectCard>
 </div>
 
+<script>
+    window.downloadFileFromStream = async (fileName, contentStreamReference) => {
+        const arrayBuffer = await contentStreamReference.arrayBuffer();
+        const blob = new Blob([arrayBuffer]);
+        const url = URL.createObjectURL(blob);
+
+        const handle = await window.showSaveFilePicker({
+            suggestedName: fileName,
+            types: [{
+                description: 'JSON Files',
+                accept: { 'application/json': ['.json'] }
+            }]
+        });
+
+        const writable = await handle.createWritable();
+        await writable.write(blob);
+        await writable.close();
+
+        URL.revokeObjectURL(url);
+    };
+</script>
+
 @code {
     private Project project = new Project();
 
     private void HandleFileSelected(InputFileChangeEventArgs e)
     {
+
         // Handle file upload logic here
     }
 }

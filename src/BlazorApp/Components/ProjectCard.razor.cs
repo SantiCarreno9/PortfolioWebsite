@@ -45,6 +45,8 @@ namespace BlazorApp.Components
 
         private void SelectContent(int index)
         {
+            if(mediaContent.Count == 0)
+                return;
             currentMediaContent.Item1 = mediaContent[index].Item1;
             currentMediaContent.Item2 = mediaContent[index].Item2;
             currentMediaIndex = index;
