@@ -22,10 +22,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-      with:
-        submodules: recursive
-    - name: Checkout submodules
-      run: git submodule sync && git submodule update --init --recursive
 
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v4
@@ -37,7 +33,7 @@ jobs:
     #   run: |
     #     $filepath = "./src/BlazorApp/wwwroot/index.html"
     #     $repository = "${{ github.repository }}" -replace "${{ github.repository_owner }}", ""
-    # 
+
     #     $html = Get-Content -Path $filepath
     #     $html -replace "<base href=`"/`" />", "<base href=`"$repository/`" />" | Out-File -Path $filepath -Force
 
@@ -46,7 +42,7 @@ jobs:
     #   run: |
     #     $filepath = "./src/BlazorApp/wwwroot/sample-data"
     #     $repository = "${{ github.repository }}" -replace "${{ github.repository_owner }}", ""
-    # 
+
     #     Get-ChildItem -Path $filepath -Filter "*.json" | ForEach-Object {
     #       $json = Get-Content -Path $_.FullName
     #       $json.Replace("../", "$repository/") | Out-File -Path $_.FullName -Force
@@ -56,20 +52,24 @@ jobs:
       shell: bash
       run: |
         dotnet restore .
+
     - name: Build solution
       shell: bash
       run: |
         dotnet build .
+
     - name: Test solution
       shell: bash
       run: |
         dotnet test . -c Release
+
     - name: Publish artifact
       shell: bash
       run: |
         dotnet publish src/BlazorApp -c Release -o published
+
     - name: Upload artifact for web
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v1
       with:
         path: published/wwwroot
 
