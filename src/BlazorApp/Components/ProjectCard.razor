@@ -1,20 +1,20 @@
 <div class="project-container">
     <div class="media-container">
         <div class="media-content-container">
-            @if (!string.IsNullOrEmpty(currentMediaContent.Item2))
+            @if (!string.IsNullOrEmpty(_currentMediaContent.Item2))
             {
-                @GetContentToDisplay(currentMediaContent)
+                @GetContentToDisplay(_currentMediaContent)
             }
         </div>
         <div class="thumbnails-scroller">
-            @if (Project.MediaContent != null)
+            @if (Project.MediaContentDirectories != null)
             {
-                @foreach (int i in Enumerable.Range(0, mediaContent.Count))
+                @foreach (int i in Enumerable.Range(0, _mediaContent.Count))
                 {
                     <div class="thumbnail @(currentMediaIndex==i?"active":"")" @onclick="()=>SelectContent(i)">
-                        @if (mediaContent[i].Item1 == MediaContentType.Image)
+                        @if (_mediaContent[i].Item1 == MediaContentType.Image)
                         {
-                            <img src="@mediaContent[i].Item2" />
+                            <img src="@_mediaContent[i].Item2" />
                         }
                         else
                         {
@@ -27,28 +27,42 @@
     </div>
     <div class="description">
         <h3 style="text-align:left">@Project.Title</h3>
+        @if (Project.Keywords != null && Project.Keywords.Count > 0)
+        {
+            <div class="d-flex">
+                @foreach (var keyword in Project.Keywords)
+                {
+                    <div class="m-1">
+                        <span class="badge rounded-pill text-bg-light text-black">@keyword</span>
+                    </div>
+                }
+            </div>
+        }
         <br>
-        @((MarkupString)Project.Description)        
+        @((MarkupString)Project.Description)
     </div>
 </div>
 
 @code {
 
-    private RenderFragment GetContentToDisplay((MediaContentType, string) content)
+    private RenderFragment GetContentToDisplay((MediaContentType?, string?) content)
     {
+        if (content.Item1 == null || content.Item2 == null)
+            return @<></>;
+
         switch (content.Item1)
         {
             case MediaContentType.Image:
                 return @<img class="media-content" src=@content.Item2 />;
             case MediaContentType.Video:
                 return
-                @<video class="media-content" controls @ref=videoPlayer>
-        <source src="@content.Item2" type="video/mp4">
-    </video>;
+                @<video class="media-content" controls @ref=_videoPlayer>
+    <source src="@content.Item2" type="video/mp4">
+</video>;
             case MediaContentType.ShortVideo:
-                return@<video id="short-video" class="media-content" src=@content.Item2 autoplay muted loop playsinline @ref=shortVideoPlayer />;
+                return@<video id="short-video" class="media-content" src=@content.Item2 autoplay muted loop playsinline @ref=_shortVideoPlayer />;
             case MediaContentType.WebVideo:
-                return@<iframe class="media-content" src=@content.Item2 loading="lazy" allowfullscreen="" @ref=iFramePlayer />;
+                return@<iframe class="media-content" src=@content.Item2 loading="lazy" allowfullscreen="" @ref=_iFramePlayer />;
             default:
                 return@<></>;
         }

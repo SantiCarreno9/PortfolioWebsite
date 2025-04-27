@@ -17,45 +17,48 @@ namespace BlazorApp.Components
         [Parameter]
         public Logos Logos { get; set; }
 
-        private List<(MediaContentType, string)> mediaContent = new List<(MediaContentType, string)>();
+        private List<(MediaContentType, string)> _mediaContent = new List<(MediaContentType, string)>();
 
-        private (MediaContentType, string) currentMediaContent;
+        private (MediaContentType?, string?) _currentMediaContent;
         private int currentMediaIndex = 0;
 
-        private ElementReference videoPlayer;
-        private ElementReference shortVideoPlayer;
-        private ElementReference iFramePlayer;
+        private ElementReference? _videoPlayer;
+        private ElementReference? _shortVideoPlayer;
+        private ElementReference? _iFramePlayer;
 
-        protected override void OnInitialized()
-        {
-            if (Project.MediaContent == null)
-                return;
-
-            for (int i = 0; i < 4; i++)
+        protected override async Task OnParametersSetAsync()
+        {            
+            var contentTypes = Enum.GetValues(typeof(MediaContentType)).Cast<MediaContentType>().ToList();
+            _mediaContent = new List<(MediaContentType, string)>();
+            foreach (var contentType in contentTypes)
             {
-                if (!Project.MediaContent.ContainsKey(i))
+                if (!Project.MediaContentDirectories.ContainsKey(contentType))
                     continue;
-                foreach (var item in Project.MediaContent[i])
+                foreach (var item in Project.MediaContentDirectories[contentType])
                 {
-                    mediaContent.Add(((MediaContentType)i, item));
+                    _mediaContent.Add((contentType, item));
                 }
             }
             SelectContent(0);
+            await base.OnParametersSetAsync();
         }
 
         private void SelectContent(int index)
         {
-            currentMediaContent.Item1 = mediaContent[index].Item1;
-            currentMediaContent.Item2 = mediaContent[index].Item2;
+            if (_mediaContent.Count == 0)
+                return;
+            _currentMediaContent.Item1 = _mediaContent[index].Item1;
+            _currentMediaContent.Item2 = _mediaContent[index].Item2;
             currentMediaIndex = index;
-        }    
+        }
 
         public async void StartRendering()
         {
-            switch (currentMediaContent.Item1)
+            switch (_currentMediaContent.Item1)
             {
                 case MediaContentType.ShortVideo:
-                    await JsMethods.PlayVideo(shortVideoPlayer);
+                    if (_shortVideoPlayer.HasValue)
+                        await JsMethods.PlayVideo(_shortVideoPlayer.Value);
                     break;
                 default:
                     StateHasChanged();
@@ -63,19 +66,35 @@ namespace BlazorApp.Components
             }
         }
 
+        public void Rerender()
+        {
+            StateHasChanged();
+        }
+
+        public void Reset()
+        {
+            _currentMediaContent = (null, null);
+            currentMediaIndex = 0;
+            _mediaContent.Clear();
+            StateHasChanged();
+        }
+
         public async void StopRendering()
         {
             SelectContent(0);
-            switch (currentMediaContent.Item1)
+            switch (_currentMediaContent.Item1)
             {
                 case MediaContentType.ShortVideo:
-                    await JsMethods.PauseVideo(shortVideoPlayer);                    
+                    if (_shortVideoPlayer.HasValue)
+                        await JsMethods.PauseVideo(_shortVideoPlayer.Value);
                     break;
                 case MediaContentType.Video:
-                    await JsMethods.PauseVideo(videoPlayer);                    
+                    if (_videoPlayer.HasValue)
+                        await JsMethods.PauseVideo(_videoPlayer.Value);
                     break;
                 case MediaContentType.WebVideo:
-                    await JsMethods.PauseVideo(iFramePlayer,isIFrame:true);                    
+                    if (_iFramePlayer.HasValue)
+                        await JsMethods.PauseVideo(_iFramePlayer.Value, isIFrame: true);
                     break;
             }
         }

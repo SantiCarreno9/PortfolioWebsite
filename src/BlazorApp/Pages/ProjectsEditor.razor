@@ -1,65 +1,143 @@
 @page "/projectseditor"
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.Inputs
 
+<Header />
 <div>
     <div class="m-5">
         <h3>Project Editor</h3>
-
-        <EditForm Model="@project">
-            <DataAnnotationsValidator />
-            <ValidationSummary />
-
-            <div>
-                <label for="title">Title:</label>
-                <InputText id="title" @bind-Value="project.Title" class="form-control" />
+        <div class="d-flex mt-2">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Portfolio Json File</label>
+                <InputFile id="form-file" class="form-control" OnChange="LoadJsonFile" accept=".json" />
             </div>
-
-            <div>
-                <label for="description">Description:</label>
-                <InputTextArea id="description" @bind-Value="project.Description" class="form-control" />
+            <div class="mx-3 pt-3 align-content-center">
+                <button class="btn btn-secondary" @onclick="DownloadJson">Download</button>
             </div>
+        </div>
+        @if (_projects != null)
+        {
+            <p>Loaded Projects: @(_projects.Count)</p>
+            <DisplayProjects Projects="_projects" OnProjectSelected="SelectProject"></DisplayProjects>
+        }
 
-            <div>
-                <label for="category">Category:</label>
-                <InputSelect id="category" @bind-Value="project.Category" class="form-control">
-                    @foreach (var category in Enum.GetValues<ProjectCategory>())
-                    {
-                        <option value="@category">@category</option>
-                    }
-                </InputSelect>
-            </div>
+        <div class="row">
+            <div class="col">
+                <EditForm Model="@project" OnSubmit="SaveChanges" id="project-edit-form">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
 
-            <div>
-                <h4>Keywords</h4>
-                <button @onclick="()=>{project.Keywords.Add(string.Empty);}" @onclick:preventDefault>+</button>
-                @for (int i = 0; i < project.Keywords.Count; i++)
-                {
                     <div>
-                        <InputText class="form-control" @bind-Value="project.Keywords[i]" />
+                        <label for="title">Title:</label>
+                        <InputText id="title" @bind-Value="project.Title" class="form-control" />
                     </div>
-                }
-                @* <InputText id="url" @bind-Value="project.Url" class="form-control" /> *@
+
+                    <div>
+                        <label for="description">Description:</label>
+                        <SfRichTextEditor @bind-Value="@project.Description" Placeholder="Type something..." EditorMode="EditorMode.HTML" />
+                    </div>
+
+                    <div>
+                        <label for="category">Category:</label>
+                        <InputSelect id="category" @bind-Value="project.Category" class="form-control">
+                            @foreach (var category in Enum.GetValues<ProjectCategory>())
+                            {
+                                <option value="@category">@category</option>
+                            }
+                        </InputSelect>
+                    </div>
+
+                    <DynamicTextList @ref="_keywords" Title="Keywords" Items="project.Keywords" OnChanged="(values)=>{project.Keywords = values; StateHasChanged();}" />
+                    <div class="mb-3">
+                        <h5>Media Content:</h5>
+                        @{
+                            var imagesItems = project.MediaContentDirectories.ContainsKey(MediaContentType.Image) ? project.MediaContentDirectories[MediaContentType.Image] : new List<string>();
+                            var shortVideosItems = project.MediaContentDirectories.ContainsKey(MediaContentType.ShortVideo) ? project.MediaContentDirectories[MediaContentType.ShortVideo] : new List<string>();
+                            var videosItems = project.MediaContentDirectories.ContainsKey(MediaContentType.Video) ? project.MediaContentDirectories[MediaContentType.Video] : new List<string>();
+                            var webVideosItems = project.MediaContentDirectories.ContainsKey(MediaContentType.WebVideo) ? project.MediaContentDirectories[MediaContentType.WebVideo] : new List<string>();
+                        }
+                        <DynamicTextList @ref="_images" Items="imagesItems"
+                                         OnChanged="(values)=>{project.MediaContentDirectories[MediaContentType.Image] = values; StateHasChanged();}">
+                            <TitleRender>
+                                <p>Images</p>
+                            </TitleRender>
+                        </DynamicTextList>
+                        <DynamicTextList @ref="_shortVideos" Items="shortVideosItems"
+                                         OnChanged="(values)=>{project.MediaContentDirectories[MediaContentType.ShortVideo] = values; StateHasChanged();}">
+                            <TitleRender>
+                                <p>Short Videos</p>
+                            </TitleRender>
+                        </DynamicTextList>
+                        <DynamicTextList @ref="_videos" Items="videosItems"
+                                         OnChanged="(values)=>{project.MediaContentDirectories[MediaContentType.Video] = values; StateHasChanged();}">
+                            <TitleRender>
+                                <p>Videos</p>
+                            </TitleRender>
+                        </DynamicTextList>
+                        <DynamicTextList @ref="_webVideos" Items="webVideosItems"
+                                         OnChanged="(values)=>{project.MediaContentDirectories[MediaContentType.WebVideo] = values; StateHasChanged();}">
+                            <TitleRender>
+                                <p>Web Videos</p>
+                            </TitleRender>
+                        </DynamicTextList>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary m-1">Save</button>
+                    <button class="btn btn-secondary m-1" @onclick="RefreshProjectCard" @onclick:preventDefault>Preview</button>
+                    <button class="btn btn-secondary m-1" @onclick="Reset" @onclick:preventDefault>Cancel</button>
+                </EditForm>
             </div>
-            @* <div>
-        <label for="keywords">Keywords:</label>
-        <InputText id="keywords" @bind-Value="project.Keywords" class="form-control" />
+            <div class="col">
+                <ProjectCard @ref="_projectCard" Project="project"></ProjectCard>
+            </div>
+        </div>
     </div>
 
-    <div>
-        <label for="mediaContent">Media Content:</label>
-        <InputFile OnChange="HandleFileSelected" />
-    </div> *@
-
-            <button type="submit" class="btn btn-primary">Save</button>
-        </EditForm>
-    </div>
-    <ProjectCard Project="project"></ProjectCard>
 </div>
+
+<script type="text/javascript">
+
+    window.initializeFilesUpload = ()=>{
+        console.log("Initializing file upload...");
+        document.getElementById('folderInput').addEventListener('change', function (e) {
+        for (const file of e.target.files) {
+            console.log("Relative Path:", file.webkitRelativePath);
+        }
+    });
+    }
+
+    window.downloadFileFromStream = async (fileName, contentStreamReference) => {
+    const arrayBuffer = await contentStreamReference.arrayBuffer();
+    const blob = new Blob([arrayBuffer]);
+    const url = URL.createObjectURL(blob);
+
+    const handle = await window.showSaveFilePicker({
+    suggestedName: fileName,
+    types: [{
+    description: 'JSON Files',
+    accept: { 'application/json': ['.json'] }
+    }]
+    });
+
+    const writable = await handle.createWritable();
+    await writable.write(blob);
+    await writable.close();
+
+    URL.revokeObjectURL(url);
+    }
+</script>
 
 @code {
     private Project project = new Project();
 
-    private void HandleFileSelected(InputFileChangeEventArgs e)
+    private void HandleFileSelected(InputFileChangeEventArgs e, MediaContentType mediaType)
     {
         // Handle file upload logic here
     }
+
+    // private void OnFileSelected(SelectedEventArgs args)
+    // {
+    //     // Handle file selection logic here
+    // }
+
 }

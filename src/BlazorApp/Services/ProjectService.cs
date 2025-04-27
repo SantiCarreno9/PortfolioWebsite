@@ -1,65 +1,67 @@
-using BlazorApp.Models;
-
 using System.Net.Http.Json;
+
+using BlazorApp.Models;
 
 namespace BlazorApp.Services
 {
     public class ProjectService : IDisposable
     {
-        private readonly HttpClient httpClient;
-        private readonly Task<IEnumerable<Project>?> getProjectsTask;
+        private readonly HttpClient _httpClient;
+        private const string _projectsPath = "portfolio/projects.json";
 
         public ProjectService(HttpClient httpClient)
         {
-            this.httpClient = httpClient;
-            getProjectsTask = GetProjectsAsync();
+            this._httpClient = httpClient;            
         }
 
-        private async Task<IEnumerable<Project>> GetProjectsAsync()
+        private async Task<List<Project>?> GetProjectsAsync()
         {
             try
             {
-                List<Project> projects = new();
-                for (int i = 0; i < GlobalValues.ProjectsFolderPaths.Length; i++)
+                var response = await this._httpClient.GetAsync(_projectsPath);
+                if (response.IsSuccessStatusCode)
                 {
-                    var response = await this.httpClient.GetAsync(GlobalValues.ProjectsFolderPaths[i]);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
-                            return Enumerable.Empty<Project>();
+                    if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                        return null;
 
-                        projects.AddRange(await response.Content.ReadFromJsonAsync<IEnumerable<Project>>());
-                    }
-                    else
-                    {
-                        var message = await response.Content.ReadAsStringAsync();
-                        throw new Exception(message);
-                    }
+                    var text = await response.Content.ReadAsStringAsync();
+                    if (string.IsNullOrEmpty(text))
+                        return null;
+
+                    return await response.Content.ReadFromJsonAsync<List<Project>>();
                 }
-                return projects;
+                else
+                {
+                    var message = await response.Content.ReadAsStringAsync();
+                    throw new Exception(message);
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                //Log exception
-                throw;
+                throw new Exception(ex.Message);
             }
         }
 
-        public async Task<IEnumerable<Project>?> GetProjects()
+        public async Task<List<Project>?> GetProjects()
         {
-            var projects = await getProjectsTask;
+            var projects = await GetProjectsAsync();
+            if (projects == null)
+                return null;
             return projects;
         }
-        public async Task<IEnumerable<Project>?> GetProjectsByCategory(Category category)
+        public async Task<List<Project>?> GetProjectsByCategory(ProjectCategory category)
         {
-            var projects = await getProjectsTask;
-            var categoryName = Enum.GetName(typeof(Category), category)??"";
-            return projects?.Where(x => x.Category.ToString() == categoryName);
+            var projects = await GetProjectsAsync();
+            if (projects == null)
+                return null;
+            if (category == ProjectCategory.All)
+                return projects;
+            return projects.Where(p => p.Category == category).ToList();
         }
 
         public void Dispose()
         {
-            httpClient.Dispose();
+            _httpClient.Dispose();
         }
     }
 }

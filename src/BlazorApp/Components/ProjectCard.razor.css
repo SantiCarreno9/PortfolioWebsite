@@ -91,18 +91,25 @@ h3 {
     word-wrap: break-word;
     font-size: 0.8rem;
     overflow: auto;
-    padding:0 8px;
+    padding: 0 8px;
+    max-height: 500px;
+    font-size: 15px;
     /*min-width:25%;*/
 }
 
-.description a {
-    text-decoration:double;
-    color: red;
-}
-
-    .description a:hover {
-        color: gray;
+    .description li {
+        font-size: 15px;
     }
+
+    .description a {
+        text-decoration: double;
+        color: red;
+        background-color: transparent;
+    }
+
+        .description a:hover {
+            color: gray;
+        }
 
 @media (max-width: 800px) {
     .media-container {

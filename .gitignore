@@ -351,3 +351,4 @@ MigrationBackup/
 /src/BlazorApp/wwwroot/jay.js
 /src/BlazorApp/wwwroot/jayvanhuttenindex.html
 /src/BlazorApp/wwwroot/css/jay.css
+/src/BlazorApp/wwwroot/appsettings.Development.json
