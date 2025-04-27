@@ -17,7 +17,8 @@ namespace BlazorApp.Components
         [Parameter]
         public Logos Logos { get; set; }
         [Parameter]
-        public Action<string> OnProjectSelected { get; set; }
+        public Action<string> OnProjectSelected { get; set; }        
+
         private ProjectCategory _currentProjectCategory;
         private ProjectCategoryInfo[] _projectCategories;
 

@@ -1,0 +1,78 @@
+<div class="my-1">
+    <div class="d-flex">
+        @if (TitleRender != null)
+        {
+            @TitleRender
+        }
+        else if (Title != null)
+        {
+            <h4>@Title</h4>
+        }
+        <button class="btn btn-success mx-2" @onclick="AddItem" @onclick:preventDefault>+</button>
+    </div>
+    @if (_items != null)
+    {
+        @foreach (var item in _items)
+        {
+            <div class="d-flex mb-2">
+                <InputText @bind-Value="item.Value" class="form-control" @onfocusout="()=>OnChanged?.Invoke(Values)" />
+                <button class="mx-2 btn btn-danger" @onclick="() => RemoveItem(item)" @onclick:preventDefault>-</button>
+            </div>
+        }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string? Title { get; set; }
+    [Parameter]
+    public RenderFragment? TitleRender { get; set; }
+    [Parameter]
+    public IEnumerable<string> Items { get; set; } = Enumerable.Empty<string>();
+    [Parameter]
+    public Action? OnItemAdded { get; set; } = null;
+    [Parameter]
+    public Action? OnItemRemoved { get; set; } = null;
+    [Parameter]
+    public Action<List<string>>? OnChanged { get; set; } = null;
+
+    private List<StringObjectHelper> _items = new List<StringObjectHelper>();
+
+    public List<string> Values => _items.Select(x => x.Value).ToList();
+
+    protected override void OnParametersSet()
+    {
+        _items = Items.Select(s => new StringObjectHelper { Value = s }).ToList();
+        StateHasChanged();
+        base.OnParametersSet();
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+
+        base.OnAfterRender(firstRender);
+    }
+
+    private void AddItem()
+    {
+        _items.Add(new StringObjectHelper());
+        OnItemAdded?.Invoke();
+        OnChanged?.Invoke(Values);
+        StateHasChanged();
+    }
+
+    private void RemoveItem(StringObjectHelper item)
+    {
+        _items.Remove(item);
+        OnItemRemoved?.Invoke();
+        OnChanged?.Invoke(Values);
+        StateHasChanged();
+    }
+
+    public void RemoveAllItems()
+    {
+        _items.Clear();
+        OnChanged?.Invoke(Values);
+        StateHasChanged();
+    }
+}

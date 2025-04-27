@@ -25,12 +25,11 @@ namespace BlazorApp.Components
         private HeroImage? hero;
 
         private IDictionary<string, object>[]? projectsParameters;
-
-        private Dictionary<int, RenderFragment> projectCards = new Dictionary<int, RenderFragment>();
-        private int currentProjectId = 0;
+        
+        private string currentProjectId;
 
         private ProjectCategory _currentProjectCategory = ProjectCategory.All;
-        private ProjectCategoryInfo[] _projectCategories;
+        private ProjectCategoryInfo[] _projectCategories;        
 
         protected override async Task OnInitializedAsync()
         {
@@ -63,62 +62,21 @@ namespace BlazorApp.Components
                     this.projectsParameters[i].Add("Project", _projects[i]);
                 }
             }
-        }
-
-        //protected override async Task OnInitializedAsync()
-        //{
-        //    Projects = await ProjectService.GetProjects();            
-        //    logos = await LogoService.GetLogos();
-
-
-
-        //    ////hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
-        //}
-
-        protected IEnumerable<Project> GetGroupedProjectsByCategory()
-        {
-            //return (IEnumerable<IGrouping<int, Project>>)(from project in Projects
-            //       group project by project.Technologies into projByCatGroup
-            //       orderby projByCatGroup.Key
-            //       select projByCatGroup);
-            return _projects;
-        }
-
-        private Project GetProject(int Id)
-        {
-            try
-            {
-                //return _projects.First(p => p.Id == Id);
-                return _projects.First();
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
+        }        
 
         private void OnItemSelected(string Id)
         {            
             isCarouselOpen = true;
-            //currentProjectId = Id;
-            //Console.WriteLine($"{_projects.First(x => x.Id == Id).Title} was selected");
+            currentProjectId = Id;                           
             StateHasChanged();
         }
 
-        private int GetProjectIndexById(int Id)
+        private int GetSelectedProjectIndex()
         {
-            return Id;
-            //return _projects.ToList().FindIndex(p => p.Id == Id);
-        }
-
-        private void SelectNext()
-        {
-            Console.WriteLine("Next");
-        }
-
-        private void SelectPrevious()
-        {
-            Console.WriteLine("Previous");
+            var index = _projects?.FindIndex(p => p.Id == currentProjectId) ?? 0;
+            if (index == -1)
+                index = 0;
+            return index;            
         }
     }
 }

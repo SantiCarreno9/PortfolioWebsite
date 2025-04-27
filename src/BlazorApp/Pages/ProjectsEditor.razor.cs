@@ -1,6 +1,7 @@
 using System.Text;
 using System.Text.Json;
 
+using BlazorApp.Components;
 using BlazorApp.Models;
 
 using Microsoft.AspNetCore.Components;
@@ -19,8 +20,14 @@ namespace BlazorApp.Pages
         public IJSRuntime JSRuntime { get; set; }
 
         private string jsonContent = string.Empty;
-        private JsonDocument? document;
         private List<Project>? _projects;
+        private DynamicTextList _keywords { get; set; }
+        private DynamicTextList _images { get; set; }
+        private DynamicTextList _shortVideos { get; set; }
+        private DynamicTextList _videos { get; set; }
+        private DynamicTextList _webVideos { get; set; }        
+        private ProjectCard? _projectCard { get; set; }
+
 
         protected override Task OnInitializedAsync()
         {
@@ -31,6 +38,20 @@ namespace BlazorApp.Pages
             }
 
             return base.OnInitializedAsync();
+        }
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {            
+            await base.OnAfterRenderAsync(firstRender);
+            await RefreshProjectCard();
+        }        
+
+        private async Task RefreshProjectCard()
+        {
+            await Task.Delay(1000).ContinueWith(_ =>
+            {
+                _projectCard?.Rerender();
+            });
         }
 
         private async Task LoadJsonFile(InputFileChangeEventArgs e)
@@ -66,13 +87,37 @@ namespace BlazorApp.Pages
 
             jsonContent = JsonSerializer.Serialize(_projects);
 
-            project = new Project();
+            Reset();
         }
 
         private void SelectProject(string id)
         {
-            this.project = _projects?.FirstOrDefault(x => x.Id == id) ?? new Project();
+            Reset();
+            var foundProject = _projects?.FirstOrDefault(x => x.Id == id);
+            if (foundProject != null)
+                project = new Project
+                {
+                    Id = foundProject.Id,
+                    Title = foundProject.Title,
+                    Description = foundProject.Description,
+                    Category = foundProject.Category,
+                    Keywords = foundProject.Keywords,
+                    MediaContentDirectories = foundProject.MediaContentDirectories
+                };
+            else project = new Project();
+            
             StateHasChanged();
+        }
+
+        private void Reset()
+        {
+            project = new Project();
+            _keywords?.RemoveAllItems();
+            _images?.RemoveAllItems();
+            _shortVideos?.RemoveAllItems();
+            _videos?.RemoveAllItems();
+            _webVideos?.RemoveAllItems();
+            _projectCard?.Reset();
         }
 
     }

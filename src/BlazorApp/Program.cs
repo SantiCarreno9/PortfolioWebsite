@@ -6,7 +6,15 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
 using RazorSCLibrary;
 
+using Syncfusion.Blazor;
+
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
+
+if(builder.HostEnvironment.IsDevelopment())
+{
+    Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(builder.Configuration["SyncfusionApiKey"]);
+    builder.Services.AddSyncfusionBlazor();
+}
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
