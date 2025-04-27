@@ -29,7 +29,7 @@
         <h3 style="text-align:left">@Project.Title</h3>
         @if (Project.Keywords != null && Project.Keywords.Count > 0)
         {
-            <div class="d-flex">
+            <div class="d-flex flex-wrap mw-100">
                 @foreach (var keyword in Project.Keywords)
                 {
                     <div class="m-1">

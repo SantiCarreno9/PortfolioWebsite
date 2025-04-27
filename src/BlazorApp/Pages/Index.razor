@@ -1,22 +1,10 @@
 @page "/"
 @inject HttpClient Http
 @inject HeroImageService HeroImageService
-@* @inject JSRuntime JSRuntime *@
 
 <PageTitle>Portfolio</PageTitle>
-
-@*Original layout*@
-@* <Header />
-<Home Http=@Http HeroImageService=@HeroImageService />
-<PortfolioWithTabs Http=@Http HeroImageService=@HeroImageService />
-<About Http=@Http HeroImageService=@HeroImageService />
-<Footer Http=@Http PrimaryColor="#4E567E" SecondaryColor="#D2F1E4" /> *@
-
-@*New layout*@
 <Header />
 <Home Http=@Http HeroImageService=@HeroImageService />
-@* <PortfolioCategory Http="@Http"></PortfolioCategory> *@
 <Portfolio></Portfolio>
 <About Http=@Http />
-@* <HeaderWithPlatforms /> *@
 <Footer Http=@Http PrimaryColor="black" SecondaryColor="#D2F1E4" />
