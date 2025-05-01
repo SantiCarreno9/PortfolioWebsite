@@ -8,29 +8,49 @@
         </div>
         <div class="thumbnails-scroller">
             @if (Project.MediaContentDirectories != null)
-            {
+            {                
                 @foreach (int i in Enumerable.Range(0, _mediaContent.Count))
                 {
+                    var contentSrc = _mediaContent[i].Item2;
                     <div class="thumbnail @(currentMediaIndex==i?"active":"")" @onclick="()=>SelectContent(i)">
-                        @if (_mediaContent[i].Item1 == MediaContentType.Image)
-                        {
-                            <img src="@_mediaContent[i].Item2" />
-                        }
-                        else
-                        {
-                            <video src="@_mediaContent[i].Item2"
-                                   preload="metadata"
-                                   muted
-                                   playsinline
-                                   onloadeddata="this.pause();"></video>
-                            <i class="far fa-play-circle"
-                               style="
-                               position: absolute;                               
-                               font-size: 2em;
-                               color: white;
-                               z-index: 10;">
-                            </i>
-                        }
+
+                        @switch (_mediaContent[i].Item1)
+                        {                            
+                            case MediaContentType.Image:
+                                <img src="@contentSrc" />
+                                break;
+                            case MediaContentType.ShortVideo:
+                            case MediaContentType.Video:
+                                <video src="@contentSrc"
+                                preload="metadata"
+                                muted
+                                playsinline
+                                onloadeddata="this.pause();"></video>
+                                <i class="far fa-play-circle"
+                                style="
+                                   position: absolute;
+                                   font-size: 2em;
+                                   color: white;
+                                   z-index: 10;">
+                                </i>
+                                break;
+                            case MediaContentType.WebVideo:
+                                @if (contentSrc.ToLower().Contains("youtube"))
+                                {
+                                    <img src="images/icons/youtubelogo.png" style="width:30px;height:30px;position:absolute;top:25%;left:35%;"/>
+                                }
+                                else
+                                {
+                                    <i class="far fa-play-circle"
+                                       style="
+                                   position: absolute;
+                                   font-size: 2em;
+                                   color: white;
+                                   z-index: 10;">
+                                    </i>
+                                }                                
+                                break;
+                        }                        
                     </div>
                 }
             }
