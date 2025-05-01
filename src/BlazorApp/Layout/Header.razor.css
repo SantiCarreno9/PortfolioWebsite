@@ -1,21 +1,17 @@
-#header {    
-  /*position: fixed;*/
-  display: flex;
-  /*justify-content: center;*/
-  justify-content:space-evenly;
-  /*gap: 2rem;*/
-  /*background: rgba(255,255,255,0.75);*/
-  background: black;
-  padding: 0.7%;
-  top: 0;
-  width: 100%;
-  max-height:10%;
-  flex-wrap:wrap;
-  z-index: 10;  
+#header {
+    display: flex;
+    justify-content: space-evenly;
+    background: black;
+    padding: 1%;
+    top: 0;
+    width: 100%;
+    max-height: 12%;
+    flex-wrap: wrap;
+    z-index: 10;
 }
 
-a{
-    margin-left:1rem;
-    margin-right:1rem;
-    color:white;
+a {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: white;
 }

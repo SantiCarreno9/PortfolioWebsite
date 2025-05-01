@@ -1,24 +1,50 @@
-<section class="dark" id="home">    
+<section class="dark" id="home">
     @* @if (hero is not null)
     {
         <img class="background" src="@(hero.Src)" alt="@(hero.Alt)" />
     } *@
-    <div style="position: absolute; top: 30%; left: 2rem;">
-        @if (property is null)
-        {
-            <p><em>Loading...</em></p>
-        }
-        else
-        {
-            <h1>@property.Name</h1>
-            <h2>@property.Title</h2>
-        }
+    <div class="w-100 justify-content-end">
+        <div style="position: absolute; top: 30%; left: 2rem; text-align:left;">
+            @if (property is null)
+            {
+                <p><em>Loading...</em></p>
+            }
+            else
+            {
+                <h1>@property.Name</h1>
+                <h2 style="text-align:left">@property.Title</h2>
+            }
+        </div>
+        @* <img src="images/coding.gif" class="mw-50" /> *@
     </div>
-    <div style="position: absolute; bottom: 8rem; left: 50%;">
+    @if (icons is not null)
+    {
+        <div class="w-100 p-4" style="position:absolute;bottom:0%;left:0%;">
+            @if (string.IsNullOrWhiteSpace(property.GitHub) is false)
+            {
+                <a class="p-3" href="https://github.com/@(property.GitHub)" target="_blank" rel="noopener noreferrer">
+                    <img src="@icons.GitHub" alt="GitHub" class="social-icon" />
+                </a>
+            }
+            @if (string.IsNullOrWhiteSpace(property.LinkedIn) is false)
+            {
+                <a class="p-3" href="https://linkedin.com/in/@(property.LinkedIn)" target="_blank" rel="noopener noreferrer">
+                    <img src="@icons.LinkedIn" alt="LinkedIn" class="social-icon" />
+                </a>
+            }
+            @if (string.IsNullOrWhiteSpace(property.Email) is false)
+            {
+                <a href="mailto:@(property.Email)" class="p-3">
+                    <img src="@icons.Email" alt="email" class="social-icon" />
+                </a>
+            }
+        </div>
+    }
+    @* <div style="position: absolute; bottom: 8rem; left: 50%;">
         <a href="#about" target="_top">
             <img src="images/down-arrow.svg" style="height: 3rem; width: 3rem;" alt="scroll down" />
         </a>
-    </div>
+    </div> *@
 </section>
 
 @code {
@@ -30,10 +56,12 @@
 
     private SiteProperties? property;
     private HeroImage? hero;
+    private SocialIcons? icons;
 
     protected override async Task OnInitializedAsync()
     {
         property = await Http.GetFromJsonAsync<SiteProperties>(Path.Combine(GlobalValues.JsonPath, "siteproperties.json"));
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "home");
+        icons = await Http.GetFromJsonAsync<SocialIcons>("sample-data/socialicons.json");
     }
 }

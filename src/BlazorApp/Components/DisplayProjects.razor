@@ -29,20 +29,15 @@
                             @foreach (var keyword in project.Keywords)
                             {
                                 index++;
-                                @if (index <= keywordsLimit)
+                                <div class="m-1 mw-100">
+                                    <span class="badge rounded-pill text-bg-light text-black mw-100" style="overflow:hidden;text-overflow:ellipsis;">
+                                        @(index > keywordsLimit ? $"+{project.Keywords.Count - keywordsLimit}": keyword)
+                                        </span>
+                                </div>
+                                @if(index > keywordsLimit)
                                 {
-                                    <div class="m-1 mw-100">
-                                        <span class="badge rounded-pill text-bg-light text-black mw-100" style="overflow:hidden;text-overflow:ellipsis;">@keyword</span>
-                                    </div>
-                                }                                        
-                                else
-                                {
-                                    <div class="m-1">
-                                        <span class="badge rounded-pill text-bg-light text-black">+@(project.Keywords.Count-keywordsLimit)</span>
-                                    </div>
                                     break;
-                                }
-                                
+                                }                                                                
                             }
                         </div>
                     </div>

@@ -1,8 +1,8 @@
 {
   "description": "I am a Mechatronic Engineer with a strong passion for coding and software development. Professionally, I specialize in developing robust and interactive applications using Unity. With a diverse skill set that includes multiple programming languages, web technologies, and industry-standard tools, I bring a creative and problem-solving mindset to every project. My expertise encompasses everything from game development and 3D modeling to web application frameworks, allowing me to design and implement innovative solutions tailored to a variety of needs.",
   "skills": {
-    "Languages and Technologies": [ "C#", ".NET", "C++", "Blazor", "Java", "JavaScript", "HTML", "CSS" ],
-    "Development Tools and Engines": [ "Visual Studio", "Unity", "Unreal Engine", "Blender", "Git"],
+    "Languages and Technologies": [ ".NET", "React", "Angular", "Blazor", "C#", "C++", "Java", "JavaScript", "GraphQL", "AI", "HTML", "CSS" ],
+    "Development Tools and Engines": [ "Visual Studio", "JetBrains Rider", "Unity", "Unreal Engine", "Blender", "Git", "GIMP"],
     "Soft skills": [ "Problem solving", "Critical thinking", "Teamwork", "Adaptability", "Leadership" ]
   }
 }

@@ -5,7 +5,10 @@
             <p><em>Loading...</em></p>
         </div>
     }
-    else if (icons is not null)
+    else{
+    <p class="small" style="margin-top: 0; color: white;">Created by @property.Name</p>
+    }
+    @* else if (icons is not null)
     {
         <div style="display: flex; justify-content: center; gap: 2.5rem;">
             @if (string.IsNullOrWhiteSpace(property.Email) is false)
@@ -26,9 +29,8 @@
                     <img src="@icons.LinkedIn" alt="LinkedIn" class="social-icon" />
                 </a>
             }            
-        </div>
-        <p class="small" style="margin-top: 0; color: white;">Created by @property.Name</p>
-    }
+        </div>        
+    } *@    
 </div>
 
 @code {
