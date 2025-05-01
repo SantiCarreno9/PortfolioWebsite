@@ -18,7 +18,18 @@
                         }
                         else
                         {
-                            <i class="far fa-play-circle"></i>
+                            <video src="@_mediaContent[i].Item2"
+                                   preload="metadata"
+                                   muted
+                                   playsinline
+                                   onloadeddata="this.pause();"></video>
+                            <i class="far fa-play-circle"
+                               style="
+                               position: absolute;                               
+                               font-size: 2em;
+                               color: white;
+                               z-index: 10;">
+                            </i>
                         }
                     </div>
                 }

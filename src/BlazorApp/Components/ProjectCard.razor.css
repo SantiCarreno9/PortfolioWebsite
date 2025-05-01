@@ -5,8 +5,7 @@
     gap: 2vh;
     align-content: start;
     flex-wrap: wrap;
-    overflow-x: auto;
-    /*height: 100%;*/
+    overflow-x: auto;    
 }
 
 .media-container {
@@ -20,14 +19,11 @@
 .media-content-container {
     width: 100%;
     display: flex;
+    justify-content:center;    
 }
 
-.media-content {
-    flex: 1;
-    width: 100%;
-    /*margin:0;*/
-    /*max-width: 100%;*/
-    height: auto;
+.media-content {    
+    max-width: 100%;    
     border-radius: 0.5rem;
 }
 
@@ -54,6 +50,7 @@ iframe {
     display: flex;
     box-shadow: 0 0 2px 1px white;
     text-align: center;
+    position:relative;
 }
 
     .thumbnail img {
@@ -93,8 +90,7 @@ h3 {
     overflow: auto;
     padding: 0 8px;
     max-height: 500px;
-    font-size: 15px;
-    /*min-width:25%;*/
+    font-size: 15px;    
 }
 
     .description li {
@@ -113,6 +109,6 @@ h3 {
 
 @media (max-width: 800px) {
     .media-container {
-        min-width: 100%;
+        min-width: 100%;        
     }
 }

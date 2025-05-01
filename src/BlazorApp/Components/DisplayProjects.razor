@@ -10,7 +10,7 @@
             {
                 if (project == null)
                     continue;
-                <div class="card col-4 col-md-3 m-2 px-0" @onclick="()=>TriggerSelection(project.Id)">
+                <div class="card col-5 col-md-3 m-2 px-0" @onclick="()=>TriggerSelection(project.Id)">
                     @if (project.MediaContentDirectories != null && project.MediaContentDirectories.ContainsKey(MediaContentType.Image))
                     {
                         <div class="w-100 h-100" style="overflow:clip;">
@@ -22,11 +22,27 @@
                             @project.Title
                         </h5>
                         <div class="d-flex flex-wrap mw-100">
+                            @{
+                                var keywordsLimit = 3;
+                                var index = 0;
+                            }
                             @foreach (var keyword in project.Keywords)
                             {
-                                <div class="m-1">
-                                    <span class="badge rounded-pill text-bg-light text-black">@keyword</span>
-                                </div>
+                                index++;
+                                @if (index <= keywordsLimit)
+                                {
+                                    <div class="m-1 mw-100">
+                                        <span class="badge rounded-pill text-bg-light text-black mw-100" style="overflow:hidden;text-overflow:ellipsis;">@keyword</span>
+                                    </div>
+                                }                                        
+                                else
+                                {
+                                    <div class="m-1">
+                                        <span class="badge rounded-pill text-bg-light text-black">+@(project.Keywords.Count-keywordsLimit)</span>
+                                    </div>
+                                    break;
+                                }
+                                
                             }
                         </div>
                     </div>

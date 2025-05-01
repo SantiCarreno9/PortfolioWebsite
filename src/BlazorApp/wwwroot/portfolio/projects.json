@@ -188,7 +188,7 @@
   {
     "Id": "b46fd8f4-b53d-4166-9c7d-7fe6828832df",
     "Title": "Cryptography Game",
-    "Description": "\u003Cp data-start=\u0022106\u0022 data-end=\u0022475\u0022\u003EThis is an interactive 3D puzzle game that introduces players to basic cryptography through hands-on challenges. The game includes three levels: Caesar Cipher, Grid Code, and Morse Code. Each level becomes more difficult as players move forward. The main goal is to fix broken attractions in the game world by solving different types of puzzles.\u003C/p\u003E\u003Cp data-start=\u0022477\u0022 data-end=\u0022871\u0022\u003EIn the first level, players learn how Caesar\u2019s Cipher works and use a clock to help decode clues from a to-do list. In the second level, they complete a grid puzzle by placing missing characters, unlocking a keyword, and finding a four-digit code. The third level focuses on Morse Code, where players tune into radio channels and decode hidden messages from song titles using a reference sheet.\u003C/p\u003E\u003Cp data-start=\u0022873\u0022 data-end=\u00221107\u0022\u003EEach level gives the player a badge and visual feedback like animations to make the experience more rewarding. The game is designed to be fun, educational, and a good way to explore the basics of cryptography through interactive play.\u003C/p\u003E",
+    "Description": "\u003Cp data-start=\u0022111\u0022 data-end=\u0022180\u0022\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli data-end=\u0022180\u0022 data-start=\u0022111\u0022\u003E\u003Cp data-end=\u0022180\u0022 data-start=\u0022111\u0022\u003EInteractive 3D puzzle game that teaches basic cryptography concepts\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022234\u0022 data-start=\u0022183\u0022\u003E\u003Cp data-end=\u0022234\u0022 data-start=\u0022183\u0022\u003EIncludes three levels with increasing difficulty:\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong data-start=\u0022239\u0022 data-end=\u0022266\u0022 style=\u0022background-color: unset; text-align: inherit;\u0022\u003ELevel 1 \u2013 Caesar Cipher\u003C/strong\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E: Use a clock to decode messages from a to-do list\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cstrong data-start=\u0022323\u0022 data-end=\u0022346\u0022 style=\u0022background-color: unset; text-align: inherit;\u0022\u003ELevel 2 \u2013 Grid Code\u003C/strong\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E: Place missing characters, unlock a keyword, and find a four-digit code\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cstrong data-start=\u0022425\u0022 data-end=\u0022449\u0022 style=\u0022background-color: unset; text-align: inherit;\u0022\u003ELevel 3 \u2013 Morse Code\u003C/strong\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E: Tune into radio channels and decode song titles using a Morse Code sheet\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003EPlayers fix broken attractions by solving puzzles in each level\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003EEach completed level rewards a badge and visual feedback (e.g., animations)\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003EDesigned to be educational and engaging, combining fun gameplay with problem-solving skills\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E",
     "Category": 1,
     "MediaContentDirectories": {
       "Image": [
@@ -207,6 +207,33 @@
       "C#",
       "3D",
       "Animations"
+    ]
+  },
+  {
+    "Id": "4edeaeec-b881-4c68-9029-168800cf65fc",
+    "Title": "Car Web Game",
+    "Description": "\u003Cul\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E3D racing game built with Babylon.js featuring realistic car physics, sound effects, and camera controls.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003EAI-powered chat assistant using Google Gemini API provides tips and hints based on player progress.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022line-height: 1.7;\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022margin: 0px; font-size: 18px; line-height: 1.5; font-weight: 300;\u0022\u003EMicroservices architecture using Node.js, Apollo GraphQL, and MongoDB.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022line-height: 1.7;\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022margin: 0px; font-size: 18px; line-height: 1.5; font-weight: 300;\u0022\u003EFrontend built with React using a microfrontends setup.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022line-height: 1.7;\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022margin: 0px; font-size: 18px; line-height: 1.5; font-weight: 300;\u0022\u003EJWT authentication for secure login and user sessions.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003EPlayer progress, experience points, and achievements are tracked and saved across sessions.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003EModular codebase with separate services for authentication, progress tracking, and AI assistant.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E",
+    "Category": 2,
+    "MediaContentDirectories": {
+      "Image": [
+        "portfolio/react/CarGameApp/img1.png",
+        "portfolio/react/CarGameApp/img2.png",
+        "portfolio/react/CarGameApp/img3.png",
+        "portfolio/react/CarGameApp/img4.png",
+        "portfolio/react/CarGameApp/img5.png"
+      ]
+    },
+    "Keywords": [
+      "React Js",
+      "GraphQL",
+      "AI",
+      "LangChain",
+      "Gemini API",
+      "Microservices",
+      "Microfrontends",
+      "MongoDB",
+      "Node.js",
+      "Babylon.js"
     ]
   }
 ]
