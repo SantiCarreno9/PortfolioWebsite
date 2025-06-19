@@ -1,1 +1,310 @@
-[{"Id":"d0b1eb4b-e2bd-4032-8c44-bd26f9fccf6e","Title":"Personal Finance App","Description":"\u003Cp\u003E\u003Ca class=\u0022e-rte-anchor\u0022 href=\u0022https://witty-bush-0b7b2100f.5.azurestaticapps.net\u0022 title=\u0022https://witty-bush-0b7b2100f.5.azurestaticapps.net\u0022 target=\u0022_blank\u0022 aria-label=\u0022Open in new window\u0022\u003E\u003Cspan style=\u0022text-decoration: underline;\u0022\u003EYou can try it here\u003C/span\u003E\u003C/a\u003E\u0026nbsp;by logging in as a Guest.\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003E\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EBackend:\u003C/strong\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBuilt with a .NET Web API connected to a SQLite database.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ESupports user registration and management of transactions (add, modify, search, filter, delete).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ERetrieves specific information like totals by categories, locations, payment methods, and transaction types.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003Cstrong\u003EFrontend:\u003C/strong\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBuilt with Blazor WebAssembly for a responsive, dynamic user experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDashboard displays total expenses, income, and balance over a selected time range.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EInteractive pie chart summarizes transaction totals, with breakdowns by categories, locations, or payment methods.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ETransaction management page shows a paginated grid with filter, create, modify, and delete options.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EAllows splitting transactions into subtransactions with automatic total calculation.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003Cstrong\u003EDeployment:\u003C/strong\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EWeb API and database hosted on Azure App Service.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBlazor WebAssembly frontend deployed to Azure Static Web Apps using CI/CD pipeline with GitHub Actions.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp aria-label=\u0022Open in new window\u0022 class=\u0022e-rte-anchor\u0022 href=\u0022https://github.com/SantiCarreno9/PersonalFinanceApp\u0022 target=\u0022_blank\u0022 title=\u0022https://github.com/SantiCarreno9/PersonalFinanceApp\u0022\u003E\u003Ca class=\u0022e-rte-anchor\u0022 href=\u0022https://github.com/SantiCarreno9/PersonalFinanceApp\u0022 title=\u0022https://github.com/SantiCarreno9/PersonalFinanceApp\u0022 target=\u0022_blank\u0022 aria-label=\u0022Open in new window\u0022\u003E\u003Cspan style=\u0022text-decoration: underline;\u0022\u003EYou can find the code here.\u003C/span\u003E\u003C/a\u003E\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003E\u003C/p\u003E","Category":2,"MediaContentDirectories":{"Image":["portfolio/dotnet/PersonalFinanceApp/img1.png","portfolio/dotnet/PersonalFinanceApp/img2.png","portfolio/dotnet/PersonalFinanceApp/img3.png","portfolio/dotnet/PersonalFinanceApp/img4.png","portfolio/dotnet/PersonalFinanceApp/img5.png"]},"Keywords":[".NET","C#","Entity Framework","Blazor","Web API","CI/CD","Azure"]},{"Id":"3ad2e3ca-3443-4307-9305-57541069d03b","Title":"Collaborative Surgery Simulator","Description":"\u003Cp\u003EIt is a prototype designed to create a multi-user environment for simulating lipoma extraction surgery. This simulator allows multiple users to engage in a realistic surgical experience, each assuming specific roles such as surgeon, assistant, or resident, and communicating through an integrated voice chat feature. This simulator has garnered academic recognition, including a publication in an\u0026nbsp;\u003Cspan style=\u0022color: rgb(33, 37, 41); font-family: system-ui, -apple-system, \u0026quot;Segoe UI\u0026quot;, Roboto, \u0026quot;Helvetica Neue\u0026quot;, Arial, \u0026quot;Noto Sans\u0026quot;, \u0026quot;Liberation Sans\u0026quot;, sans-serif, \u0026quot;Apple Color Emoji\u0026quot;, \u0026quot;Segoe UI Emoji\u0026quot;, \u0026quot;Segoe UI Symbol\u0026quot;, \u0026quot;Noto Color Emoji\u0026quot;; font-size: 18px; font-style: normal; font-weight: 300; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; float: none; display: inline !important;\u0022\u003E\u003Ca class=\u0022e-rte-anchor\u0022 href=\u0022https://ieeexplore.ieee.org/document/9419164\u0022 title=\u0022https://ieeexplore.ieee.org/document/9419164\u0022 target=\u0022_blank\u0022 aria-label=\u0022Open in new window\u0022\u003EIEEE article\u003C/a\u003E.\u003C/span\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022color: rgb(33, 37, 41); font-family: system-ui, -apple-system, \u0026quot;Segoe UI\u0026quot;, Roboto, \u0026quot;Helvetica Neue\u0026quot;, Arial, \u0026quot;Noto Sans\u0026quot;, \u0026quot;Liberation Sans\u0026quot;, sans-serif, \u0026quot;Apple Color Emoji\u0026quot;, \u0026quot;Segoe UI Emoji\u0026quot;, \u0026quot;Segoe UI Symbol\u0026quot;, \u0026quot;Noto Color Emoji\u0026quot;; font-size: 18px; font-style: normal; font-weight: 300; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); float: none; display: inline !important;\u0022\u003E\u003C/span\u003E\u003Cstrong\u003EOnline Multiplayer System:\u003C/strong\u003E Users can select and perform different roles within the surgical team, enhancing collaborative learning and practice with real-time voice communication.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EReal-Time 3D Mesh Modification:\u003C/strong\u003E Simulates the surgical cutting process in real time, allowing users to make precise cuts on the 3D model of the skin covering the lipoma, closely mimicking the actual surgical procedure.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EAvatar Animations with hand controls:\u003C/strong\u003E Includes a procedural rig that enables full hand movement and interaction with objects, providing a realistic and interactive experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EObject Transfer Between Users:\u003C/strong\u003E Facilitates seamless transfer of instruments and objects between users, mirroring the teamwork required in an actual operating room.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E","Category":3,"MediaContentDirectories":{"ShortVideo":["portfolio/unity/Surgery/svideo1.mp4","portfolio/unity/Surgery/svideo2.mp4"],"WebVideo":["https://www.youtube.com/embed/Jc6QFovmRck?si=f0tlcg1iUswpJ6Tn"],"Image":["portfolio/unity/Surgery/img1.png"]},"Keywords":["Unity","Networking","Multiplayer","C#","Photon PUN"]},{"Id":"1fa734fc-a6dc-4575-90de-ce42b9cabb91","Title":"UNO 3D","Description":"\u003Cp\u003EIt is a sophisticated adaptation of the classic card game UNO, presented in an immersive three-dimensional environment. This version retains the beloved gameplay while introducing a minimalist design for the cards, creating an elegant and engaging visual experience.\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EMultiplayer System:\u003C/strong\u003E Accommodates up to six players, making it ideal for both casual and competitive play.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003E3D Animations:\u003C/strong\u003E Features dynamic 3D animations for special cards, enhancing the interactive experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EComplete Game Logic:\u003C/strong\u003E Fully implements the traditional rules and mechanics of UNO, ensuring a seamless and authentic gameplay experience.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E","Category":1,"MediaContentDirectories":{"WebVideo":["https://www.youtube.com/embed/HDGS-Jimu5M?si=ggw39pprL2eYhEp7"],"Image":["portfolio/unity/UNO/img1.png","portfolio/unity/UNO/img2.png","portfolio/unity/UNO/img3.png"]},"Keywords":["Unity","C#","Photon PUN","Multiplayer","3D"]},{"Id":"2ccb86e9-c27d-4c78-82fc-c9d1950d4bbe","Title":"Breakout","Description":"\u003Cp\u003EMy version of the classic \u0022Breakout\u0022 game features an attractive sci-fi style and fun, challenging levels.\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EPower-Ups:\u003C/strong\u003E Elevate your gaming experience with power-ups that augment your paddle\u0027s size and equip you with lasers, allowing for strategic block destruction.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EImmerse yourself in the sci-fi atmosphere with captivating music and sound effects.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003Ca class=\u0022e-rte-anchor\u0022 href=\u0022https://github.com/SantiCarreno9/Breakout\u0022 title=\u0022https://github.com/SantiCarreno9/Breakout\u0022 target=\u0022_blank\u0022 aria-label=\u0022Open in new window\u0022\u003E\u003Cspan style=\u0022text-decoration: underline;\u0022\u003EYou can find the code here.\u003C/span\u003E\u003C/a\u003E\u003C/p\u003E","Category":1,"MediaContentDirectories":{"Image":["portfolio/unity/Breakout/img1.png","portfolio/unity/Breakout/img2.png"],"ShortVideo":["portfolio/unity/Breakout/svideo1.mp4","portfolio/unity/Breakout/svideo2.mp4"],"Video":[],"WebVideo":["https://www.youtube.com/embed/aLLGY9lUF_A?si=vTXqca1xJwg1S-8q"]},"Keywords":["Unity","C#","2D"]},{"Id":"c280c3ce-2f01-45c7-acfa-fb9745686b29","Title":"Pong","Description":"\u003Cp\u003EMy version of the classic \u0022Pong\u0022 game features an engaging sci-fi aesthetic and customizable gameplay, enhancing replayability and providing fresh challenges with each playthrough.\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003ELocal Multiplayer:\u003C/strong\u003E Supports up to 4 players, with 2 players using the keyboard and 2 using gamepads.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EFlexible Player Options:\u003C/strong\u003E Players can choose between competing against human opponents or AI, allowing for a versatile gaming experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003ECustomizable Gameplay:\u003C/strong\u003E Players can enable or disable obstacles and power-ups to add complexity. Power-ups can freeze opponents or increase their speed, enhancing the challenge and strategic depth of the game.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003Ca class=\u0022e-rte-anchor\u0022 href=\u0022https://github.com/SantiCarreno9/Pong\u0022 title=\u0022https://github.com/SantiCarreno9/Pong\u0022 target=\u0022_blank\u0022 aria-label=\u0022Open in new window\u0022\u003E\u003Cspan style=\u0022text-decoration: underline;\u0022\u003EYou can find the code here.\u003C/span\u003E\u003C/a\u003E\u003C/p\u003E","Category":1,"MediaContentDirectories":{"ShortVideo":["portfolio/unity/Pong/svideo1.mp4","portfolio/unity/Pong/svideo2.mp4"],"WebVideo":["https://www.youtube.com/embed/IgG47VEhGR8?si=Y01nercIkCEmUPrj"],"Image":["portfolio/unity/Pong/img1.png"]},"Keywords":["Unity","C#","2D"]},{"Id":"366bac75-e345-413b-b8ab-21a1407f9237","Title":"Tira Island","Description":"\u003Cp\u003EThis project is a 2D action/adventure platformer demo developed collaboratively with two colleagues. I was responsible for all programming aspects related to gameplay, enemies, and player controls.\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EModular Weapon System:\u003C/strong\u003E Implemented a modular weapon system utilizing object pooling to optimize performance and adhere to good coding practices.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EDevelopment Tools:\u003C/strong\u003E Created various tools to simplify the addition of new enemy types and features, enhancing the overall gameplay experience.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E","Category":1,"MediaContentDirectories":{"ShortVideo":["portfolio/unity/Tira/svideo1.mp4","portfolio/unity/Tira/svideo2.mp4"],"WebVideo":["https://www.youtube.com/embed/2b1zo4DpeP4?si=b4eSf0j_y_bXV4TF"],"Image":["portfolio/unity/Tira/img1.png","portfolio/unity/Tira/img2.png"]},"Keywords":["Unity","C#","2D","Platformer"]},{"Id":"085eaba5-5b1c-4f19-a99d-05ce00340c11","Title":"Jump Command","Description":"\u003Cp\u003EInspired by Google\u0027s Dinosaur Game, this game challenges players to dodge obstacles and survive for as long as possible. The game offers a unique twist with the option to control the character using voice commands or the traditional keyboard, making it accessible and engaging for a wide range of players.\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EVoice Command Controls:\u003C/strong\u003E Play using voice commands in either English or Spanish, or opt for classic keyboard controls for a versatile gaming experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EIncreasing Difficulty:\u003C/strong\u003E The game becomes progressively more challenging over time, ensuring that players remain engaged and tested.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EMultiplatform Compatibility:\u003C/strong\u003E Enjoy the game on both desktop and web browsers, providing flexibility and convenience for players.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E","Category":1,"MediaContentDirectories":{"Image":["portfolio/unity/Jumping/img1.png"],"WebVideo":["https://www.youtube.com/embed/RJGvawRlqMs?si=WTj8VESsevdGaWD2"]},"Keywords":["Unity","C#","Speech Recognition","WebGL"]},{"Id":"0f63de4a-7033-4d05-bad0-14f159fb856d","Title":"Cookie Mania","Description":"\u003Cp\u003ESingle-player game designed to test your speed and precision. The goal is simple: collect as many cookies as you can within a limited time while navigating a dynamically changing terrain. \u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EProcedural Map Generation:\u003C/strong\u003E Every playthrough offers a unique challenge with maps generated on the fly, ensuring endless replayability and a fresh experience each time you play.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EStream Writing for Score Storage:\u003C/strong\u003E Your high scores are efficiently saved using advanced stream writing techniques, allowing you to track and compare your progress seamlessly.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E","Category":1,"MediaContentDirectories":{"Image":["portfolio/unity/Cookies/img1.png"],"WebVideo":["https://www.youtube.com/embed/zUrW9RkVLnM?si=ap9FCXcJu8D1ImYs"]},"Keywords":["Unity","C#","Procedural Generation","3D"]},{"Id":"b46fd8f4-b53d-4166-9c7d-7fe6828832df","Title":"Cryptography Game","Description":"\u003Cp data-start=\u0022111\u0022 data-end=\u0022180\u0022\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli data-end=\u0022180\u0022 data-start=\u0022111\u0022\u003E\u003Cp data-end=\u0022180\u0022 data-start=\u0022111\u0022\u003EInteractive 3D puzzle game that teaches basic cryptography concepts\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022234\u0022 data-start=\u0022183\u0022\u003E\u003Cp data-end=\u0022234\u0022 data-start=\u0022183\u0022\u003EIncludes three levels with increasing difficulty:\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong data-start=\u0022239\u0022 data-end=\u0022266\u0022 style=\u0022background-color: unset; text-align: inherit;\u0022\u003ELevel 1 \u2013 Caesar Cipher\u003C/strong\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E: Use a clock to decode messages from a to-do list\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cstrong data-start=\u0022323\u0022 data-end=\u0022346\u0022 style=\u0022background-color: unset; text-align: inherit;\u0022\u003ELevel 2 \u2013 Grid Code\u003C/strong\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E: Place missing characters, unlock a keyword, and find a four-digit code\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cstrong data-start=\u0022425\u0022 data-end=\u0022449\u0022 style=\u0022background-color: unset; text-align: inherit;\u0022\u003ELevel 3 \u2013 Morse Code\u003C/strong\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E: Tune into radio channels and decode song titles using a Morse Code sheet\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003EPlayers fix broken attractions by solving puzzles in each level\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003EEach completed level rewards a badge and visual feedback (e.g., animations)\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003EDesigned to be educational and engaging, combining fun gameplay with problem-solving skills\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E","Category":1,"MediaContentDirectories":{"Image":["portfolio/unity/CryptographyGame/img1.png","portfolio/unity/CryptographyGame/img2.png"],"ShortVideo":["portfolio/unity/CryptographyGame/svideo1.mp4","portfolio/unity/CryptographyGame/svideo2.mp4","portfolio/unity/CryptographyGame/svideo3.mp4","portfolio/unity/CryptographyGame/svideo4.mp4"]},"Keywords":["Unity","C#","3D","Animations"]},{"Id":"4edeaeec-b881-4c68-9029-168800cf65fc","Title":"Car Web Game","Description":"\u003Cul\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E3D racing game built with Babylon.js featuring realistic car physics, sound effects, and camera controls.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003EAI-powered chat assistant using Google Gemini API provides tips and hints based on player progress.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022line-height: 1.7;\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022margin: 0px; font-size: 18px; line-height: 1.5; font-weight: 300;\u0022\u003EMicroservices architecture using Node.js, Apollo GraphQL, and MongoDB.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022line-height: 1.7;\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022margin: 0px; font-size: 18px; line-height: 1.5; font-weight: 300;\u0022\u003EFrontend built with React using a microfrontends setup.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022line-height: 1.7;\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022margin: 0px; font-size: 18px; line-height: 1.5; font-weight: 300;\u0022\u003EJWT authentication for secure login and user sessions.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003EPlayer progress, experience points, and achievements are tracked and saved across sessions.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003EModular codebase with separate services for authentication, progress tracking, and AI assistant.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Ca class=\u0022e-rte-anchor\u0022 href=\u0022https://github.com/SantiCarreno9/CarGameWebApp\u0022 title=\u0022https://github.com/SantiCarreno9/CarGameWebApp\u0022 target=\u0022_blank\u0022 aria-label=\u0022Open in new window\u0022\u003E\u003Cspan style=\u0022text-decoration: underline;\u0022\u003EYou can find the code here.\u003C/span\u003E\u003C/a\u003E\u003C/p\u003E","Category":2,"MediaContentDirectories":{"Image":["portfolio/react/CarGameApp/img1.png","portfolio/react/CarGameApp/img2.png","portfolio/react/CarGameApp/img3.png","portfolio/react/CarGameApp/img4.png","portfolio/react/CarGameApp/img5.png"]},"Keywords":["React Js","GraphQL","AI","LangChain","Gemini API","Microservices","Microfrontends","MongoDB","Node.js","Babylon.js"]},{"Id":"cae1b83c-ccf0-465b-8527-087f61915b41","Title":"The Guardian","Description":"\u003Cp data-start=\u0022129\u0022 data-end=\u0022199\u0022\u003E\u003Cem data-start=\u0022165\u0022 data-end=\u0022199\u0022\u003EA short, atmospheric action-RPG.\u003C/em\u003E\u003C/p\u003E\u003Cp data-start=\u0022201\u0022 data-end=\u0022322\u0022\u003EYou are the last Guardian, sworn to protect the boundary between the living and the dead. Now, that boundary is breaking.\u003C/p\u003E\u003Cp data-start=\u0022324\u0022 data-end=\u0022535\u0022\u003ERestless souls have begun slipping through dimensional rifts, possessing inanimate objects\u2014mannequins, lanterns, and more. Destroying them only delays the inevitable, as spirits jump from one object to the next.\u003C/p\u003E\u003Cp data-start=\u0022537\u0022 data-end=\u0022772\u0022\u003EYour mission is clear: find the gates through which they enter and seal them\u2014before the dead overrun the world of the living. Explore haunted landscapes, uncover lost relics, and battle relentless spirits in this eerie, fast-paced RPG.\u003C/p\u003E\u003Cp data-start=\u0022774\u0022 data-end=\u0022818\u0022\u003EThe dead are rising. Only you can stop them.\u003C/p\u003E","Category":1,"MediaContentDirectories":{"Image":["/portfolio/unity/TheGuardian/img1.png","/portfolio/unity/TheGuardian/img2.png","/portfolio/unity/TheGuardian/img3.png","/portfolio/unity/TheGuardian/img4.png"],"WebVideo":["https://www.youtube.com/embed/eieprb3Gtfs?si=HqIQgDffoC24bJ4c"]},"Keywords":["Unity","C#","3D"]},{"Id":"6b4772e6-cbee-4d8c-b062-b4f53913a9b0","Title":"Sub-In-Titan","Description":"\u003Cp data-start=\u0022165\u0022 data-end=\u0022238\u0022\u003E\u003Cem data-start=\u0022193\u0022 data-end=\u0022238\u0022\u003EA short, story-driven underwater adventure.\u003C/em\u003E\u003C/p\u003E\u003Cp data-start=\u0022240\u0022 data-end=\u0022521\u0022\u003EDescend into the crushing depths of the Mariana Trench in a desperate search for your lost brother: a reckless explorer who vanished chasing a sunken legend. Armed only with your wits and a weaponized submersible, you navigate a hostile abyss where the light dies and monsters stir.\u003C/p\u003E\u003Cp data-start=\u0022523\u0022 data-end=\u0022801\u0022\u003EAs you follow the fading trail he left behind, myth blurs with reality. Ancient, monstrous creatures lurk in the dark, guarding secrets that were never meant to be found. You\u2019ll need to fight, explore, and survive the deep in order to uncover the truth (and maybe bring him home).\u003C/p\u003E\u003Cp data-start=\u0022803\u0022 data-end=\u0022863\u0022\u003ESomething waits at the bottom.\u003Cbr data-start=\u0022833\u0022 data-end=\u0022836\u0022\u003E\nAnd it\u0027s not just treasure.\u003C/p\u003E","Category":1,"MediaContentDirectories":{"Image":["/portfolio/unity/Sub-In-Titan/img2.png","/portfolio/unity/Sub-In-Titan/img1.png","/portfolio/unity/Sub-In-Titan/img3.png","/portfolio/unity/Sub-In-Titan/img4.png"],"ShortVideo":[],"Video":[],"WebVideo":["https://www.youtube.com/embed/auT4AUb4sBE?si=JkxW80k3FjX4_TXo"]},"Keywords":["Unity","2D","C#"]},{"Id":"9937c41f-ae51-4c37-9f96-dd5f87f33c41","Title":"Rat-Escape","Description":"\u003Cp data-start=\u0022122\u0022 data-end=\u0022205\u0022\u003E\u003Cem data-start=\u0022154\u0022 data-end=\u0022205\u0022\u003EA small puzzle-platformer.\u003C/em\u003E\u003C/p\u003E\u003Cp data-start=\u0022207\u0022 data-end=\u0022431\u0022\u003EYou are a lab rat (but not an ordinary one). Inside a high-tech testing facility, your intelligence is being pushed to the limit. Navigate each level by stepping on every tile exactly once to progress to the next test chamber.\u003C/p\u003E\u003Cp data-start=\u0022433\u0022 data-end=\u0022454\u0022\u003EBut you\u0027re not alone.\u003C/p\u003E\u003Cp data-start=\u0022456\u0022 data-end=\u0022646\u0022\u003EOther rogue rats roam the grid, threatening to ruin your path by stepping where they shouldn\u2019t. You\u0027ll need sharp thinking (and a laser turret) to stop them before they sabotage your progress.\u003C/p\u003E\u003Cp data-start=\u0022648\u0022 data-end=\u0022704\u0022\u003EPrecision. Timing. Survival.\u003Cbr\u003E\u003C/p\u003E","Category":1,"MediaContentDirectories":{"Image":["/portfolio/unreal/Rat-Escape/img1.png","/portfolio/unreal/Rat-Escape/img2.png","/portfolio/unreal/Rat-Escape/img3.png"],"ShortVideo":[],"Video":[],"WebVideo":["https://www.youtube.com/embed/GZqEHYVkT-c?si=zAcnZ6Snng3JThex"]},"Keywords":["Unreal Engine"]}]
+[
+  {
+    "Id": "d0b1eb4b-e2bd-4032-8c44-bd26f9fccf6e",
+    "Title": "Personal Finance App",
+    "Description": "\u003Cp\u003E\u003Ca class=\u0022e-rte-anchor\u0022 href=\u0022https://witty-bush-0b7b2100f.5.azurestaticapps.net\u0022 title=\u0022https://witty-bush-0b7b2100f.5.azurestaticapps.net\u0022 target=\u0022_blank\u0022 aria-label=\u0022Open in new window\u0022\u003E\u003Cspan style=\u0022text-decoration: underline;\u0022\u003EYou can try it here\u003C/span\u003E\u003C/a\u003E\u0026nbsp;by logging in as a Guest.\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003E\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EBackend:\u003C/strong\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBuilt with a .NET Web API connected to a SQLite database.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ESupports user registration and management of transactions (add, modify, search, filter, delete).\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ERetrieves specific information like totals by categories, locations, payment methods, and transaction types.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003Cstrong\u003EFrontend:\u003C/strong\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EBuilt with Blazor WebAssembly for a responsive, dynamic user experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EDashboard displays total expenses, income, and balance over a selected time range.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EInteractive pie chart summarizes transaction totals, with breakdowns by categories, locations, or payment methods.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003ETransaction management page shows a paginated grid with filter, create, modify, and delete options.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EAllows splitting transactions into subtransactions with automatic total calculation.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003Cstrong\u003EDeployment:\u003C/strong\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EWeb API and database hosted on Azure App Service.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EBlazor WebAssembly frontend deployed to Azure Static Web Apps using CI/CD pipeline with GitHub Actions.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp aria-label=\u0022Open in new window\u0022 class=\u0022e-rte-anchor\u0022 href=\u0022https://github.com/SantiCarreno9/PersonalFinanceApp\u0022 target=\u0022_blank\u0022 title=\u0022https://github.com/SantiCarreno9/PersonalFinanceApp\u0022\u003E\u003Ca class=\u0022e-rte-anchor\u0022 href=\u0022https://github.com/SantiCarreno9/PersonalFinanceApp\u0022 title=\u0022https://github.com/SantiCarreno9/PersonalFinanceApp\u0022 target=\u0022_blank\u0022 aria-label=\u0022Open in new window\u0022\u003E\u003Cspan style=\u0022text-decoration: underline;\u0022\u003EYou can find the code here.\u003C/span\u003E\u003C/a\u003E\u003C/p\u003E\u003Cp\u003E\u003Cbr\u003E\u003C/p\u003E",
+    "Category": 2,
+    "MediaContentDirectories": {
+      "Image": [
+        "portfolio/dotnet/PersonalFinanceApp/img1.png",
+        "portfolio/dotnet/PersonalFinanceApp/img2.png",
+        "portfolio/dotnet/PersonalFinanceApp/img3.png",
+        "portfolio/dotnet/PersonalFinanceApp/img4.png",
+        "portfolio/dotnet/PersonalFinanceApp/img5.png"
+      ]
+    },
+    "Keywords": [
+      ".NET",
+      "C#",
+      "Entity Framework",
+      "Blazor",
+      "Web API",
+      "CI/CD",
+      "Azure"
+    ]
+  },
+  {
+    "Id": "3ad2e3ca-3443-4307-9305-57541069d03b",
+    "Title": "Collaborative Surgery Simulator",
+    "Description": "\u003Cp\u003EIt is a prototype designed to create a multi-user environment for simulating lipoma extraction surgery. This simulator allows multiple users to engage in a realistic surgical experience, each assuming specific roles such as surgeon, assistant, or resident, and communicating through an integrated voice chat feature. This simulator has garnered academic recognition, including a publication in an\u0026nbsp;\u003Cspan style=\u0022color: rgb(33, 37, 41); font-family: system-ui, -apple-system, \u0026quot;Segoe UI\u0026quot;, Roboto, \u0026quot;Helvetica Neue\u0026quot;, Arial, \u0026quot;Noto Sans\u0026quot;, \u0026quot;Liberation Sans\u0026quot;, sans-serif, \u0026quot;Apple Color Emoji\u0026quot;, \u0026quot;Segoe UI Emoji\u0026quot;, \u0026quot;Segoe UI Symbol\u0026quot;, \u0026quot;Noto Color Emoji\u0026quot;; font-size: 18px; font-style: normal; font-weight: 300; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; float: none; display: inline !important;\u0022\u003E\u003Ca class=\u0022e-rte-anchor\u0022 href=\u0022https://ieeexplore.ieee.org/document/9419164\u0022 title=\u0022https://ieeexplore.ieee.org/document/9419164\u0022 target=\u0022_blank\u0022 aria-label=\u0022Open in new window\u0022\u003EIEEE article\u003C/a\u003E.\u003C/span\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022color: rgb(33, 37, 41); font-family: system-ui, -apple-system, \u0026quot;Segoe UI\u0026quot;, Roboto, \u0026quot;Helvetica Neue\u0026quot;, Arial, \u0026quot;Noto Sans\u0026quot;, \u0026quot;Liberation Sans\u0026quot;, sans-serif, \u0026quot;Apple Color Emoji\u0026quot;, \u0026quot;Segoe UI Emoji\u0026quot;, \u0026quot;Segoe UI Symbol\u0026quot;, \u0026quot;Noto Color Emoji\u0026quot;; font-size: 18px; font-style: normal; font-weight: 300; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); float: none; display: inline !important;\u0022\u003E\u003C/span\u003E\u003Cstrong\u003EOnline Multiplayer System:\u003C/strong\u003E Users can select and perform different roles within the surgical team, enhancing collaborative learning and practice with real-time voice communication.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EReal-Time 3D Mesh Modification:\u003C/strong\u003E Simulates the surgical cutting process in real time, allowing users to make precise cuts on the 3D model of the skin covering the lipoma, closely mimicking the actual surgical procedure.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EAvatar Animations with hand controls:\u003C/strong\u003E Includes a procedural rig that enables full hand movement and interaction with objects, providing a realistic and interactive experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EObject Transfer Between Users:\u003C/strong\u003E Facilitates seamless transfer of instruments and objects between users, mirroring the teamwork required in an actual operating room.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E",
+    "Category": 3,
+    "MediaContentDirectories": {
+      "ShortVideo": [
+        "portfolio/unity/Surgery/svideo1.mp4",
+        "portfolio/unity/Surgery/svideo2.mp4"
+      ],
+      "WebVideo": [
+        "https://www.youtube.com/embed/Jc6QFovmRck?si=f0tlcg1iUswpJ6Tn"
+      ],
+      "Image": [
+        "portfolio/unity/Surgery/img1.png"
+      ]
+    },
+    "Keywords": [
+      "Unity",
+      "Networking",
+      "Multiplayer",
+      "C#",
+      "Photon PUN"
+    ]
+  },
+  {
+    "Id": "1fa734fc-a6dc-4575-90de-ce42b9cabb91",
+    "Title": "UNO 3D",
+    "Description": "\u003Cp\u003EIt is a sophisticated adaptation of the classic card game UNO, presented in an immersive three-dimensional environment. This version retains the beloved gameplay while introducing a minimalist design for the cards, creating an elegant and engaging visual experience.\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EMultiplayer System:\u003C/strong\u003E Accommodates up to six players, making it ideal for both casual and competitive play.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003E3D Animations:\u003C/strong\u003E Features dynamic 3D animations for special cards, enhancing the interactive experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EComplete Game Logic:\u003C/strong\u003E Fully implements the traditional rules and mechanics of UNO, ensuring a seamless and authentic gameplay experience.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E",
+    "Category": 1,
+    "MediaContentDirectories": {
+      "WebVideo": [
+        "https://www.youtube.com/embed/HDGS-Jimu5M?si=ggw39pprL2eYhEp7"
+      ],
+      "Image": [
+        "portfolio/unity/UNO/img1.png",
+        "portfolio/unity/UNO/img2.png",
+        "portfolio/unity/UNO/img3.png"
+      ]
+    },
+    "Keywords": [
+      "Unity",
+      "C#",
+      "Photon PUN",
+      "Multiplayer",
+      "3D"
+    ]
+  },
+  {
+    "Id": "2ccb86e9-c27d-4c78-82fc-c9d1950d4bbe",
+    "Title": "Breakout",
+    "Description": "\u003Cp\u003EMy version of the classic \u0022Breakout\u0022 game features an attractive sci-fi style and fun, challenging levels.\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EPower-Ups:\u003C/strong\u003E Elevate your gaming experience with power-ups that augment your paddle\u0027s size and equip you with lasers, allowing for strategic block destruction.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003EImmerse yourself in the sci-fi atmosphere with captivating music and sound effects.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003Ca class=\u0022e-rte-anchor\u0022 href=\u0022https://github.com/SantiCarreno9/Breakout\u0022 title=\u0022https://github.com/SantiCarreno9/Breakout\u0022 target=\u0022_blank\u0022 aria-label=\u0022Open in new window\u0022\u003E\u003Cspan style=\u0022text-decoration: underline;\u0022\u003EYou can find the code here.\u003C/span\u003E\u003C/a\u003E\u003C/p\u003E",
+    "Category": 1,
+    "MediaContentDirectories": {
+      "Image": [
+        "portfolio/unity/Breakout/img1.png",
+        "portfolio/unity/Breakout/img2.png"
+      ],
+      "ShortVideo": [
+        "portfolio/unity/Breakout/svideo1.mp4",
+        "portfolio/unity/Breakout/svideo2.mp4"
+      ],
+      "Video": [
+      ],
+      "WebVideo": [
+        "https://www.youtube.com/embed/aLLGY9lUF_A?si=vTXqca1xJwg1S-8q"
+      ]
+    },
+    "Keywords": [
+      "Unity",
+      "C#",
+      "2D"
+    ]
+  },
+  {
+    "Id": "c280c3ce-2f01-45c7-acfa-fb9745686b29",
+    "Title": "Pong",
+    "Description": "\u003Cp\u003EMy version of the classic \u0022Pong\u0022 game features an engaging sci-fi aesthetic and customizable gameplay, enhancing replayability and providing fresh challenges with each playthrough.\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003ELocal Multiplayer:\u003C/strong\u003E Supports up to 4 players, with 2 players using the keyboard and 2 using gamepads.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EFlexible Player Options:\u003C/strong\u003E Players can choose between competing against human opponents or AI, allowing for a versatile gaming experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003ECustomizable Gameplay:\u003C/strong\u003E Players can enable or disable obstacles and power-ups to add complexity. Power-ups can freeze opponents or increase their speed, enhancing the challenge and strategic depth of the game.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003Ca class=\u0022e-rte-anchor\u0022 href=\u0022https://github.com/SantiCarreno9/Pong\u0022 title=\u0022https://github.com/SantiCarreno9/Pong\u0022 target=\u0022_blank\u0022 aria-label=\u0022Open in new window\u0022\u003E\u003Cspan style=\u0022text-decoration: underline;\u0022\u003EYou can find the code here.\u003C/span\u003E\u003C/a\u003E\u003C/p\u003E",
+    "Category": 1,
+    "MediaContentDirectories": {
+      "ShortVideo": [
+        "portfolio/unity/Pong/svideo1.mp4",
+        "portfolio/unity/Pong/svideo2.mp4"
+      ],
+      "WebVideo": [
+        "https://www.youtube.com/embed/IgG47VEhGR8?si=Y01nercIkCEmUPrj"
+      ],
+      "Image": [
+        "portfolio/unity/Pong/img1.png"
+      ]
+    },
+    "Keywords": [
+      "Unity",
+      "C#",
+      "2D"
+    ]
+  },
+  {
+    "Id": "366bac75-e345-413b-b8ab-21a1407f9237",
+    "Title": "Tira Island",
+    "Description": "\u003Cp\u003EThis project is a 2D action/adventure platformer demo developed collaboratively with two colleagues. I was responsible for all programming aspects related to gameplay, enemies, and player controls.\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EModular Weapon System:\u003C/strong\u003E Implemented a modular weapon system utilizing object pooling to optimize performance and adhere to good coding practices.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EDevelopment Tools:\u003C/strong\u003E Created various tools to simplify the addition of new enemy types and features, enhancing the overall gameplay experience.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E",
+    "Category": 1,
+    "MediaContentDirectories": {
+      "ShortVideo": [
+        "portfolio/unity/Tira/svideo1.mp4",
+        "portfolio/unity/Tira/svideo2.mp4"
+      ],
+      "WebVideo": [
+        "https://www.youtube.com/embed/2b1zo4DpeP4?si=b4eSf0j_y_bXV4TF"
+      ],
+      "Image": [
+        "portfolio/unity/Tira/img1.png",
+        "portfolio/unity/Tira/img2.png"
+      ]
+    },
+    "Keywords": [
+      "Unity",
+      "C#",
+      "2D",
+      "Platformer"
+    ]
+  },
+  {
+    "Id": "085eaba5-5b1c-4f19-a99d-05ce00340c11",
+    "Title": "Jump Command",
+    "Description": "\u003Cp\u003EInspired by Google\u0027s Dinosaur Game, this game challenges players to dodge obstacles and survive for as long as possible. The game offers a unique twist with the option to control the character using voice commands or the traditional keyboard, making it accessible and engaging for a wide range of players.\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EVoice Command Controls:\u003C/strong\u003E Play using voice commands in either English or Spanish, or opt for classic keyboard controls for a versatile gaming experience.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EIncreasing Difficulty:\u003C/strong\u003E The game becomes progressively more challenging over time, ensuring that players remain engaged and tested.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EMultiplatform Compatibility:\u003C/strong\u003E Enjoy the game on both desktop and web browsers, providing flexibility and convenience for players.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E",
+    "Category": 1,
+    "MediaContentDirectories": {
+      "Image": [
+        "portfolio/unity/Jumping/img1.png"
+      ],
+      "WebVideo": [
+        "https://www.youtube.com/embed/RJGvawRlqMs?si=WTj8VESsevdGaWD2"
+      ]
+    },
+    "Keywords": [
+      "Unity",
+      "C#",
+      "Speech Recognition",
+      "WebGL"
+    ]
+  },
+  {
+    "Id": "0f63de4a-7033-4d05-bad0-14f159fb856d",
+    "Title": "Cookie Mania",
+    "Description": "\u003Cp\u003ESingle-player game designed to test your speed and precision. The goal is simple: collect as many cookies as you can within a limited time while navigating a dynamically changing terrain. \u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EProcedural Map Generation:\u003C/strong\u003E Every playthrough offers a unique challenge with maps generated on the fly, ensuring endless replayability and a fresh experience each time you play.\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong\u003EStream Writing for Score Storage:\u003C/strong\u003E Your high scores are efficiently saved using advanced stream writing techniques, allowing you to track and compare your progress seamlessly.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E",
+    "Category": 1,
+    "MediaContentDirectories": {
+      "Image": [
+        "portfolio/unity/Cookies/img1.png"
+      ],
+      "WebVideo": [
+        "https://www.youtube.com/embed/zUrW9RkVLnM?si=ap9FCXcJu8D1ImYs"
+      ]
+    },
+    "Keywords": [
+      "Unity",
+      "C#",
+      "Procedural Generation",
+      "3D"
+    ]
+  },
+  {
+    "Id": "b46fd8f4-b53d-4166-9c7d-7fe6828832df",
+    "Title": "Cryptography Game",
+    "Description": "\u003Cp data-start=\u0022111\u0022 data-end=\u0022180\u0022\u003E\u003C/p\u003E\u003Cul\u003E\u003Cli data-end=\u0022180\u0022 data-start=\u0022111\u0022\u003E\u003Cp data-end=\u0022180\u0022 data-start=\u0022111\u0022\u003EInteractive 3D puzzle game that teaches basic cryptography concepts\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022234\u0022 data-start=\u0022183\u0022\u003E\u003Cp data-end=\u0022234\u0022 data-start=\u0022183\u0022\u003EIncludes three levels with increasing difficulty:\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003E\u003Cstrong data-start=\u0022239\u0022 data-end=\u0022266\u0022 style=\u0022background-color: unset; text-align: inherit;\u0022\u003ELevel 1 \u2013 Caesar Cipher\u003C/strong\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E: Use a clock to decode messages from a to-do list\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cstrong data-start=\u0022323\u0022 data-end=\u0022346\u0022 style=\u0022background-color: unset; text-align: inherit;\u0022\u003ELevel 2 \u2013 Grid Code\u003C/strong\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E: Place missing characters, unlock a keyword, and find a four-digit code\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cstrong data-start=\u0022425\u0022 data-end=\u0022449\u0022 style=\u0022background-color: unset; text-align: inherit;\u0022\u003ELevel 3 \u2013 Morse Code\u003C/strong\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E: Tune into radio channels and decode song titles using a Morse Code sheet\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003EPlayers fix broken attractions by solving puzzles in each level\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003EEach completed level rewards a badge and visual feedback (e.g., animations)\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003Cli\u003E\u003Cp\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003E\u003C/span\u003E\u003Cspan style=\u0022background-color: unset; text-align: inherit;\u0022\u003EDesigned to be educational and engaging, combining fun gameplay with problem-solving skills\u003C/span\u003E\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E",
+    "Category": 1,
+    "MediaContentDirectories": {
+      "Image": [
+        "portfolio/unity/CryptographyGame/img1.png",
+        "portfolio/unity/CryptographyGame/img2.png"
+      ],
+      "ShortVideo": [
+        "portfolio/unity/CryptographyGame/svideo1.mp4",
+        "portfolio/unity/CryptographyGame/svideo2.mp4",
+        "portfolio/unity/CryptographyGame/svideo3.mp4",
+        "portfolio/unity/CryptographyGame/svideo4.mp4"
+      ]
+    },
+    "Keywords": [
+      "Unity",
+      "C#",
+      "3D",
+      "Animations"
+    ]
+  },
+  {
+    "Id": "4edeaeec-b881-4c68-9029-168800cf65fc",
+    "Title": "Car Web Game",
+    "Description": "\u003Cul\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E3D racing game built with Babylon.js featuring realistic car physics, sound effects, and camera controls.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003EAI-powered chat assistant using Google Gemini API provides tips and hints based on player progress.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022line-height: 1.7;\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022margin: 0px; font-size: 18px; line-height: 1.5; font-weight: 300;\u0022\u003EMicroservices architecture using Node.js, Apollo GraphQL, and MongoDB.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022line-height: 1.7;\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022margin: 0px; font-size: 18px; line-height: 1.5; font-weight: 300;\u0022\u003EFrontend built with React using a microfrontends setup.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022line-height: 1.7;\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022 style=\u0022margin: 0px; font-size: 18px; line-height: 1.5; font-weight: 300;\u0022\u003EJWT authentication for secure login and user sessions.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003EPlayer progress, experience points, and achievements are tracked and saved across sessions.\u003C/p\u003E\u003C/li\u003E\u003Cli data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003EModular codebase with separate services for authentication, progress tracking, and AI assistant.\u003C/p\u003E\u003C/li\u003E\u003C/ul\u003E\u003Cp data-end=\u0022225\u0022 data-start=\u0022119\u0022\u003E\u003Ca class=\u0022e-rte-anchor\u0022 href=\u0022https://github.com/SantiCarreno9/CarGameWebApp\u0022 title=\u0022https://github.com/SantiCarreno9/CarGameWebApp\u0022 target=\u0022_blank\u0022 aria-label=\u0022Open in new window\u0022\u003E\u003Cspan style=\u0022text-decoration: underline;\u0022\u003EYou can find the code here.\u003C/span\u003E\u003C/a\u003E\u003C/p\u003E",
+    "Category": 2,
+    "MediaContentDirectories": {
+      "Image": [
+        "portfolio/react/CarGameApp/img1.png",
+        "portfolio/react/CarGameApp/img2.png",
+        "portfolio/react/CarGameApp/img3.png",
+        "portfolio/react/CarGameApp/img4.png",
+        "portfolio/react/CarGameApp/img5.png"
+      ]
+    },
+    "Keywords": [
+      "React Js",
+      "GraphQL",
+      "AI",
+      "LangChain",
+      "Gemini API",
+      "Microservices",
+      "Microfrontends",
+      "MongoDB",
+      "Node.js",
+      "Babylon.js"
+    ]
+  },
+  {
+    "Id": "cae1b83c-ccf0-465b-8527-087f61915b41",
+    "Title": "The Guardian",
+    "Description": "\u003Cp data-start=\u0022129\u0022 data-end=\u0022199\u0022\u003E\u003Cem data-start=\u0022165\u0022 data-end=\u0022199\u0022\u003EA short, atmospheric action-RPG.\u003C/em\u003E\u003C/p\u003E\u003Cp data-start=\u0022201\u0022 data-end=\u0022322\u0022\u003EYou are the last Guardian, sworn to protect the boundary between the living and the dead. Now, that boundary is breaking.\u003C/p\u003E\u003Cp data-start=\u0022324\u0022 data-end=\u0022535\u0022\u003ERestless souls have begun slipping through dimensional rifts, possessing inanimate objects\u2014mannequins, lanterns, and more. Destroying them only delays the inevitable, as spirits jump from one object to the next.\u003C/p\u003E\u003Cp data-start=\u0022537\u0022 data-end=\u0022772\u0022\u003EYour mission is clear: find the gates through which they enter and seal them\u2014before the dead overrun the world of the living. Explore haunted landscapes, uncover lost relics, and battle relentless spirits in this eerie, fast-paced RPG.\u003C/p\u003E\u003Cp data-start=\u0022774\u0022 data-end=\u0022818\u0022\u003EThe dead are rising. Only you can stop them.\u003C/p\u003E",
+    "Category": 1,
+    "MediaContentDirectories": {
+      "Image": [
+        "portfolio/unity/TheGuardian/img1.png",
+        "portfolio/unity/TheGuardian/img2.png",
+        "portfolio/unity/TheGuardian/img3.png",
+        "portfolio/unity/TheGuardian/img4.png"
+      ],
+      "WebVideo": [
+        "https://www.youtube.com/embed/eieprb3Gtfs?si=HqIQgDffoC24bJ4c"
+      ]
+    },
+    "Keywords": [
+      "Unity",
+      "C#",
+      "3D"
+    ]
+  },
+  {
+    "Id": "6b4772e6-cbee-4d8c-b062-b4f53913a9b0",
+    "Title": "Sub-In-Titan",
+    "Description": "\u003Cp data-start=\u0022165\u0022 data-end=\u0022238\u0022\u003E\u003Cem data-start=\u0022193\u0022 data-end=\u0022238\u0022\u003EA short, story-driven underwater adventure.\u003C/em\u003E\u003C/p\u003E\u003Cp data-start=\u0022240\u0022 data-end=\u0022521\u0022\u003EDescend into the crushing depths of the Mariana Trench in a desperate search for your lost brother: a reckless explorer who vanished chasing a sunken legend. Armed only with your wits and a weaponized submersible, you navigate a hostile abyss where the light dies and monsters stir.\u003C/p\u003E\u003Cp data-start=\u0022523\u0022 data-end=\u0022801\u0022\u003EAs you follow the fading trail he left behind, myth blurs with reality. Ancient, monstrous creatures lurk in the dark, guarding secrets that were never meant to be found. You\u2019ll need to fight, explore, and survive the deep in order to uncover the truth (and maybe bring him home).\u003C/p\u003E\u003Cp data-start=\u0022803\u0022 data-end=\u0022863\u0022\u003ESomething waits at the bottom.\u003Cbr data-start=\u0022833\u0022 data-end=\u0022836\u0022\u003E\nAnd it\u0027s not just treasure.\u003C/p\u003E",
+    "Category": 1,
+    "MediaContentDirectories": {
+      "Image": [
+        "portfolio/unity/Sub-In-Titan/img2.png",
+        "portfolio/unity/Sub-In-Titan/img1.png",
+        "portfolio/unity/Sub-In-Titan/img3.png",
+        "portfolio/unity/Sub-In-Titan/img4.png"
+      ],
+      "ShortVideo": [
+      ],
+      "Video": [
+      ],
+      "WebVideo": [
+        "https://www.youtube.com/embed/auT4AUb4sBE?si=JkxW80k3FjX4_TXo"
+      ]
+    },
+    "Keywords": [
+      "Unity",
+      "2D",
+      "C#"
+    ]
+  },
+  {
+    "Id": "9937c41f-ae51-4c37-9f96-dd5f87f33c41",
+    "Title": "Rat-Escape",
+    "Description": "\u003Cp data-start=\u0022122\u0022 data-end=\u0022205\u0022\u003E\u003Cem data-start=\u0022154\u0022 data-end=\u0022205\u0022\u003EA small puzzle-platformer.\u003C/em\u003E\u003C/p\u003E\u003Cp data-start=\u0022207\u0022 data-end=\u0022431\u0022\u003EYou are a lab rat (but not an ordinary one). Inside a high-tech testing facility, your intelligence is being pushed to the limit. Navigate each level by stepping on every tile exactly once to progress to the next test chamber.\u003C/p\u003E\u003Cp data-start=\u0022433\u0022 data-end=\u0022454\u0022\u003EBut you\u0027re not alone.\u003C/p\u003E\u003Cp data-start=\u0022456\u0022 data-end=\u0022646\u0022\u003EOther rogue rats roam the grid, threatening to ruin your path by stepping where they shouldn\u2019t. You\u0027ll need sharp thinking (and a laser turret) to stop them before they sabotage your progress.\u003C/p\u003E\u003Cp data-start=\u0022648\u0022 data-end=\u0022704\u0022\u003EPrecision. Timing. Survival.\u003Cbr\u003E\u003C/p\u003E",
+    "Category": 1,
+    "MediaContentDirectories": {
+      "Image": [
+        "portfolio/unreal/Rat-Escape/img1.png",
+        "portfolio/unreal/Rat-Escape/img2.png",
+        "portfolio/unreal/Rat-Escape/img3.png"
+      ],
+      "ShortVideo": [
+      ],
+      "Video": [
+      ],
+      "WebVideo": [
+        "https://www.youtube.com/embed/GZqEHYVkT-c?si=zAcnZ6Snng3JThex"
+      ]
+    },
+    "Keywords": [
+      "Unreal Engine"
+    ]
+  }
+]
