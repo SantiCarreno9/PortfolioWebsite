@@ -1,0 +1,52 @@
+.entry-container {
+    font-size: large;
+    margin-bottom: 1rem;
+    break-inside: avoid;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.time-frame {
+    font-size: 1.2rem;
+}
+
+.title-container {
+    display: flex;
+    width: 100%;
+    break-inside: avoid;
+}
+
+    .title-container p {
+        flex: 1;
+    }
+
+    .title-container .title {
+        text-align: left;
+    }
+
+    .title-container .time-frame {
+        text-align: right;
+    }
+
+
+.organization-info {
+    font-size: 1.2rem;
+}
+
+.description {
+    font-size: 1.1rem;
+}
+
+.text {
+    word-wrap: break-word;
+    word-break: keep-all;
+    white-space: normal;
+}

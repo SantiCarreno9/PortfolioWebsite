@@ -1,0 +1,26 @@
+<div class="entry-container">
+    <div class="title-container">
+        <p class="title">@Entry.Title</p>
+        <p class="time-frame">@GetTimeFrame()</p>
+    </div>
+    @if (!string.IsNullOrEmpty(Entry.Organization) || !string.IsNullOrEmpty(Entry.Location))
+    {
+        <p class="organization-info">
+            @($"{Entry.Organization}, {Entry.Location}")
+        </p>
+    }
+    @if (Entry.Description != null)
+    {
+        <p class="description text">@((MarkupString)Entry.Description)</p>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public required ProfileEntry Entry { get; set; }
+
+    private string GetTimeFrame()
+    {
+        return Entry.StartDate.ToString("MMM yyyy") + " - " + (Entry.EndDate.HasValue ? Entry.EndDate.Value.ToString("MMM yyyy") : "Present");
+    }
+}

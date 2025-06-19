@@ -1,0 +1,123 @@
+[
+  {
+    "id": "dd06aca4-34bd-4f0f-a8b9-48d5193cf1e3",
+    "category": 2,
+    "title": "Career Toolkit",
+    "organization": "",
+    "location": "",
+    "startDate": "2025-05-07",
+    "endDate": null,
+    "isCurrent": true,
+    "description": "<ul><li>Designed&nbsp;and&nbsp;implemented&nbsp;a&nbsp;microservices-based&nbsp;web&nbsp;application&nbsp;to&nbsp;streamline&nbsp;the&nbsp;job&nbsp;application&nbsp;process,&nbsp;featuring&nbsp;separate&nbsp;services&nbsp;for&nbsp;User&nbsp;Management,&nbsp;Resume&nbsp;Builder,&nbsp;and&nbsp;Cover&nbsp;Letter&nbsp;Builder.</li><li>Integrated&nbsp;AI&nbsp;(Gemini)&nbsp;as&nbsp;an&nbsp;assistant&nbsp;tool&nbsp;to&nbsp;improve&nbsp;the&nbsp;quality&nbsp;of&nbsp;the&nbsp;resulting&nbsp;resume&nbsp;and&nbsp;cover&nbsp;letter,&nbsp;providing&nbsp;suggestions&nbsp;based&nbsp;on&nbsp;the&nbsp;user&nbsp;experience&nbsp;and&nbsp;the&nbsp;job&nbsp;posting.</li><li>Applied&nbsp;Clean&nbsp;Architecture&nbsp;to&nbsp;each&nbsp;.NET&nbsp;microservice,&nbsp;ensuring&nbsp;modularity,&nbsp;scalability,&nbsp;and&nbsp;clear&nbsp;separation&nbsp;of&nbsp;concerns.</li><li>Built&nbsp;a&nbsp;responsive&nbsp;frontend&nbsp;using&nbsp;Angular,&nbsp;integrated&nbsp;with&nbsp;backend&nbsp;services&nbsp;via&nbsp;a&nbsp;centralized&nbsp;API&nbsp;Gateway.</li><li>Containerized&nbsp;all&nbsp;microservices&nbsp;using&nbsp;Docker&nbsp;and&nbsp;orchestrated&nbsp;them&nbsp;with&nbsp;Kubernetes&nbsp;for&nbsp;scalable&nbsp;deployment.</li><li>Managed&nbsp;CI/CD&nbsp;pipelines&nbsp;with&nbsp;GitHub&nbsp;Actions,&nbsp;automating&nbsp;build,&nbsp;test,&nbsp;and&nbsp;deployment&nbsp;workflows.</li><li>Deployed&nbsp;the&nbsp;solution&nbsp;to&nbsp;Azure,&nbsp;using&nbsp;Azure&nbsp;Container&nbsp;Registry&nbsp;and&nbsp;Azure&nbsp;Kubernetes&nbsp;Service&nbsp;(AKS).</li><li>Used&nbsp;PostgreSQL&nbsp;for&nbsp;high&nbsp;performance&nbsp;data&nbsp;management.</li></ul>"
+  },
+  {
+    "id": "1fd90074-a062-43e1-8ac5-4146a3ba9549",
+    "category": 1,
+    "title": "Student Researcher",
+    "organization": "Centennial College",
+    "location": "Toronto, ON",
+    "startDate": "2025-02-25",
+    "endDate": "2025-04-11",
+    "isCurrent": false,
+    "description": "<ul><li>Developed&nbsp;a&nbsp;.NET&nbsp;Web&nbsp;API&nbsp;using&nbsp;C#&nbsp;and&nbsp;Entity&nbsp;Framework&nbsp;to&nbsp;interact&nbsp;with&nbsp;a&nbsp;MySQL&nbsp;database&nbsp;and&nbsp;manage&nbsp;users&#39;&nbsp;accounts&nbsp;and&nbsp;transactions.</li><li>Built&nbsp;a&nbsp;React&nbsp;application&nbsp;to&nbsp;connect&nbsp;with&nbsp;the&nbsp;backend,&nbsp;letting&nbsp;users&nbsp;manage&nbsp;their&nbsp;accounts&nbsp;and&nbsp;view&nbsp;their&nbsp;electronic&nbsp;consumption&nbsp;data&nbsp;through&nbsp;charts.</li><li>Improved&nbsp;a&nbsp;Java&nbsp;library&nbsp;for&nbsp;Electric&nbsp;Vehicle&nbsp;chargers&nbsp;to&nbsp;control&nbsp;charging&nbsp;stations&nbsp;and&nbsp;sync&nbsp;transactions&nbsp;with&nbsp;users&#39;&nbsp;accounts.</li><li>Deployed&nbsp;the&nbsp;application&nbsp;to&nbsp;a&nbsp;DigitalOcean&nbsp;Droplet&nbsp;using&nbsp;Docker&nbsp;and&nbsp;GitHub&nbsp;Actions&nbsp;for&nbsp;automated&nbsp;CI/CD.</li></ul>"
+  },
+  {
+    "id": "c3ae5f07-9d0a-451d-9352-9a81e5746f50",
+    "category": 2,
+    "title": "Resume Builder",
+    "organization": "",
+    "location": "",
+    "startDate": "2024-09-01",
+    "endDate": "2024-11-30",
+    "isCurrent": false,
+    "description": "<ul><li>Implemented&nbsp;comprehensive&nbsp;user&nbsp;profile&nbsp;management&nbsp;features,&nbsp;allowing&nbsp;users&nbsp;to&nbsp;create,&nbsp;update,&nbsp;and&nbsp;delete&nbsp;their&nbsp;resumes&nbsp;efficiently,&nbsp;with&nbsp;an&nbsp;intuitive&nbsp;and&nbsp;user-friendly&nbsp;interface.</li><li>Developed&nbsp;a&nbsp;web&nbsp;application&nbsp;using&nbsp;ASP.NET&nbsp;Model-View-Controller&nbsp;(MVC)&nbsp;framework,&nbsp;Entity&nbsp;Framework&nbsp;(EF)&nbsp;for&nbsp;data&nbsp;access,&nbsp;and&nbsp;SQLite&nbsp;as&nbsp;the&nbsp;relational&nbsp;database&nbsp;to&nbsp;ensure&nbsp;efficient&nbsp;data&nbsp;management&nbsp;and&nbsp;retrieval.</li><li>Designed&nbsp;and&nbsp;implemented&nbsp;a&nbsp;custom&nbsp;authorization&nbsp;and&nbsp;authentication&nbsp;system,&nbsp;providing&nbsp;secure&nbsp;user&nbsp;access&nbsp;and&nbsp;protecting&nbsp;sensitive&nbsp;information.</li><li>Integrated&nbsp;jQuery&nbsp;and&nbsp;AJAX&nbsp;to&nbsp;support&nbsp;asynchronous&nbsp;updates,&nbsp;enhancing&nbsp;user&nbsp;experience&nbsp;by&nbsp;preventing&nbsp;constant&nbsp;page&nbsp;reloads&nbsp;and&nbsp;improving&nbsp;overall&nbsp;application&nbsp;responsiveness.</li></ul>"
+  },
+  {
+    "id": "f8d9e9ce-e36b-488c-8385-0ded04a5a159",
+    "category": 2,
+    "title": "Personal Finance App",
+    "organization": "",
+    "location": "",
+    "startDate": "2024-06-21",
+    "endDate": "2024-09-29",
+    "isCurrent": false,
+    "description": "<ul><li>Developed&nbsp;a&nbsp;full-featured&nbsp;finance&nbsp;application&nbsp;that&nbsp;allows&nbsp;users&nbsp;to&nbsp;create&nbsp;accounts,&nbsp;manage&nbsp;income&nbsp;and&nbsp;expense&nbsp;transactions,&nbsp;and&nbsp;visualize&nbsp;financial&nbsp;data&nbsp;through&nbsp;interactive&nbsp;charts&nbsp;(including&nbsp;category&nbsp;summaries&nbsp;and&nbsp;monthly&nbsp;income/expense&nbsp;trends).&nbsp;Additionally,&nbsp;implemented&nbsp;tools&nbsp;to&nbsp;help&nbsp;users&nbsp;compare&nbsp;product&nbsp;prices&nbsp;to&nbsp;find&nbsp;the&nbsp;cheapest&nbsp;option&nbsp;and&nbsp;calculate&nbsp;investment&nbsp;growth&nbsp;based&nbsp;on&nbsp;customizable&nbsp;time&nbsp;frames&nbsp;and&nbsp;interest&nbsp;rates.</li><li>Developed&nbsp;a&nbsp;.NET&nbsp;Web&nbsp;API&nbsp;using&nbsp;Entity&nbsp;Framework&nbsp;(EF)&nbsp;for&nbsp;data&nbsp;access&nbsp;and&nbsp;SQLite&nbsp;as&nbsp;the&nbsp;relational&nbsp;database,&nbsp;ensuring&nbsp;efficient&nbsp;data&nbsp;management&nbsp;and&nbsp;retrieval.</li><li>Built&nbsp;a&nbsp;dynamic&nbsp;and&nbsp;responsive&nbsp;web&nbsp;application&nbsp;with&nbsp;.NET&nbsp;BlazorWebAssembly,&nbsp;integrating&nbsp;JavaScript,&nbsp;HTML,&nbsp;CSS,&nbsp;and&nbsp;Bootstrap&nbsp;for&nbsp;a&nbsp;seamless&nbsp;user&nbsp;interface,&nbsp;and&nbsp;efficiently&nbsp;retrieving&nbsp;data&nbsp;from&nbsp;the&nbsp;API&nbsp;via&nbsp;RESTful&nbsp;services.</li><li>Deployed&nbsp;the&nbsp;Web&nbsp;API&nbsp;to&nbsp;Azure&nbsp;Web&nbsp;Services&nbsp;and&nbsp;the&nbsp;Web&nbsp;App&nbsp;to&nbsp;Azure&nbsp;Static&nbsp;Web&nbsp;Apps,&nbsp;utilizing&nbsp;CI/CD&nbsp;pipelines&nbsp;through&nbsp;GitHub&nbsp;Actions&nbsp;Workflows&nbsp;to&nbsp;ensure&nbsp;smooth&nbsp;and&nbsp;automated&nbsp;deployments.</li></ul>"
+  },
+  {
+    "id": "f58d8fa3-7d27-4ccf-879c-5f71d1b65364",
+    "category": 2,
+    "title": "Portfolio Website",
+    "organization": "",
+    "location": "",
+    "startDate": "2024-04-01",
+    "endDate": "2024-05-28",
+    "isCurrent": false,
+    "description": "<ul><li>Developed&nbsp;a&nbsp;dynamic&nbsp;website&nbsp;using&nbsp;.NET&nbsp;Blazor&nbsp;WebAssembly,&nbsp;efficiently&nbsp;retrieving&nbsp;and&nbsp;displaying&nbsp;information&nbsp;from&nbsp;structured&nbsp;JSON&nbsp;files&nbsp;to&nbsp;ensure&nbsp;a&nbsp;seamless&nbsp;user&nbsp;experience.</li><li>Built&nbsp;a&nbsp;user-friendly&nbsp;editor&nbsp;to&nbsp;create&nbsp;and&nbsp;modify&nbsp;project&nbsp;entries&nbsp;for&nbsp;my&nbsp;personal&nbsp;portfolio.&nbsp;The&nbsp;interface&nbsp;allows&nbsp;easy&nbsp;input&nbsp;and&nbsp;updates,&nbsp;with&nbsp;the&nbsp;project&nbsp;data&nbsp;stored&nbsp;in&nbsp;a&nbsp;structured&nbsp;JSON&nbsp;file&nbsp;that&nbsp;can&nbsp;be&nbsp;downloaded&nbsp;and&nbsp;used&nbsp;directly&nbsp;on&nbsp;the&nbsp;site.</li><li>Created&nbsp;a&nbsp;comprehensive&nbsp;Razor&nbsp;Class&nbsp;Library&nbsp;featuring&nbsp;reusable&nbsp;UI&nbsp;components&nbsp;with&nbsp;HTML,&nbsp;CSS,&nbsp;and&nbsp;JavaScript,&nbsp;and&nbsp;integrated&nbsp;it&nbsp;into&nbsp;the&nbsp;project&nbsp;as&nbsp;a&nbsp;Git&nbsp;submodule&nbsp;for&nbsp;easy&nbsp;management&nbsp;and&nbsp;updates.</li><li>Deployed&nbsp;the&nbsp;website&nbsp;to&nbsp;GitHub&nbsp;Pages&nbsp;using&nbsp;automated&nbsp;GitHub&nbsp;Actions,&nbsp;ensuring&nbsp;a&nbsp;smooth&nbsp;and&nbsp;continuous&nbsp;deployment&nbsp;process&nbsp;with&nbsp;minimal&nbsp;manual&nbsp;intervention.</li></ul>"
+  },
+  {
+    "id": "0f74cd24-b92a-4346-9b98-582651560e56",
+    "category": 0,
+    "title": "Game Programming",
+    "organization": "Centennial College",
+    "location": "Toronto, ON",
+    "startDate": "2023-09-05",
+    "endDate": "2025-04-17",
+    "isCurrent": false,
+    "description": "<p>Graduated&nbsp;with&nbsp;High&nbsp;Honors.</p>"
+  },
+  {
+    "id": "b3ebf8fe-dbd9-4611-a3c9-abf8a6d08cbe",
+    "category": 1,
+    "title": "VR Developer",
+    "organization": "Somnium Space",
+    "location": "Prague, Czechia",
+    "startDate": "2022-08-15",
+    "endDate": "2023-09-01",
+    "isCurrent": false,
+    "description": "<ul><li>Implemented&nbsp;a&nbsp;social&nbsp;networking&nbsp;system&nbsp;enabling&nbsp;users&nbsp;to&nbsp;add&nbsp;friends,&nbsp;block&nbsp;others,&nbsp;and&nbsp;engage&nbsp;in&nbsp;chat&nbsp;conversations.</li><li>Maintained&nbsp;continuous&nbsp;back-end&nbsp;communication&nbsp;via&nbsp;SignalR&nbsp;and&nbsp;asynchronously&nbsp;consumed&nbsp;multiple&nbsp;APIs&nbsp;through&nbsp;REST&nbsp;architecture&nbsp;to&nbsp;ensure&nbsp;a&nbsp;smooth&nbsp;user&nbsp;experience.</li><li>Developed&nbsp;a&nbsp;custom&nbsp;web&nbsp;browser&nbsp;featuring&nbsp;navigation&nbsp;history,&nbsp;bookmarks,&nbsp;and&nbsp;a&nbsp;tab&nbsp;system,&nbsp;integrating&nbsp;a&nbsp;third-party&nbsp;library&nbsp;for&nbsp;content&nbsp;rendering.</li><li>Implemented&nbsp;responsive&nbsp;user&nbsp;interface&nbsp;with&nbsp;animations,&nbsp;transitions,&nbsp;and&nbsp;interactive&nbsp;elements&nbsp;to&nbsp;enhance&nbsp;the&nbsp;user&nbsp;experience&nbsp;and&nbsp;engagement.</li></ul>"
+  },
+  {
+    "id": "aa84d68b-1d50-4dd4-b90b-48c6313e3dd8",
+    "category": 1,
+    "title": "XR Developer",
+    "organization": "Consultoria GP S.A.S",
+    "location": "Medellín, Colombia",
+    "startDate": "2021-11-16",
+    "endDate": "2022-08-12",
+    "isCurrent": false,
+    "description": "<ul><li>Renewed&nbsp;and&nbsp;improved&nbsp;the&nbsp;user&nbsp;interface&nbsp;by&nbsp;optimizing&nbsp;and&nbsp;organizing&nbsp;the&nbsp;visual&nbsp;resources&nbsp;and&nbsp;implementing&nbsp;newer&nbsp;tools&nbsp;such&nbsp;as&nbsp;UI&nbsp;Toolkit.</li><li>Implemented&nbsp;WebSockets&nbsp;for&nbsp;continuous&nbsp;back-end&nbsp;communication.</li><li>Integrated&nbsp;Azure&nbsp;AI&nbsp;services&nbsp;like&nbsp;Speech-to-Text&nbsp;and&nbsp;Text-to-Speech&nbsp;for&nbsp;real-time&nbsp;virtual&nbsp;assistant&nbsp;interactions&nbsp;using&nbsp;Microsoft&#39;s&nbsp;SDK.</li><li>Facilitated&nbsp;communication&nbsp;between&nbsp;a&nbsp;WebGL&nbsp;app&nbsp;and&nbsp;the&nbsp;browser&nbsp;using&nbsp;C#&nbsp;and&nbsp;JavaScript.</li><li>Applied&nbsp;Simple&nbsp;Clean&nbsp;Architecture&nbsp;and&nbsp;Dependency&nbsp;Injection&nbsp;(DI)&nbsp;to&nbsp;achieve&nbsp;low&nbsp;coupling&nbsp;and&nbsp;high&nbsp;cohesion.</li><li>Led&nbsp;version&nbsp;control&nbsp;efforts&nbsp;for&nbsp;organization&nbsp;employing&nbsp;Git.</li><li>Program&nbsp;the&nbsp;different&nbsp;frontend&nbsp;events&nbsp;of&nbsp;the&nbsp;Nati&nbsp;digital&nbsp;human&nbsp;platform&nbsp;using&nbsp;Unity.</li><li>Designed,&nbsp;created,&nbsp;and&nbsp;maintained&nbsp;efficient,&nbsp;reusable,&nbsp;and&nbsp;reliable&nbsp;code.</li><li>Ensured&nbsp;optimal&nbsp;performance,&nbsp;quality,&nbsp;and&nbsp;scalability.</li><li>Implemented&nbsp;new&nbsp;features&nbsp;in&nbsp;a&nbsp;fast-paced&nbsp;and&nbsp;agile&nbsp;development&nbsp;environment.</li><li>Support&nbsp;the&nbsp;development&nbsp;process&nbsp;by&nbsp;contributing&nbsp;improvement&nbsp;suggestions&nbsp;and&nbsp;promoting&nbsp;code&nbsp;quality&nbsp;throughout&nbsp;the&nbsp;development&nbsp;cycle.</li></ul>"
+  },
+  {
+    "id": "b1876367-5b6f-41cd-9595-32b450fdcf27",
+    "category": 1,
+    "title": "XR Mobile Developer",
+    "organization": "KosmoKosmic",
+    "location": "Bogotá, Colombia",
+    "startDate": "2021-08-02",
+    "endDate": "2022-03-01",
+    "isCurrent": false,
+    "description": "<ul><li>Updated&nbsp;and&nbsp;maintained&nbsp;an&nbsp;augmented&nbsp;reality&nbsp;(AR)&nbsp;mobile&nbsp;application&nbsp;utilizing&nbsp;the&nbsp;Vuforia&nbsp;SDK,&nbsp;ensuring&nbsp;consistent&nbsp;performance&nbsp;and&nbsp;feature&nbsp;enhancements&nbsp;across&nbsp;Android&nbsp;and&nbsp;iOS&nbsp;devices.</li><li>Implemented&nbsp;Unity&#39;s&nbsp;Addressables&nbsp;system&nbsp;to&nbsp;streamline&nbsp;updates&nbsp;and&nbsp;additions&nbsp;within&nbsp;the&nbsp;app,&nbsp;improving&nbsp;efficiency&nbsp;and&nbsp;maintainability.</li><li>Designed&nbsp;and&nbsp;implemented&nbsp;an&nbsp;interactive&nbsp;mobile&nbsp;virtual&nbsp;reality&nbsp;(VR)&nbsp;system,&nbsp;enhancing&nbsp;user&nbsp;engagement&nbsp;through&nbsp;immersive&nbsp;content&nbsp;and&nbsp;innovative&nbsp;features.</li></ul>"
+  },
+  {
+    "id": "6365ae87-93a7-4010-b58c-cc91d0ee213c",
+    "category": 1,
+    "title": "XR Developer",
+    "organization": "MPL eLearning XR Services",
+    "location": "Bogotá, Colombia",
+    "startDate": "2021-01-02",
+    "endDate": "2021-08-01",
+    "isCurrent": false,
+    "description": "<ul><li>Created&nbsp;3D&nbsp;models&nbsp;of&nbsp;equipment,&nbsp;machinery&nbsp;and&nbsp;interior&nbsp;spaces&nbsp;in&nbsp;Blender&nbsp;by&nbsp;using&nbsp;photos&nbsp;and&nbsp;videos&nbsp;as&nbsp;reference.</li><li>Developed&nbsp;interactive&nbsp;VR&nbsp;simulators&nbsp;in&nbsp;Unity&nbsp;for&nbsp;employee&nbsp;training.</li><li>Developed&nbsp;C#&nbsp;libraries&nbsp;to&nbsp;streamline&nbsp;and&nbsp;expedite&nbsp;the&nbsp;creation&nbsp;of&nbsp;virtual&nbsp;reality&nbsp;(VR)&nbsp;applications.</li><li>Created&nbsp;editor&nbsp;tools&nbsp;with&nbsp;C#&nbsp;to&nbsp;automate&nbsp;file&nbsp;management&nbsp;processes.</li><li>Contributed&nbsp;to&nbsp;the&nbsp;company’s&nbsp;SDK&nbsp;for&nbsp;VR&nbsp;glasses,&nbsp;enabling&nbsp;app&nbsp;downloads&nbsp;linked&nbsp;to&nbsp;user&nbsp;accounts&nbsp;from&nbsp;the&nbsp;server.</li></ul>"
+  },
+  {
+    "id": "7eeeca1a-6a59-473b-9ed1-214a5959a7f9",
+    "category": 0,
+    "title": "Bachelor's in Mechatronics Engineering",
+    "organization": "Universidad Militar Nueva Granada",
+    "location": "Bogotá, Colombia",
+    "startDate": "2015-01-10",
+    "endDate": "2021-03-23",
+    "isCurrent": false,
+    "description": "<p>Final&nbsp;project&nbsp;featured&nbsp;in&nbsp;<a href=\"https://ieeexplore.ieee.org/document/9419164\" rel=\"noopener noreferrer\" target=\"_blank\">IEEE&nbsp;article</a>:&nbsp;<em>“Lipoma&nbsp;Extraction&nbsp;Surgery&nbsp;Simulation&nbsp;in&nbsp;a&nbsp;Multi-user&nbsp;Environment”</em></p>"
+  }
+]

@@ -13,7 +13,7 @@
             }
             else
             {
-                <p>@aboutMe.Description</p>    
+                <p>@((MarkupString)aboutMe.Description)</p>
                 <hr />
                 @foreach (var key in aboutMe.Skills.Keys)
                 {
@@ -24,28 +24,64 @@
                             <li>@values</li>
                         }
                     </ul>
-                }                               
+                }
             }
         </div>
     </div>
-    <h2>My resume</h2>
-    <br>
-    <div class="resume-container">
-        <iframe src="https://santicarreno9.github.io/ResumeWebsite/" title="Resume" class="resume"></iframe>
+    <div class="container d-flex flex-column">
+        @if (educationEntries != null)
+        {
+            <h2>My Education</h2>
+            <br>
+            @foreach (var entry in educationEntries)
+            {
+                <ProfileEntryComponent Entry="entry"></ProfileEntryComponent>
+            }
+        }
+        <br>
+        @if (experienceEntries != null)
+        {
+            <h2>My Professional Experience</h2>
+            <br>
+            @foreach (var entry in experienceEntries)
+            {
+                <ProfileEntryComponent Entry="entry"></ProfileEntryComponent>
+            }
+        }
+        <br>
+        @if (projectEntries != null)
+        {
+            <h2>My Projects</h2>
+            <br>
+            @foreach (var entry in projectEntries)
+            {
+                <ProfileEntryComponent Entry="entry"></ProfileEntryComponent>
+            }
+        }
     </div>
-    <br>
 </section>
 
 @code {
     [Parameter, EditorRequired]
     public required HttpClient Http { get; set; }
 
+    private List<ProfileEntry>? profileEntries;
     private AboutMe? aboutMe;
     private HeroImage? hero;
+
+    private List<ProfileEntry>? educationEntries;
+    private List<ProfileEntry>? experienceEntries;
+    private List<ProfileEntry>? projectEntries;
 
     protected override async Task OnInitializedAsync()
     {
         aboutMe = await Http.GetFromJsonAsync<AboutMe>(Path.Combine(GlobalValues.JsonPath, "aboutme.json"));
+        profileEntries = await Http.GetFromJsonAsync<List<ProfileEntry>>(Path.Combine(GlobalValues.JsonPath, "profileentries.json"));
 
+        if (profileEntries == null)
+            return;
+        educationEntries = profileEntries.Where(pe => pe.Category == ProfileEntryCategory.Education).ToList();
+        experienceEntries = profileEntries.Where(pe => pe.Category == ProfileEntryCategory.WorkExperience).ToList();
+        projectEntries = profileEntries.Where(pe => pe.Category == ProfileEntryCategory.Project).ToList();
     }
 }
