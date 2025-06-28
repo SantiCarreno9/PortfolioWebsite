@@ -53,7 +53,7 @@ namespace BlazorApp.Components
             _currentProjectCategory = category;
             _projects = await ProjectService.GetProjectsByCategory(category);
             if (_projects != null)
-            {
+            {                
                 int projectsCount = _projects.Count();
                 this.projectsParameters = new Dictionary<string, object>[projectsCount];
                 for (int i = 0; i < projectsCount; i++)
